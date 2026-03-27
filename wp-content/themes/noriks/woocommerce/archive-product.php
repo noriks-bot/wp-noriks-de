@@ -46,23 +46,23 @@ function is_active_menu_item( $path ) {
 <nav class="category-menu">
   <ul>
     <li class="<?php echo is_shop() ? 'active' : ''; ?>">
-      <a href="/hr/shop">Svi produkti</a>
+      <a href="/de/shop">Svi produkti</a>
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/majice') ? 'active' : ''; ?>">
-      <a href="/hr/product-category/majice/">Majice</a>
+      <a href="/de/product-category/majice/">Majice</a>
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/bokserice') ? 'active' : ''; ?>">
-      <a href="/hr/product-category/bokserice/">Bokserice</a>
+      <a href="/de/product-category/bokserice/">Bokserice</a>
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/kompleti') ? 'active' : ''; ?>">
-      <a href="/hr/product-category/kompleti/">Kompleti</a>
+      <a href="/de/product-category/kompleti/">Kompleti</a>
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/carape') ? 'active' : ''; ?>">
-      <a href="/hr/product-category/carape/">Čarape</a>
+      <a href="/de/product-category/carape/">Čarape</a>
     </li>
   </ul>
 </nav>

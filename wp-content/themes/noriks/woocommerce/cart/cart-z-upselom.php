@@ -99,8 +99,8 @@ $(this).append('<div class="qty-btn-group"><button type="button" class="qty-btn 
                     </svg>
                   </span>
                   <span class="wc-reserve-note__text">
-                    Molimo, požuri! Netko je upravo naručio jedan od proizvoda u tvojoj košarici. 
-                    Rezervacija vrijedi još samo <strong id="wc-reserve-timer">10:00</strong> minuta.
+                    Bitte beeilen Sie sich. Jemand hat gerade eines der Produkte in Ihrem Warenkorb bestellt.
+                    Ihre Reservierung gilt nur noch <strong id="wc-reserve-timer">10:00</strong> Minuten.
                   </span>
                 </div>
                 
@@ -1220,7 +1220,7 @@ img.emoji {
         }
 
         if (!removeUrl) {
-          alert('Ne mogu ukloniti proizvod (ne mogu pronaći remove link u košarici).');
+          alert('Produkt kann nicht entfernt werden (Entfernungslink im Warenkorb wurde nicht gefunden).');
           checkbox.checked = true;
           syncAddedUI(true);
           setBusy(false);
@@ -1303,4 +1303,3 @@ img.emoji {
 
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
-

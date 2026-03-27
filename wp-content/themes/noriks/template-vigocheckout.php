@@ -666,7 +666,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <h3 class="ql-align-justify"><strong>xi. Platforma za rješavanje sporova</strong></h3>
 <p class="ql-align-justify">U skladu s pravnim standardima, tvrtka HS plus d.o.o. ne priznaje nijednog pružatelja usluga izvansudskog rješavanja potrošačkih sporova kao pružatelja koji je ovlašten rješavati potrošačke sporove koje potrošači mogu pokrenuti na temelju izvansudske nagodbe Zakona o potrošačkim sporovima.</p>
 <p class="ql-align-justify">Platforma za rješavanje sporova dostupna je na stranici&nbsp;<a href="https://ec.europa.eu/consumers/odr/">http://ec.europa.eu/consumers/odr/</a>.</p>
-<p class="ql-align-justify">Više informacija o platformi za rješavanje sporova potražite na <a href="https://ec.europa.eu/commission/presscorner/detail/hr/MEMO_13_193">ec.europa.eu</a>.</p>
+<p class="ql-align-justify">Više informacija o platformi za rješavanje sporova potražite na <a href="https://ec.europa.eu/commission/presscorner/detail/de/MEMO_13_193">ec.europa.eu</a>.</p>
 <p class="ql-align-justify">
 <h2 class="ql-align-justify"><strong>3. KOMUNIKACIJA</strong></h2>
 <p class="ql-align-justify">Tvrtka će se obratiti korisniku samo s pomoću daljinske komunikacije ako je to potrebno za izvršavanje narudžbe.</p>
@@ -927,7 +927,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <h3 class="ql-align-justify"><strong>xi. Platforma za rješavanje sporova</strong></h3>
 <p class="ql-align-justify">U skladu s pravnim standardima, tvrtka HS plus d.o.o. ne priznaje nijednog pružatelja usluga izvansudskog rješavanja potrošačkih sporova kao pružatelja koji je ovlašten rješavati potrošačke sporove koje potrošači mogu pokrenuti na temelju izvansudske nagodbe Zakona o potrošačkim sporovima.</p>
 <p class="ql-align-justify">Platforma za rješavanje sporova dostupna je na stranici&nbsp;<a href="https://ec.europa.eu/consumers/odr/">http://ec.europa.eu/consumers/odr/</a>.</p>
-<p class="ql-align-justify">Više informacija o platformi za rješavanje sporova potražite na <a href="https://ec.europa.eu/commission/presscorner/detail/hr/MEMO_13_193">ec.europa.eu</a>.</p>
+<p class="ql-align-justify">Više informacija o platformi za rješavanje sporova potražite na <a href="https://ec.europa.eu/commission/presscorner/detail/de/MEMO_13_193">ec.europa.eu</a>.</p>
 <p class="ql-align-justify">
 <h2 class="ql-align-justify"><strong>3. KOMUNIKACIJA</strong></h2>
 <p class="ql-align-justify">Tvrtka će se obratiti korisniku samo s pomoću daljinske komunikacije ako je to potrebno za izvršavanje narudžbe.</p>

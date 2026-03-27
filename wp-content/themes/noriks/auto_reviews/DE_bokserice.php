@@ -1,0 +1,23 @@
+<?php
+$auto_reviews_en = array(
+    array("name" => "Luca M.", "text" => "Die Boxer behalten auch nach vielen Waeschen ihre Form."),
+    array("name" => "Jonas P.", "text" => "Weicher Stoff, nichts kratzt und nichts drueckt."),
+    array("name" => "David S.", "text" => "Sehr bequem fuer den ganzen Tag, ich merke sie kaum."),
+    array("name" => "Timo R.", "text" => "Der Bund sitzt fest, aber schneidet nicht ein."),
+    array("name" => "Felix D.", "text" => "Atmungsaktiv und leicht, perfekt fuer Alltag und Training."),
+    array("name" => "Leon K.", "text" => "Bleiben auch nach mehreren Waeschen sauber in Form."),
+    array("name" => "Patrick C.", "text" => "Angenehm auf der Haut und ohne stoerende Naehte."),
+    array("name" => "Marco V.", "text" => "Auch nach einem langen Tag sitzt alles noch da, wo es soll."),
+    array("name" => "Robin L.", "text" => "Fuehlen sich direkt hochwertig an, sobald man sie in der Hand hat."),
+    array("name" => "Nico G.", "text" => "Kein Ausleiern, kein Verrutschen, einfach bequem."),
+    array("name" => "Sebastian B.", "text" => "Toller Schnitt, liegt gut an, ohne zu eng zu sein."),
+    array("name" => "Florian J.", "text" => "Die Beine rollen nicht hoch, grosser Pluspunkt."),
+    array("name" => "Matthias S.", "text" => "Der Stoff atmet gut und bleibt angenehm trocken."),
+    array("name" => "Dennis K.", "text" => "Sehr sauber verarbeitet und wirkt langlebig."),
+    array("name" => "Kevin H.", "text" => "Preis-Leistung ist wirklich stark."),
+    array("name" => "Tobias N.", "text" => "Sitzen auch gut, wenn man zwischen zwei Groessen liegt."),
+    array("name" => "Andreas M.", "text" => "Ideal fuer Arbeit und Sport, ich trage kaum noch andere."),
+    array("name" => "Lennart B.", "text" => "Sehr bequem, selbst bei langem Sitzen im Buero."),
+    array("name" => "Simon Z.", "text" => "Keine Irritationen, auch nicht an warmen Tagen."),
+    array("name" => "Benedikt F.", "text" => "Einmal probiert und direkt weitere Paare bestellt."),
+);

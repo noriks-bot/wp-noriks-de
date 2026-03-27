@@ -424,7 +424,7 @@ $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product
 $boxers_image_url   = trailingslashit(get_template_directory_uri()) . 'lander2/images/noriks_boxers_gif_1.gif';
 
 if (!$target_product_url) {
-    $target_product_url = home_url('/hr/product/noriks-majica/');
+    $target_product_url = home_url('/de/product/noriks-majica/');
 }
 
 if (!$target_product_id) {

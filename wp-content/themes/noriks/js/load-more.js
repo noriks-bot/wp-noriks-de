@@ -26,7 +26,7 @@ jQuery(function($) {
                     if (page >= maxPage) {
                         $('#load-more').hide();
                     } else {
-                        $('#load-more').text('Prikaži više');
+                        $('#load-more').text('Mehr anzeigen');
                     }
                 } else {
                     $('#load-more').hide();
@@ -34,7 +34,7 @@ jQuery(function($) {
                 loading = false;
             },
             error: function() {
-                $('#load-more').text('Error. Try again');
+                $('#load-more').text('Fehler. Bitte erneut versuchen');
                 loading = false;
             }
         });

@@ -1,0 +1,23 @@
+<?php
+$auto_reviews_en = array(
+    array("name" => "Lukas M.", "text" => "Die Farbe bleibt auch nach vielen Waeschen satt und gleichmaessig."),
+    array("name" => "Tobias H.", "text" => "Das Noriks Shirt hat mich positiv ueberrascht. Der Stoff ist weich, sitzt sauber und traegt sich den ganzen Tag angenehm."),
+    array("name" => "Daniel K.", "text" => "Sieht hochwertig aus und fuehlt sich auch so an."),
+    array("name" => "Martin S.", "text" => "Der Schnitt sitzt modern, ohne einzuengen."),
+    array("name" => "Jonas R.", "text" => "Genau so ein Basic habe ich lange gesucht."),
+    array("name" => "Felix T.", "text" => "Leicht, bequem und trotzdem blickdicht."),
+    array("name" => "Kevin B.", "text" => "Passt sowohl im Buero als auch in der Freizeit."),
+    array("name" => "Marco P.", "text" => "Auch nach mehreren Waeschen bleibt die Form stabil."),
+    array("name" => "Simon W.", "text" => "Der Stoff kratzt nicht und wirkt wirklich hochwertig."),
+    array("name" => "Jan D.", "text" => "Angenehm auf der Haut und sehr gut kombinierbar."),
+    array("name" => "Nico F.", "text" => "Laesst sich super tragen und sieht deutlich teurer aus."),
+    array("name" => "David L.", "text" => "Bleibt den ganzen Tag bequem und verrutscht nicht."),
+    array("name" => "Leon G.", "text" => "Sehr gutes Verhaeltnis von Preis und Qualitaet."),
+    array("name" => "Patrick E.", "text" => "Minimalistisch, sauber verarbeitet und alltagstauglich."),
+    array("name" => "Sebastian V.", "text" => "Trocknet schnell und ist ideal fuer Reisen."),
+    array("name" => "Robin A.", "text" => "Gute Laenge, auch fuer groeessere Maenner."),
+    array("name" => "Tim N.", "text" => "Bleibt auch nach einem langen Tag frisch und bequem."),
+    array("name" => "Benedikt J.", "text" => "Die Passform ist wirklich gelungen, nicht zu eng und nicht zu weit."),
+    array("name" => "Florian U.", "text" => "Wurde sofort eines meiner meistgetragenen Shirts."),
+    array("name" => "Matthias Z.", "text" => "Schlicht, bequem und genau richtig fuer jeden Tag."),
+);
