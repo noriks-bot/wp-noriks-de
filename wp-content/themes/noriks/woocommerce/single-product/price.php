@@ -158,10 +158,10 @@ if( get_field('multipack_option_1', get_the_ID())  == true  ) {
 
   <?php
   
-// Check if current product is in category "singles-boxers"
-$is_singles_boxers = has_term( '1-komad-bokserice', 'product_cat', $current_product_id );
+// Check if current product is in the single boxershorts category.
+$is_singles_boxers = has_term( array( '1-komad-bokserice', 'single-boxershorts' ), 'product_cat', $current_product_id );
 
-$is_singles_majice = has_term( '1-komad-majice', 'product_cat', $current_product_id );
+$is_singles_majice = has_term( array( '1-komad-majice', 'single-t-shirts' ), 'product_cat', $current_product_id );
 
 
 
@@ -174,7 +174,7 @@ if ( $is_singles_boxers ) {
 
 
 <?php
-    // Query products from category "singles-boxers"
+    // Query products from the single boxershorts category.
     $args = array(
         'post_type'      => 'product',
         'posts_per_page' => -1,
@@ -182,7 +182,7 @@ if ( $is_singles_boxers ) {
             array(
                 'taxonomy' => 'product_cat',
                 'field'    => 'slug',
-                'terms'    => 'singles-boxers',
+                'terms'    => array( 'singles-boxers', '1-komad-bokserice', 'single-boxershorts' ),
             ),
         ),
         'orderby' => 'date',
@@ -199,7 +199,7 @@ if ( $is_singles_boxers ) {
 
 <?php
 
-    // Default → Query products from category "singles"
+    // Default -> query products from the single t-shirts category.
     $args = array(
         'post_type'      => 'product',
         'posts_per_page' => -1,
@@ -207,7 +207,7 @@ if ( $is_singles_boxers ) {
             array(
                 'taxonomy' => 'product_cat',
                 'field'    => 'slug',
-                'terms'    => 'singles',
+                'terms'    => array( 'singles', '1-komad-majice', 'single-t-shirts' ),
             ),
         ),
         'orderby' => 'date',

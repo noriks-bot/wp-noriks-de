@@ -1,6 +1,6 @@
 
 <?php 
-if (  has_term( array( 'starter-paketi','orto-starter' ), 'product_cat', get_the_id() )  )   : 
+if ( noriks_has_product_cat( 'starter', get_the_id() ) )   : 
 ?>
 
 
@@ -195,7 +195,7 @@ Aber der erste Schritt ist genau dieser: wenig Risiko, klarer Eindruck.
 
 
 <?php 
-if (  has_term( array( 'majice', 'orto-majice' ), 'product_cat', get_the_id() )  ||  has_term( 'black-friday', 'product_cat', get_the_id() )) : 
+if ( noriks_has_product_cat( 'tshirts', get_the_id() ) || has_term( 'black-friday', 'product_cat', get_the_id() ) ) : 
 ?>
 
 
@@ -362,7 +362,7 @@ if (  has_term( array( 'majice', 'orto-majice' ), 'product_cat', get_the_id() ) 
 
 <!-- here we include new file BOXERIRICE-->
 
-<?php if ( has_term( array( 'bokserice', 'bokserice-sastavi-paket',  'orto-bokserice' ), 'product_cat', get_the_ID() )  && !has_term( 'black-friday', 'product_cat', get_the_ID() ) ): ?>
+<?php if ( noriks_has_product_cat( 'boxers', get_the_ID() ) && !has_term( 'black-friday', 'product_cat', get_the_ID() ) ): ?>
 
 
 
@@ -559,15 +559,15 @@ endif;
 
 $products = array();
 
-// If current product is in category 'bokserice' → load all products from that category
-if ( has_term( array( 'bokserice', 'orto-bokserice', 'bokserice-sastavi-paket' ), 'product_cat', get_the_ID() ) ) {
+// If current product is in the boxershorts group, load matching products.
+if ( noriks_has_product_cat( 'boxers', get_the_ID() ) ) {
 
-    // Get all products from category 'bokserice'
+    // Get all products from the boxershorts category group.
     $wc_products = wc_get_products( array(
         'limit'    => 8,
         'orderby'  => 'menu_order',
         'order'    => 'ASC',
-        'category' => array( 'bokserice' )
+        'category' => noriks_term_group( 'boxers' )
     ) );
 
     if ( ! empty( $wc_products ) ) {
@@ -777,7 +777,7 @@ a:hover {
 
 <section style="display:block; max-width:1440px; margin:0 auto; padding-bottom:30px;" class="most-popular">
   <div class="container" style="padding-left:10px; padding-right:10px;">
-    <h2 class="section-title" style="margin-bottom:20px;">Gotove kombinacije – jednostavno i brzo</h2>
+    <h2 class="section-title" style="margin-bottom:20px;">Fertige Kombinationen, schnell und unkompliziert</h2>
 
     <div class="products-grid slider-mobile">
       <?php foreach ($products as $index => $product): ?>
@@ -859,10 +859,10 @@ a:hover {
 
                 if ($shirt_count != 1):
                   if ($alt_output == false):
-                    $is_boxers = has_term( array( 'bokserice', 'orto-bokserice' , 'bokserice-sastavi-paket' ), 'product_cat', $current_product_id );
+                    $is_boxers = noriks_has_product_cat( 'boxers', $current_product_id );
 
                     if ($is_boxers):
-                      $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " " . "€ po boksericama";
+                      $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " € pro Boxershorts";
                     else:
                       $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " " . get_field("singlepp_priceper_after","options");
                     endif;
@@ -982,7 +982,7 @@ a:hover {
       <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
       <h1 style="color:black;     margin-bottom: 4px;">
           
-          <?php if ( !has_term( array( 'bokserice', 'bokserice-sastavi-paket' ), 'product_cat', get_the_ID() ) ): ?>
+          <?php if ( !noriks_has_product_cat( 'boxers', get_the_ID() ) ): ?>
           
           <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
           
@@ -1061,9 +1061,9 @@ a:hover {
   $reviews_language = get_field("webshop_language", "options");
   if (!$reviews_language) { $reviews_language = "EN"; }
 
-  // Detect if current product belongs to bokserice group
+  // Detect if current product belongs to the boxershorts group.
   $current_product_id = (function_exists('is_product') && is_product()) ? get_queried_object_id() : get_the_id();
-  $is_bokserice_page  = has_term( array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $current_product_id );
+  $is_bokserice_page  = noriks_has_product_cat( 'boxers', $current_product_id );
 
   // Include review pools
   if ( ! $is_bokserice_page )  {
@@ -1133,7 +1133,7 @@ a:hover {
 
       $is_bokserice = false;
       if ( $product_id ) {
-          $is_bokserice = has_term( array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $product_id );
+          $is_bokserice = noriks_has_product_cat( 'boxers', $product_id );
       }
 
       $cache_key = $transient_key . ( $is_bokserice ? '_bokserice' : '_all' );
@@ -1154,13 +1154,13 @@ a:hover {
       ];
 
       if ( $is_bokserice ) {
-          $args['category'] = [ 'bokserice' ];
+          $args['category'] = noriks_term_group( 'boxers' );
       } else {
           $args['tax_query'] = [
               [
                   'taxonomy' => 'product_cat',
                   'field'    => 'slug',
-                  'terms'    => [ 'bokserice' ],
+                  'terms'    => noriks_term_group( 'boxers' ),
                   'operator' => 'NOT IN',
               ],
           ];
@@ -1195,8 +1195,8 @@ a:hover {
    *  - /auto_reviews/bokserice-slike/
    *  - /auto_reviews/majice-slike/
    */
-  function get_review_avatar_pool(string $type = 'majice'): array {
-    $type = ($type === 'bokserice') ? 'bokserice' : 'majice';
+  function get_review_avatar_pool(string $type = 'tshirts'): array {
+    $type = ($type === 'bokserice' || $type === 'boxershorts') ? 'bokserice' : 'majice';
 
     $dir_path = trailingslashit(get_stylesheet_directory()) . 'auto_reviews/' . $type . '-slike/';
     $dir_url  = trailingslashit(get_stylesheet_directory_uri()) . 'auto_reviews/' . $type . '-slike/';

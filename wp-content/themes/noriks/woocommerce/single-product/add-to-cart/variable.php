@@ -42,7 +42,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					
 				//	var_dump($attribute_name);
 						
-						if ( $attribute_name == 'Choose your size' ||  $attribute_name == 'Size' || $attribute_name == 'Groesse'  || $attribute_name == 'Groesse majice'  )     {
+						if ( $attribute_name == 'Choose your size' ||  $attribute_name == 'Size' || $attribute_name == 'Groesse'  || $attribute_name == 'Groesse T-Shirt'  || $attribute_name == 'Groesse Boxershorts' )     {
 						    
 						    
 						    

@@ -12,6 +12,43 @@ include(get_template_directory() . '/functions/options.php');
 include(get_template_directory() . '/functions/single_product_mods.php');
 include(get_template_directory() . '/functions/discounts.php');
 
+function noriks_term_group( $group ) {
+    $groups = array(
+        'tshirts'       => array( 't-shirts', 'majice', 'orto-majice' ),
+        'boxers'        => array( 'boxershorts', 'bokserice', 'orto-bokserice', 'bokserice-sastavi-paket' ),
+        'boxers_build'  => array( 'boxershorts-paket-erstellen', 'bokserice-sastavi-paket' ),
+        'sets'          => array( 'sets', 'kompleti' ),
+        'socks'         => array( 'socken', 'carape', 'zimske-carape' ),
+        'starter'       => array( 'starterpakete', 'starter-paketi', 'orto-starter' ),
+        'ortho_combo'   => array( 'ortho-t-shirt-boxershorts', 'orto-majica-bokserica' ),
+        'ortho'         => array( 'orthopaedisch', 'orto' ),
+    );
+
+    return $groups[ $group ] ?? array();
+}
+
+function noriks_primary_term_slug( $group ) {
+    $group_terms = noriks_term_group( $group );
+    return $group_terms ? $group_terms[0] : '';
+}
+
+function noriks_has_product_cat( $groups, $product_id = 0 ) {
+    $groups = (array) $groups;
+    $terms  = array();
+
+    foreach ( $groups as $group ) {
+        $terms = array_merge( $terms, noriks_term_group( $group ) );
+    }
+
+    $terms = array_values( array_unique( array_filter( $terms ) ) );
+
+    if ( empty( $terms ) ) {
+        return false;
+    }
+
+    return has_term( $terms, 'product_cat', $product_id );
+}
+
 
 
 add_filter( 'woocommerce_gallery_image_size', function() {

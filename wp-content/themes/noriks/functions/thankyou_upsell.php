@@ -247,13 +247,13 @@ function noriks_handle_add_upsell() {
         wp_send_json_error( 'Upsell nur bei Zahlung per Nachnahme verfuegbar' );
     }
     if ( $order->get_status() !== 'primary-hold' ) {
-        wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
+        wp_send_json_error( 'Die Zeit zum Hinzufuegen ist abgelaufen' );
     }
 
     // Time limit: 5 min from order creation (safety check)
     $created = $order->get_date_created();
     if ( $created && ( time() - $created->getTimestamp() ) > 330 ) { // 5.5 min grace
-        wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
+        wp_send_json_error( 'Die Zeit zum Hinzufuegen ist abgelaufen' );
     }
 
     // Get the actual product (variation or simple)
@@ -286,15 +286,16 @@ function noriks_handle_add_upsell() {
         $active_price = (float) $product->get_regular_price();
     }
     if ( ! $active_price ) {
-        wp_send_json_error( 'Cijena proizvoda nije dostupna' );
+        wp_send_json_error( 'Der Produktpreis ist nicht verfuegbar' );
     }
 
     $quantity = max( 1, absint( $_POST['quantity'] ?? 3 ) );
-    // Prices depend on product type (bokserice vs majice)
-    $bokserice_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
-    $majice_prices    = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
-    $is_majice = strpos(strtolower($product->get_name()), 'majic') !== false;
-    $qty_prices = $is_majice ? $majice_prices : $bokserice_prices;
+    // Prices depend on product type (boxershorts vs t-shirts)
+    $boxershorts_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
+    $tshirt_prices      = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
+    $product_name_lc    = strtolower( $product->get_name() );
+    $is_tshirt          = strpos( $product_name_lc, 'majic' ) !== false || strpos( $product_name_lc, 'shirt' ) !== false;
+    $qty_prices         = $is_tshirt ? $tshirt_prices : $boxershorts_prices;
     $total_price = isset( $qty_prices[$quantity] ) ? $qty_prices[$quantity] : $active_price;
     $upsell_price = $total_price / $quantity;
 
@@ -317,7 +318,7 @@ function noriks_handle_add_upsell() {
 
     $order->add_order_note(
         sprintf(
-            'Thank you upsell: %s dodano s 50%% popustom — akcijska cijena: %s, upsell cijena: %s',
+            'Thank-you-Upsell: %s mit 50%% Rabatt hinzugefuegt - Aktionspreis: %s, Upsell-Preis: %s',
             $product->get_name(),
             wc_price( $active_price ),
             wc_price( $upsell_price )
@@ -325,7 +326,7 @@ function noriks_handle_add_upsell() {
     );
 
     wp_send_json_success( array(
-        'message'      => 'Dodano',
+        'message'      => 'Hinzugefuegt',
         'product_name' => $product->get_name(),
         'upsell_price' => $upsell_price,
         'total'        => $order->get_formatted_order_total(),

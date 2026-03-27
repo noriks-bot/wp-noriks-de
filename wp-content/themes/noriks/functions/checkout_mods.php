@@ -474,7 +474,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_email']['label'] = 'E-Mail-Adresse';
     $fields['billing']['billing_email']['placeholder'] = 'E-Mail-Adresse';
     /* Description injected via JS to survive update_checkout AJAX re-renders */
-    // $fields['billing']['billing_email']['description'] = 'Za potvrdu narudžbe i praćenje pošiljke';
+    // $fields['billing']['billing_email']['description'] = 'Zur Bestellbestaetigung und Sendungsverfolgung';
     $fields['billing']['billing_email']['required'] = true;
     $fields['billing']['billing_country']['default'] = 'HR';
     unset( $fields['billing']['billing_company'] );
@@ -650,7 +650,7 @@ add_filter('woocommerce_checkout_posted_data', function($data){
 });
 
 /**
- * Validate billing_address_2 (kućni broj) is required
+ * Validate billing_address_2 (house number) is required
  */
 add_action('woocommerce_checkout_process', function(){
     if ( empty( $_POST['billing_address_2'] ) ) {

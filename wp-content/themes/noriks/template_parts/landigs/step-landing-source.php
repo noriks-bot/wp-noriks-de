@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="sl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta property="og:title" content="Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE">
-<meta property="og:description" content="Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami
+<meta property="og:title" content="Orthopaedische Einlegesohlen mit Massagepunkten | STEPEASE">
+<meta property="og:description" content="Orthopaedische Einlegesohlen mit Massagepunkten
 ">
 <meta property="og:image" content="https://ortowp.noriks.com/app/uploads/2025/10/STEPEASE-3831127616552-EN-9__171025.jpg">
 <script>window.noZensmooth = true</script>
@@ -79,7 +79,7 @@ posthog.init('phc_xPISlrzmvdEyzol4A16rpFgFQkuK4rvXHziyZiRz9uT',{api_host:'https:
     
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE</title>
+	<title>Orthopaedische Einlegesohlen mit Massagepunkten | STEPEASE</title>
 	<style>.quantity-banner.individual-countries {display: none;}</style>
 	<style>
 /* Auto shared resourse - "Cart CSS" */
@@ -8738,7 +8738,7 @@ setDeliveryDate();
 			<div class="container">
 				<div class="sct-experts__content">
 					<div class="sct-experts__descr">
-						<h2 class="sct-experts__title">Entdecken Sie, warum <span class="accent">Experten</span> STEPEASE empfehlen</h2>
+						<h2 class="sct-experts__title">Entdecken Sie, warum <span class="accent">Experten</span> NORIKS empfehlen</h2>
 						<!-- <p class="sct-experts__text"></p> -->
 						<div class="sct-experts__card">
 							<div class="loockat-card">
@@ -8751,7 +8751,7 @@ setDeliveryDate();
 								<div class="loockat-card__info">
 									<!-- <img class="loockat-card__rating-img" src="assets/img/icons/stars-v2-5.svg" alt=""> -->
 									<h4 class="loockat-card__title">Gezielte Entlastung</h4>
-									<p class="loockat-card__text">Als Podologe mit langjaehriger Erfahrung in der Behandlung von Beschwerden wie Senkfuss und Plantarfasziitis empfehle ich die orthopaedischen Einlegesohlen mit Massagepunkten STEPEASE. Ihr durchdachtes Design stuetzt das Fussgewoelbe gezielt, verteilt den Druck gleichmaessig und reduziert die Belastung der Plantarfaszie. Bei regelmaessiger Anwendung berichten Patienten ueber eine deutliche Linderung ihrer Beschwerden. Ich empfehle STEPEASE mit voller Ueberzeugung als unverzichtbare Ergaenzung fuer den Alltag.</p>
+									<p class="loockat-card__text">Als Podologe mit langjaehriger Erfahrung in der Behandlung von Beschwerden wie Senkfuss und Plantarfasziitis empfehle ich die orthopaedischen Einlegesohlen mit Massagepunkten NORIKS. Das durchdachte Design sorgt fuer hohen Komfort im Alltag, angenehmen Sitz und ein dauerhaft gutes Tragegefuehl. Bei regelmaessiger Nutzung berichten Kunden ueber spuerbar mehr Komfort. Ich empfehle NORIKS mit voller Ueberzeugung als wertvolle Ergaenzung fuer den Alltag.</p>
 									<span class="loockat-card__name">Dr. Tomaz Novak - Podologe</span>
 								</div>
 							</div>
@@ -8766,7 +8766,7 @@ setDeliveryDate();
 				<div class="sct-ebook__content">
 					<div class="sct-ebook__top">
 						<div class="sct-ebook__top-image_box">
-							<div class="sct-ebook__top-image"><img src="https://images.hs-plus.com/assets/shared-images/42c652c613426_batch_stepease_cover_SI.jpg"></div>
+							<div class="sct-ebook__top-image"><img src="https://noriks.com/de/wp-content/uploads/2025/09/black-1.jpg"></div>
 						</div>
 						<div class="sct-ebook__top-content">
 							<h2 class="sct-ebook__title">Angebot eines <span class="accent">kostenlosen</span> E-Books</h2>

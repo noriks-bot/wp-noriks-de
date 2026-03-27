@@ -180,7 +180,7 @@ get_header(); ?>
 
   <div class="collections__grid">
     <!-- Card 1 -->
-    <a class="collection-card" href="/de/product-category/majice/">
+    <a class="collection-card" href="/de/product-category/t-shirts/">
       <div class="collection-card__media">
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/noriks-majice.jpeg"
@@ -203,7 +203,7 @@ get_header(); ?>
     </a>
 
     <!-- Card 2 -->
-    <a class="collection-card" href="/de/product-category/bokserice/">
+    <a class="collection-card" href="/de/product-category/boxershorts/">
       <div class="collection-card__media">
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/noriks-boksarice.jpeg"
@@ -227,7 +227,7 @@ get_header(); ?>
     </a>
 
     <!-- Card 3 -->
-    <a class="collection-card" href="/de/product-category/kompleti/">
+    <a class="collection-card" href="/de/product-category/sets/">
       <div class="collection-card__media">
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/noriks-kompleti.jpeg"
@@ -251,7 +251,7 @@ Maximaler Vorteil im Paket.
     </a>
     
     <!-- Card 3 -->
-    <a class="collection-card" href="/de/product-category/starter-paketi/">
+    <a class="collection-card" href="/de/product-category/starterpakete/">
       <div class="collection-card__media">
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/starter-paket_.jpeg"
@@ -267,7 +267,7 @@ Maximaler Vorteil im Paket.
            
           </div>
           <p class="collection-card__desc">
-Probaj NORIKS po boljoj cijeni.
+           Teste NORIKS zum besseren Einstiegspreis.
 
           </p>
         </div>
@@ -669,13 +669,13 @@ a:hover {
                   if ( $alt_output == false ):
 
                     $current_product_id = $product->get_id();
-                    $is_boxers = has_term( array('bokserice','bokserice-sastavi-paket'), 'product_cat', $current_product_id );
+                    $is_boxers = noriks_has_product_cat( 'boxers', $current_product_id );
 
                     if ( $is_boxers ):
                       if ( has_term('black-friday', 'product_cat', $current_product_id ) ):
                         $topseler_text = "Black Friday ";
                       else:
-                        $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " " . "€ po boksericama";
+                        $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " € pro Boxershorts";
                       endif;
                     else:
                       $topseler_text = get_field("singlepp_priceper_before","options") . " " . $tmp_price . " " . get_field("singlepp_priceper_after","options");
@@ -873,5 +873,4 @@ a:hover {
 	</div><!-- #primary -->
 <?php
 get_footer();
-
 

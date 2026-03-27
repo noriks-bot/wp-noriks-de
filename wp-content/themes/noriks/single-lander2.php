@@ -223,7 +223,7 @@ get_header();
                         ">
                         <p class="announcement-bar__message">
                           <span>
-                            <a style="font-size: 1.2rem; "href="https://noriks.com/de/product-category/bokserice/" title="">NORIKS • Komfort und Gesundheit an erster Stelle</a>
+                            <a style="font-size: 1.2rem; "href="https://noriks.com/de/product-category/boxershorts/" title="">NORIKS • Komfort und Gesundheit an erster Stelle</a>
                           </span>
                         </p>
                       </div>
@@ -253,7 +253,7 @@ get_header();
                         ">
                         <p class="announcement-bar__message">
                           <span>
-                            <a style="margin-top: 15px; padding-bottom: 5px;display: block; color: #121212; font-size:1.1rem;" href="https://noriks.com/de/product-category/bokserice/" title="">Artikel Men Cub › Maennergesundheit › Unterwaesche</a>
+                            <a style="margin-top: 15px; padding-bottom: 5px;display: block; color: #121212; font-size:1.1rem;" href="https://noriks.com/de/product-category/boxershorts/" title="">Men Club Artikel › Maennergesundheit › Unterwaesche</a>
                           </span>
                         </p>
                       </div>
@@ -406,7 +406,7 @@ get_header();
                     <p>Wenn du derzeit Baumwoll- oder andere herkoemmliche Boxershorts traegst, lies die Informationen auf dieser Seite aufmerksam durch.</p>
                     <p>Wenn du noch immer klassische Baumwolle oder, noch schlimmer, synthetische Unterwaesche aus Polyester traegst, riskierst du ernsthafte Gesundheitsprobleme.</p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -434,7 +434,7 @@ get_header();
                     </p>
                     <p>Der Intimbereich ist bereits warm und feucht. Herkoemmliche Stoffe speichern Hitze und Feuchtigkeit und schaffen damit ideale Bedingungen fuer Bakterien und Pilze. Dieser Hitzestau kann die Spermienproduktion verringern und das Wachstum von Mikroorganismen foerdern.</p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -469,7 +469,7 @@ get_header();
                       <em>NORIKS Boxershorts mit Belueftung und ultraweichem Modal helfen dabei, die Haut kuehl, trocken und geschuetzt zu halten.</em>
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -612,7 +612,7 @@ get_header();
                       <strong>Darum sind NORIKS Boxershorts nicht nur Luxus, sondern eine gesundheitlich sinnvolle Entscheidung.</strong>
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -640,7 +640,7 @@ get_header();
                     <p>Der Intimbereich ist ohnehin warm und feucht. Herkoemmliche Baumwolle und Polyester speichern Hitze und Feuchtigkeit - genau das, was Bakterien und Pilze fuer ihre Vermehrung brauchen.</p>
                     <p>Hitzestau kann die Spermienbildung verringern und sich negativ auf die maennliche Fortpflanzungsgesundheit auswirken.</p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> NORIKS kaufen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> NORIKS kaufen </a>
                 </div>
               </div>
             </div>
@@ -674,7 +674,7 @@ get_header();
                       <strong>-Hitzepickel (Miliaria):</strong> Verstopfte Schweissdruesengaenge fuehren zu schmerzhaften, juckenden Erhebungen, die sich beim Kratzen entzuenden koennen.
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -704,7 +704,7 @@ get_header();
                       <strong>Das ultraweiche NORIKS</strong> Modal ist glatter und feiner als Baumwolle, reduziert Reibung und schuetzt empfindliche Haut.
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> NORIKS bestellen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> NORIKS bestellen </a>
                 </div>
               </div>
             </div>
@@ -752,7 +752,7 @@ get_header();
                       <li>Aussergewoehnlicher Komfort und hohe Atmungsaktivitaet</li>
                     </ul>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Jetzt bestellen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> Jetzt bestellen </a>
                 </div>
               </div>
             </div>
@@ -792,7 +792,7 @@ get_header();
 Individuelle Ergebnisse koennen variieren. </em>
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> NORIKS bestellen </a>
+                  <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary"> NORIKS bestellen </a>
                 </div>
               </div>
             </div>
@@ -838,7 +838,7 @@ Individuelle Ergebnisse koennen variieren. </em>
                 </h2>
               </div>
               <div style="margin-top: 15px;" class="rich-text__buttons">
-                <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary">Jetzt bestellen und deine Gesundheit schuetzen</a>
+                <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary">Jetzt bestellen und deine Gesundheit schuetzen</a>
               </div>
               <div class="rich-text__text rte">
                 <p>Mehr als 2.225.000 Maenner sind bereits zu NORIKS gewechselt. Warte nicht, bis Ausschlaege, Infektionen oder unangenehme Gerueche auftreten.</p>
@@ -968,7 +968,7 @@ Individuelle Ergebnisse koennen variieren. </em>
                 </p>
               </div>
               <div class="rich-text__buttons">
-                <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary">Verfuegbarkeit pruefen >></a>
+                <a href="https://noriks.com/de/product-category/boxershorts/" class="button button--primary">Verfuegbarkeit pruefen >></a>
               </div>
               <div class="rich-text__text rte">
                 <h6>
@@ -1060,7 +1060,7 @@ Individuelle Ergebnisse koennen variieren. </em>
                         ">
                         <p class="announcement-bar__message">
                           <span>
-                            <a style="font-size: 1.2rem;" href="https://noriks.com/de/product-category/bokserice/" title="">70% popusta danas → 30-dnevno probno razdoblje bez rizika</a>
+                            <a style="font-size: 1.2rem;" href="https://noriks.com/de/product-category/boxershorts/" title="">70 % Rabatt heute -> 30 Tage risikofrei testen</a>
                           </span>
                         </p>
                       </div>

@@ -17,8 +17,8 @@ function my_add_price_to_button_text( $text, $prod = null ) {
         }
     }
 
-    // If product is in category "orto", return default text (unchanged)
-    if ( has_term( 'orto', 'product_cat', $prod->get_id() ) ) {
+    // Leave orthopaedic category products untouched.
+    if ( noriks_has_product_cat( 'ortho', $prod->get_id() ) ) {
         return $text;
     }
 
@@ -62,7 +62,7 @@ add_action( 'wp_footer', function () {
 	document.addEventListener('DOMContentLoaded', function () {
 	  var btn = document.querySelector('.storefront-sticky-add-to-cart__content-button');
 	  if (!btn) return;
-	  btn.textContent = 'Natrag na odabir';
+	  btn.textContent = 'Zurueck zur Auswahl';
 	  btn.setAttribute('href', '#title-buy-now'); // put your desired URL here
 	});
 	</script>
@@ -104,5 +104,4 @@ add_filter( 'woocommerce_single_product_carousel_options', function ( $options )
 
     return $options;
 } );
-
 

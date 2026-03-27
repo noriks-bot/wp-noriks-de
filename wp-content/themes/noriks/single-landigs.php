@@ -368,8 +368,8 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
                 'var relatedProductsData = [{"id":"rp-0","name":"NORIKS schwarze Boxershorts","description":"Weiche, elastische und bequeme Boxershorts fuer den ganzen Tag.","price":7.99,"originalPrice":15.99,"discountPercentage":50,"wcId":981495,"imageUrl":"' . esc_js($boxers_image_url) . '"}];',
             ),
             array(
-                '<img class="related-product-image" src="' . esc_url($boxers_image_url) . '" alt="NORIKS bokserice">',
-                'NORIKS crne bokserice',
+                '<img class="related-product-image" src="' . esc_url($boxers_image_url) . '" alt="NORIKS Boxershorts">',
+                'NORIKS schwarze Boxershorts',
                 'Weiche, elastische und bequeme Boxershorts fuer den ganzen Tag.',
                 '7.99&#x20AC;',
                 '15.99&#x20AC;',
@@ -386,31 +386,31 @@ if (!function_exists('noriks_customize_step_landing_markup')) {
 
         $text_replacements = array(
             'STEPEASE - OrthoStep' => 'NORIKS - NORIKS',
-            'Ortopedski vlo&#x17E;ki z masa&#x17E;nimi to&#x10D;kami | STEPEASE' => 'NORIKS MAJICA | NORIKS',
-            'Ortopedski vložki z masažnimi točkami | STEPEASE' => 'NORIKS T-SHIRT | NORIKS',
-            'STEPEASE&#xA0;|&#xA0;Masa&#x17E;ni vlo&#x17E;ki' => 'NORIKS&#xA0;|&#xA0;Majica',
-            'STEPEASE | Masažni vložki' => 'NORIKS | T-Shirt',
-            '93% strank je ocenilo Stepease z odličnostjo' => '93 % der Kunden bewerten NORIKS mit ausgezeichnet',
-            'Ali se STEPEASE prilegajo mojim &#x10D;evljem?' => 'Passt das NORIKS T-Shirt zu mir?',
-            'Kako dolgo zdr&#x17E;ijo vlo&#x17E;ki STEPEASE?' => 'Wie lange halten NORIKS T-Shirts?',
-            'Kako dolgo zdržijo vložki STEPEASE?' => 'Wie lange halten NORIKS T-Shirts?',
-            'Spoznaj vlo&#x17E;ke STEPEASE &#x2013; popolno udobje za tvoja stopala.' => 'Entdecken Sie NORIKS fuer taeglichen Komfort.',
-            'Razlika, ki jo prina&#x161;a <span class="accent">STEPEASE</span>' => 'Der Unterschied mit <span class="accent">NORIKS</span>',
-            'Poglejte, kako drugi <span class="accent">obu&#x17E;ujejo svoje vlo&#x17E;ke STEPEASE</span>' => 'Sehen Sie, wie andere ihr <span class="accent">NORIKS T-Shirt tragen</span>',
-            'Kaj dela STEPEASE tako <span class="accent">posebne</span>?' => 'Was macht NORIKS so <span class="accent">besonders</span>?',
-            'Odkrijte, zakaj <span class="accent">strokovnjaki priporo&#x10D;ajo</span> STEPEASE' => 'Entdecken Sie, warum <span class="accent">Kunden</span> NORIKS empfehlen',
-            'Spletna trgovina Stepease' => 'Spletna trgovina NORIKS',
+            'Ortophedische Einlegesohlen mit Massagepunkten | STEPEASE' => 'NORIKS T-SHIRT | NORIKS',
+            'Orthopaedische Einlegesohlen mit Massagepunkten | STEPEASE' => 'NORIKS T-SHIRT | NORIKS',
+            'STEPEASE&#xA0;|&#xA0;Massage-Einlegesohlen' => 'NORIKS&#xA0;|&#xA0;T-Shirt',
+            'STEPEASE | Massage-Einlegesohlen' => 'NORIKS | T-Shirt',
+            '93 % der Kunden bewerten Stepease mit ausgezeichnet' => '93 % der Kunden bewerten NORIKS mit ausgezeichnet',
+            'Passen STEPEASE in meine Schuhe?' => 'Passt das NORIKS T-Shirt zu mir?',
+            'Wie lange halten STEPEASE Einlegesohlen?' => 'Wie lange halten NORIKS T-Shirts?',
+            'Wie lange halten STEPEASE Einlegesohlen?' => 'Wie lange halten NORIKS T-Shirts?',
+            'Entdecken Sie STEPEASE - perfekter Komfort fuer Ihre Fuesse.' => 'Entdecken Sie NORIKS fuer taeglichen Komfort.',
+            'Der Unterschied mit <span class="accent">STEPEASE</span>' => 'Der Unterschied mit <span class="accent">NORIKS</span>',
+            'Sehen Sie, wie andere ihre <span class="accent">STEPEASE Einlegesohlen tragen</span>' => 'Sehen Sie, wie andere ihr <span class="accent">NORIKS T-Shirt tragen</span>',
+            'Was macht STEPEASE so <span class="accent">besonders</span>?' => 'Was macht NORIKS so <span class="accent">besonders</span>?',
+            'Entdecken Sie, warum <span class="accent">Experten</span> STEPEASE empfehlen' => 'Entdecken Sie, warum <span class="accent">Kunden</span> NORIKS empfehlen',
+            'Stepease Onlineshop' => 'NORIKS Onlineshop',
             'var brand = \'Stepease\';' => 'var brand = \'NORIKS\';',
             'var brandSettings = {"name":"Stepease"};' => 'var brandSettings = {"name":"NORIKS"};',
-            'OrthoStep &raquo; STEPEASE Vir komentarjev' => 'NORIKS &raquo; NORIKS Vir komentarjev',
+            'OrthoStep &raquo; STEPEASE Kommentarquelle' => 'NORIKS &raquo; NORIKS Kommentarquelle',
             'name":"STEPEASE"' => 'name":"NORIKS"',
             'name":"STEPEASE - OrthoStep"' => 'name":"NORIKS - NORIKS"',
-            'Ortopedski vlo&#x17E;ki' => 'Majica',
-            'Ortopedski vložki' => 'T-Shirt',
-            'vlo&#x17E;ki' => 'majice',
-            'Vlo&#x17E;ki' => 'Majice',
-            'vložki' => 'T-Shirts',
-            'Vložki' => 'T-Shirts',
+            'Orthopaedische Einlegesohlen' => 'T-Shirt',
+            'Orthopaedische Einlegesohlen' => 'T-Shirt',
+            'Einlegesohlen' => 'T-Shirts',
+            'Einlegesohlen' => 'T-Shirts',
+            'einlegesohlen' => 't-shirts',
+            'Einlegesohlen' => 'T-Shirts',
         );
 
         $markup = str_replace(array_keys($text_replacements), array_values($text_replacements), $markup);
@@ -424,7 +424,7 @@ $target_product_id  = (int) get_post_meta(get_the_ID(), '_landigs_target_product
 $boxers_image_url   = trailingslashit(get_template_directory_uri()) . 'lander2/images/noriks_boxers_gif_1.gif';
 
 if (!$target_product_url) {
-    $target_product_url = home_url('/de/product/noriks-majica/');
+    $target_product_url = home_url('/de/product/noriks-t-shirt/');
 }
 
 if (!$target_product_id) {
