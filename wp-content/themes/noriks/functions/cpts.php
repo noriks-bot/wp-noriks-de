@@ -238,11 +238,11 @@ function noriks_render_landigs_meta_box($post) {
     $offer_options      = get_post_meta($post->ID, '_landigs_offer_options', true);
 
     if ($primary_label === '') {
-        $primary_label = 'Boja';
+        $primary_label = 'Farbe';
     }
 
     if ($secondary_label === '') {
-        $secondary_label = 'Veličina';
+        $secondary_label = 'Groesse';
     }
 
     if ($secondary_options === '') {
@@ -261,18 +261,18 @@ function noriks_render_landigs_meta_box($post) {
         $primary_options = implode("\n", array(
             'Crna|#000000',
             'Bijela|#f3f4f6',
-            'Siva|#9ca3af',
+            'Grau|#9ca3af',
             'Tamnoplava|#203240',
-            'Smeđa|#6b4f3a',
+            'Braun|#6b4f3a',
             'Zelena|#556b2f',
         ));
     }
 
     if ($offer_options === '') {
         $offer_options = implode("\n", array(
-            '1|1 majica|Odličan ulazni paket|',
-            '2|2 majice|Najbolji omjer cijene i količine|NAJPOPULARNIJE',
-            '3|3 majice|Najveća ušteda po komadu|',
+            '1|1 T-Shirt|Perfektes Einstiegspaket|',
+            '2|2 T-Shirts|Bestes Preis-Leistungs-Verhaeltnis|AM BELIEBTESTEN',
+            '3|3 T-Shirts|Groesste Ersparnis pro Stueck|',
         ));
     }
 

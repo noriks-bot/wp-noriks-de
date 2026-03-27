@@ -88,7 +88,7 @@ $(this).append('<div class="qty-btn-group"><button type="button" class="qty-btn 
     
     
     <!-- !!!!!!     COUNTDOWN    TIMER   !!! --!>
-                <!-- KOŠARICA – OBAVIJEST O REZERVACIJI -->
+                <!-- WARENKORB - RESERVIERUNGSHINWEIS -->
                 <div class="wc-reserve-note" id="wc-reserve-note" role="status" aria-live="polite">
                   <span class="wc-reserve-note__icon" aria-hidden="true">
                     <!-- ikona "i" -->
@@ -479,7 +479,7 @@ $img_id     = $display_obj->get_image_id();
 $upsell_img = $img_id ? wp_get_attachment_image_url( $img_id, 'woocommerce_thumbnail' ) : wc_placeholder_img_src('woocommerce_thumbnail');
 
 $desc = wp_strip_all_tags( $display_obj->get_short_description() );
-if ( ! $desc ) $desc = 'Odličen dodatek k tvoji narudžbi.';
+if ( ! $desc ) $desc = 'Eine tolle Ergaenzung zu deiner Bestellung.';
 
 $price_pill = wp_strip_all_tags( wc_price( $display_obj->get_price() ) );
 
@@ -875,7 +875,7 @@ img.emoji {
 
         <div class="upsell-actions">
           <button type="button" class="upsell-add-btn" id="upsell-add-btn">
-            <span id="upsell-btn-text"><?php echo $upsell_in_cart ? 'DODANO' : 'Dodaj u košaricu'; ?></span>
+            <span id="upsell-btn-text"><?php echo $upsell_in_cart ? 'HINZUGEFUEGT' : 'In den Warenkorb'; ?></span>
           </button>
 
           <button type="button" class="upsell-remove-btn" id="upsell-remove-btn" <?php echo $upsell_in_cart ? '' : 'style="display:none"'; ?>>
@@ -888,7 +888,7 @@ img.emoji {
 
     <div class="upsell-loader" aria-hidden="true">
       <div class="upsell-loader__dots"><span></span><span></span><span></span></div>
-      <div class="upsell-loader__text">Obrađujem…</div>
+      <div class="upsell-loader__text">Wird verarbeitet...</div>
     </div>
   </div>
 
@@ -958,7 +958,7 @@ img.emoji {
       if (removeBtn) removeBtn.style.display = isAdded ? 'inline-flex' : 'none';
 
       setOptionsDisabled(isAdded);
-      if (btnText) btnText.textContent = isAdded ? 'DODANO' : 'Dodaj u košaricu';
+      if (btnText) btnText.textContent = isAdded ? 'HINZUGEFUEGT' : 'In den Warenkorb';
     }
 
     function clearAttrHiddenInputs(){
@@ -1155,7 +1155,7 @@ img.emoji {
 
           if (type === 'variable') {
             if (!hasAllRequiredSelections()) {
-              alert('Odaberi sve opcije (npr. veličinu) prije dodavanja.');
+              alert('Waehle vor dem Hinzufuegen alle Optionen aus (z. B. die Groesse).');
               checkbox.checked = false;
               syncAddedUI(false);
               setBusy(false);
@@ -1256,7 +1256,7 @@ img.emoji {
 
       } catch(e){
         console.error(e);
-        alert('Nešto je pošlo po zlu. Pogledaj DevTools → Network.');
+        alert('Etwas ist schiefgelaufen. Bitte pruefen Sie DevTools -> Network.');
         checkbox.checked = !checkbox.checked;
         syncAddedUI();
         setBusy(false);

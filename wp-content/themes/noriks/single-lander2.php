@@ -223,7 +223,7 @@ get_header();
                         ">
                         <p class="announcement-bar__message">
                           <span>
-                            <a style="font-size: 1.2rem; "href="https://noriks.com/de/product-category/bokserice/" title="">NORIKS • Udobnost i zdravlje na prvom mjestu</a>
+                            <a style="font-size: 1.2rem; "href="https://noriks.com/de/product-category/bokserice/" title="">NORIKS • Komfort und Gesundheit an erster Stelle</a>
                           </span>
                         </p>
                       </div>
@@ -253,7 +253,7 @@ get_header();
                         ">
                         <p class="announcement-bar__message">
                           <span>
-                            <a style="margin-top: 15px; padding-bottom: 5px;display: block; color: #121212; font-size:1.1rem;" href="https://noriks.com/de/product-category/bokserice/" title="">Članak Men Cub › Muško zdravlje › Donje rublje</a>
+                            <a style="margin-top: 15px; padding-bottom: 5px;display: block; color: #121212; font-size:1.1rem;" href="https://noriks.com/de/product-category/bokserice/" title="">Artikel Men Cub › Maennergesundheit › Unterwaesche</a>
                           </span>
                         </p>
                       </div>
@@ -300,7 +300,7 @@ get_header();
               <div class="rich-text__text rte">
                 <h1 style="margin-top: 20px; font-size: 2.2rem;
     line-height: 1.2;" >
-                  <strong>Tihi ubojica: Skrivena istina o tvojim gaćama i zašto modal bokserice NORIKS čine sve druge opcije nebitnima</strong>
+                  <strong>Der stille Verursacher: Die verborgene Wahrheit ueber deine Unterwaesche und warum NORIKS Modal-Boxershorts alle anderen Optionen uebertreffen</strong>
                 </h1>
               </div>
             </div>
@@ -345,7 +345,7 @@ get_header();
                   </h3>
                   <div class="rte">
                     <p style="color: #303030;">
-                      <strong>Napisao Ivan Horvat • Zadnje ažurirano: 10. listopada 2025</strong>
+                      <strong>Von Ivan Horvat • Zuletzt aktualisiert: 10. Oktober 2025</strong>
                     </p>
                   </div>
                 </div>
@@ -400,13 +400,13 @@ get_header();
               </div>
               <div style="width: 50%;"  class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_Rmp8Af color-custom gradient">
-                  <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"> ČLANAK </p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#2e2a39"> Tvoje donje rublje moglo bi ozbiljno utjecati na tvoje zdravlje upravo sada</h2>
+                  <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"> ARTIKEL </p>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#2e2a39"> Deine Unterwaesche koennte deine Gesundheit schon jetzt ernsthaft beeinflussen</h2>
                   <div class="image-with-text__text rte body">
-                    <p>Ako trenutno nosiš pamučne ili druge uobičajene bokserice, pažljivo pročitaj informacije na ovoj stranici.</p>
-                    <p>Ako još uvijek nosiš tradicionalni pamuk ili, još gore, sintetičko rublje od poliestera, riskiraš ozbiljne zdravstvene probleme.</p>
+                    <p>Wenn du derzeit Baumwoll- oder andere herkoemmliche Boxershorts traegst, lies die Informationen auf dieser Seite aufmerksam durch.</p>
+                    <p>Wenn du noch immer klassische Baumwolle oder, noch schlimmer, synthetische Unterwaesche aus Polyester traegst, riskierst du ernsthafte Gesundheitsprobleme.</p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Provjeri dostupnost </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -427,14 +427,14 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_Rmp8Af color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#2e2a39"> Strašna istina: Što tvoje donje rublje radi tvom tijelu</h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#2e2a39"> Die harte Wahrheit: Was deine Unterwaesche mit deinem Koerper macht</h2>
                   <div class="image-with-text__text rte body">
                     <p>
-                      <strong>1) Zadržavanje topline = Savršeno tlo za bakterije i gljivice</strong>
+                      <strong>1) Hitzestau = perfekter Naehrboden fuer Bakterien und Pilze</strong>
                     </p>
-                    <p>Tvoje preponsko područje je već toplo i vlažno. Tradicionalne tkanine zadržavaju toplinu i vlagu, stvarajući idealno okruženje za razvoj bakterija i gljivica. Ovo nakupljanje topline može smanjiti proizvodnju sperme i potaknuti prekomjerni rast mikroorganizama.</p>
+                    <p>Der Intimbereich ist bereits warm und feucht. Herkoemmliche Stoffe speichern Hitze und Feuchtigkeit und schaffen damit ideale Bedingungen fuer Bakterien und Pilze. Dieser Hitzestau kann die Spermienproduktion verringern und das Wachstum von Mikroorganismen foerdern.</p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Provjeri dostupnost </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -457,19 +457,19 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_Rmp8Af color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#2e2a39">Trenje i loša ventilacija = Oštećenja kože i rizik od infekcija </h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#2e2a39">Reibung und schlechte Belueftung = Hautschaeden und hoeheres Infektionsrisiko </h2>
                   <div class="image-with-text__text rte body">
                     <p>
-                      <strong>2) Trenje i iritacija:</strong>Gruba vlakna mogu s vremenom uzrokovati mikrooštećenja i iritacije.
+                      <strong>2) Reibung und Reizung:</strong>Grobe Fasern koennen mit der Zeit Mikroverletzungen und Reizungen verursachen.
                     </p>
                     <p>
-                      <strong>3) Slaba ventilacija:</strong> Vruće i vlažno okruženje povećava rizik od osipa, infekcija mokraćnog sustava i gljivičnih infekcija.
+                      <strong>3) Schlechte Belueftung:</strong> Eine heisse und feuchte Umgebung erhoeht das Risiko fuer Ausschlaege, Harnwegsinfektionen und Pilzinfektionen.
                     </p>
                     <p>
-                      <em>Bokserice NORIKS s ventilacijom i ultra mekim modal-om pomažu da koža ostane hladna, suha i zaštićena.</em>
+                      <em>NORIKS Boxershorts mit Belueftung und ultraweichem Modal helfen dabei, die Haut kuehl, trocken und geschuetzt zu halten.</em>
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Provjeri dostupnost </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -547,21 +547,21 @@ get_header();
   <div class="accordion-wrapper">
   <div class="accordion">
    <details>
-  <summary>Prije i poslije: Što se mijenja s NORIKS-om?</summary>
+  <summary>Vorher und nachher: Was veraendert sich mit NORIKS?</summary>
   <div class="content">
-    <p><strong>Prije:</strong> Crvena, iziritirana koža; uporni mirisi; ponavljajuće gljivične/bakterijske infekcije; bolni osipi.</p>
-    <p><strong>Poslije:</strong> Zdrava koža bez iritacija; prirodna otpornost na mirise; manji rizik od infekcija; iznimna udobnost i prozračnost.</p>
+    <p><strong>Vorher:</strong> Gerötete, gereizte Haut; hartnaeckige Gerueche; wiederkehrende Pilz- oder Bakterieninfektionen; schmerzhafte Ausschlaege.</p>
+    <p><strong>Nachher:</strong> Gesunde Haut ohne Reizungen; natuerliche Geruchshemmung; geringeres Infektionsrisiko; aussergewoehnlicher Komfort und Atmungsaktivitaet.</p>
   </div>
 </details>
 
 <details>
-  <summary>Zašto je NORIKS jedan od najsigurnijih izbora</summary>
+  <summary>Warum NORIKS eine der sichersten Entscheidungen ist</summary>
   <div class="content">
     <ul>
-      <li><strong>Prirodna antimikrobna zaštita:</strong> bioagenti modala pomažu u borbi protiv bakterija i gljivica.</li>
-      <li><strong>Izvrsna prozračnost:</strong> napredan protok zraka pomaže održavati kožu suhom i hladnom.</li>
-      <li><strong>Iznimna mekoća:</strong> glađa i tanja vlakna smanjuju trenje.</li>
-      <li><strong>Regulacija temperature:</strong> podržava zdravo temperaturno okruženje.</li>
+      <li><strong>Natuerlicher antimikrobieller Schutz:</strong> die natuerlichen Eigenschaften von Modal helfen im Kampf gegen Bakterien und Pilze.</li>
+      <li><strong>Hervorragende Atmungsaktivitaet:</strong> ein verbesserter Luftstrom hilft, die Haut trocken und kuehl zu halten.</li>
+      <li><strong>Aussergewoehnliche Weichheit:</strong> glattere und feinere Fasern reduzieren Reibung.</li>
+      <li><strong>Temperaturregulierung:</strong> unterstuetzt ein gesundes Temperaturgleichgewicht.</li>
     </ul>
   </div>
 </details>
@@ -604,15 +604,15 @@ get_header();
               
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_BXHadv color-custom gradient">
-                  <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"> ČLANAK </p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Tvoje donje rublje moglo bi ozbiljno utjecati na tvoje zdravlje upravo sada </h2>
+                  <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"> ARTIKEL </p>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Deine Unterwaesche koennte deine Gesundheit schon jetzt ernsthaft beeinflussen </h2>
                   <div class="image-with-text__text rte body">
-                    <p>Tradicionalne tkanine poput poliestera ili pamučnih mješavina mogu iritirati osjetljiva područja i stvoriti idealno okruženje za infekcije. Ne radi se samo o udobnosti — radi se o zaštiti tvog tijela od infekcija, oštećenja kože i dugoročnih zdravstvenih problema.</p>
+                    <p>Traditionelle Stoffe wie Polyester oder Baumwollmischungen koennen empfindliche Bereiche reizen und ein ideales Umfeld fuer Infektionen schaffen. Es geht nicht nur um Komfort, sondern darum, deinen Koerper vor Infektionen, Hautschaeden und langfristigen Gesundheitsproblemen zu schuetzen.</p>
                     <p>
-                      <strong>Zato NORIKS bokserice nisu samo luksuz, nego zdravstvena nužnost.</strong>
+                      <strong>Darum sind NORIKS Boxershorts nicht nur Luxus, sondern eine gesundheitlich sinnvolle Entscheidung.</strong>
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Provjeri dostupnost </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -635,12 +635,12 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_BXHadv color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> 1) Zadržavanje topline = Savršeno tlo za bakterije i gljivice </h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> 1) Hitzestau = perfekter Naehrboden fuer Bakterien und Pilze </h2>
                   <div class="image-with-text__text rte body">
-                    <p>Preponsko područje je već toplo i vlažno. Tradicionalni pamuk i poliester zadržavaju toplinu i vlagu — upravo ono što bakterije i gljivice trebaju za razmnožavanje.</p>
-                    <p>Nakupljanje topline može smanjiti stvaranje sperme i negativno utjecati na muško reproduktivno zdravlje.</p>
+                    <p>Der Intimbereich ist ohnehin warm und feucht. Herkoemmliche Baumwolle und Polyester speichern Hitze und Feuchtigkeit - genau das, was Bakterien und Pilze fuer ihre Vermehrung brauchen.</p>
+                    <p>Hitzestau kann die Spermienbildung verringern und sich negativ auf die maennliche Fortpflanzungsgesundheit auswirken.</p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Kupi NORIKS </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> NORIKS kaufen </a>
                 </div>
               </div>
             </div>
@@ -660,21 +660,21 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_BXHadv color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Posljedice zarobljene topline i vlage </h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Folgen von eingeschlossener Hitze und Feuchtigkeit </h2>
                   <div class="image-with-text__text rte body">
                     <p>
-                      <strong>-Infekcije mokraćnog sustava (UTI):</strong> Uzrokovane bakterijama koje se množe u toplom, vlažnom okruženju. Muškarci sa slabijom higijenom ili uskim, nezračnim rubljem u većem su riziku.
+                      <strong>-Harnwegsinfektionen (UTI):</strong> Sie werden durch Bakterien verursacht, die sich in einer warmen, feuchten Umgebung vermehren. Maenner mit schwacher Hygiene oder enger, wenig atmungsaktiver Unterwaesche haben ein hoeheres Risiko.
                     </p>
                     <p>
                       <br>
-                      <strong>-Gljivične infekcije:</strong> Prekomjeran rast gljivica uzrokuje svrbež, peckanje i nelagodu. <br>
+                      <strong>-Pilzinfektionen:</strong> Ein uebermaessiges Pilzwachstum verursacht Juckreiz, Brennen und Unwohlsein. <br>
                     </p>
                     <p>
                       <br>
-                      <strong>-Toplinski osip (miliaria):</strong> Začepljeni kanalići znojnih žlijezda stvaraju bolne, svrbeće izbočine koje se mogu inficirati ako se češu.
+                      <strong>-Hitzepickel (Miliaria):</strong> Verstopfte Schweissdruesengaenge fuehren zu schmerzhaften, juckenden Erhebungen, die sich beim Kratzen entzuenden koennen.
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Provjeri dostupnost </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Verfuegbarkeit pruefen </a>
                 </div>
               </div>
             </div>
@@ -694,17 +694,17 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_BXHadv color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Kako NORIKS pomaže kod oštećenja kože </h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Wie NORIKS bei Hautschaeden hilft </h2>
                   <div class="image-with-text__text rte body">
                     <p>
-                      <strong>Inovativni ventilacijski sustav NORIKS</strong> sprječava pregrijavanje i održava kožu hladnom i suhom. Prirodna antimikrobna svojstva modal vlakana pomažu u borbi protiv bakterija i gljivica, pa ostaješ svjež dulje.
+                      <strong>Das innovative Belueftungssystem von NORIKS</strong> verhindert Ueberhitzung und haelt die Haut kuehl und trocken. Die natuerlich antimikrobiellen Eigenschaften der Modal-Fasern helfen im Kampf gegen Bakterien und Pilze, sodass du laenger frisch bleibst.
                     </p>
-                    <p>Gruba, abrazivna vlakna trljaju kožu, uzrokuju mikroonštećenja i iritacije, što vodi do infekcija i upala.</p>
+                    <p>Grobe, abrasive Fasern reiben an der Haut und verursachen Mikroverletzungen und Reizungen, was zu Infektionen und Entzuendungen fuehren kann.</p>
                     <p>
-                      <strong>Ultra mekani NORIKS</strong> modal je glađi i tanji od pamuka, smanjuje trenje i štiti osjetljivu kožu.
+                      <strong>Das ultraweiche NORIKS</strong> Modal ist glatter und feiner als Baumwolle, reduziert Reibung und schuetzt empfindliche Haut.
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Naruči NORIKS </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> NORIKS bestellen </a>
                 </div>
               </div>
             </div>
@@ -724,35 +724,35 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_BXHadv color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Prije i poslije: Dokaz je u rezultatima </h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Vorher und nachher: Der Beweis liegt in den Ergebnissen </h2>
                   <div class="image-with-text__text rte body">
                     <p>
-                      <strong>Prije NORIKS:</strong>
+                      <strong>Vor NORIKS:</strong>
                     </p>
                     <ul>
-                      <li>Crvena, iziritirana koža zbog stalnog trenja <br>
+                      <li>Gerötete, gereizte Haut durch staendige Reibung <br>
                       </li>
-                      <li>Uporne neugodne mirise <br>
+                      <li>Hartnaeckige unangenehme Gerueche <br>
                       </li>
-                      <li>Česte gljivične ili bakterijske infekcije <br>
+                      <li>Haeufige Pilz- oder Bakterieninfektionen <br>
                       </li>
-                      <li>Bolni osipi koji otežavaju kretanje <br>
+                      <li>Schmerzhafte Ausschlaege, die die Bewegung erschweren <br>
                       </li>
                     </ul>
                     <p>
-                      <strong>Nakon NORIKS-a:</strong>
+                      <strong>Nach NORIKS:</strong>
                     </p>
                     <ul>
-                      <li>Zdrava koža bez iritacija <br>
+                      <li>Gesunde Haut ohne Reizungen <br>
                       </li>
-                      <li>Prirodna otpornost na mirise <br>
+                      <li>Natuerliche Geruchshemmung <br>
                       </li>
-                      <li>Manji rizik od infekcija <br>
+                      <li>Geringeres Infektionsrisiko <br>
                       </li>
-                      <li>Izvanredna udobnost i prozračnost</li>
+                      <li>Aussergewoehnlicher Komfort und hohe Atmungsaktivitaet</li>
                     </ul>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Naruči sada </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Jetzt bestellen </a>
                 </div>
               </div>
             </div>
@@ -771,28 +771,28 @@ get_header();
               <div style="width: 50%;" class="image-with-text__text-item grid__item">
                 <div class="image-with-text__content image-with-text__content--middle image-with-text__content--desktop-left image-with-text__content--mobile-left image-with-text__content--adapt content-container color-scheme-template--19454951555210__multirow_BXHadv color-custom gradient">
                   <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium"></p>
-                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Zašto je NORIKS sigurniji izbor</h2>
+                  <h2 class="image-with-text__heading h2 rte title-with-highlight" style="--hightlight-color:#121212"> Warum NORIKS die sicherere Wahl ist</h2>
                   <div class="image-with-text__text rte body">
                     <ul>
                       <li>
-                        <strong>Prirodna antimikrobna zaštita</strong> pomaže u borbi protiv bakterija i gljivica. <br>
+                        <strong>Natuerlicher antimikrobieller Schutz</strong> hilft im Kampf gegen Bakterien und Pilze. <br>
                       </li>
                       <li>
-                        <strong>Izvrsna prozračnost</strong> održava kožu suhom i hladnom. <br>
+                        <strong>Hervorragende Atmungsaktivitaet</strong> haelt die Haut trocken und kuehl. <br>
                       </li>
                       <li>
-                        <strong>Izvanredna mekoća </strong> smanjuje trenje i iritaciju. <br>
+                        <strong>Aussergewoehnliche Weichheit </strong> reduziert Reibung und Reizungen. <br>
                       </li>
                       <li>
-                        <strong>Regulacija temperature </strong> podržava reproduktivno zdravlje. <br>
+                        <strong>Temperaturregulierung </strong> unterstuetzt die Fortpflanzungsgesundheit. <br>
                       </li>
                     </ul>
                     <p>
-                      <em>Svi navodi potkrijepljeni su objavljenim istraživanjima koja su dostupna na zahtjev.
-Individualni rezultati mogu se razlikovati. </em>
+                      <em>Alle Aussagen stuetzen sich auf veroeffentlichte Studien, die auf Anfrage verfuegbar sind.
+Individuelle Ergebnisse koennen variieren. </em>
                     </p>
                   </div>
-                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> Naruči NORIKS </a>
+                  <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary"> NORIKS bestellen </a>
                 </div>
               </div>
             </div>
@@ -831,17 +831,17 @@ Individualni rezultati mogu se razlikovati. </em>
         <div class="rich-text content-container color-custom color-scheme-template--19454951555210__rich_text_d3HeA8 gradient rich-text--full-width content-container--full-width section-template--19454951555210__rich_text_d3HeA8-padding">
           <div class="rich-text__wrapper rich-text__wrapper--center page-width">
             <div class="rich-text__blocks center animate-item">
-              <h2 style="margin-top: 25px; font-size: 2.2rem; line-height:1.1;" class="rich-text__heading rte h1 title-with-highlight" style="--hightlight-color:#6d388b"> Pridruži se tisućama koji su već prešli • 70% popusta na prvu narudžbu </h2>
+              <h2 style="margin-top: 25px; font-size: 2.2rem; line-height:1.1;" class="rich-text__heading rte h1 title-with-highlight" style="--hightlight-color:#6d388b"> Schliesse dich Tausenden an, die bereits gewechselt haben • 70 % Rabatt auf die erste Bestellung </h2>
               <div class="rich-text__text rte">
                 <h2 class="second-h2" style=" font-size: 1.7rem; line-height:1.1;" >
-                  <strong>6-mjesečno jamstvo protiv rupa • 30-dnevno probno razdoblje bez rizika</strong>
+                  <strong>6 Monate Garantie gegen Loecher • 30 Tage risikofrei testen</strong>
                 </h2>
               </div>
               <div style="margin-top: 15px;" class="rich-text__buttons">
-                <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary">Naruči sada i zaštiti svoje zdravlje</a>
+                <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary">Jetzt bestellen und deine Gesundheit schuetzen</a>
               </div>
               <div class="rich-text__text rte">
-                <p>Više od 2.225.000 muškaraca već je prešlo na NORIKS. Ne čekaj da se pojave osipi, infekcije ili neugodni mirisi.</p>
+                <p>Mehr als 2.225.000 Maenner sind bereits zu NORIKS gewechselt. Warte nicht, bis Ausschlaege, Infektionen oder unangenehme Gerueche auftreten.</p>
               </div>
             </div>
           </div>
@@ -964,19 +964,19 @@ Individualni rezultati mogu se razlikovati. </em>
           <div class="rich-text__wrapper rich-text__wrapper--center page-width">
             <div class="rich-text__blocks center animate-item">
               <div class="rich-text__text rte">
-                <p>Ako želiš pročitati više recenzija i naručiti svoje bokserice, <strong>posjeti njihovu web stranicu</strong>.
+                <p>Wenn du weitere Bewertungen lesen und deine Boxershorts bestellen moechtest, <strong>besuche die Website</strong>.
                 </p>
               </div>
               <div class="rich-text__buttons">
-                <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary">Provjeri dostupnost >></a>
+                <a href="https://noriks.com/de/product-category/bokserice/" class="button button--primary">Verfuegbarkeit pruefen >></a>
               </div>
               <div class="rich-text__text rte">
                 <h6>
-                  <strong>Sva prava pridržana, NORIKS</strong>
+                  <strong>Alle Rechte vorbehalten, NORIKS</strong>
                 </h6>
        
                 <h6>
-                 Najbolje što muškarac može nositi.
+                 Das Beste, was ein Mann tragen kann.
                 </h6>
            
               </div>

@@ -50,7 +50,7 @@ function is_active_menu_item( $path ) {
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/majice') ? 'active' : ''; ?>">
-      <a href="/de/product-category/majice/">Majice</a>
+      <a href="/de/product-category/majice/">T-Shirts</a>
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/bokserice') ? 'active' : ''; ?>">
@@ -62,7 +62,7 @@ function is_active_menu_item( $path ) {
     </li>
 
     <li class="<?php echo is_active_menu_item('/product-category/carape') ? 'active' : ''; ?>">
-      <a href="/de/product-category/carape/">Čarape</a>
+      <a href="/de/product-category/carape/">Socken</a>
     </li>
   </ul>
 </nav>

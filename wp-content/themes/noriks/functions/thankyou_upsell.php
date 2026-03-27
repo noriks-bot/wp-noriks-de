@@ -205,7 +205,7 @@ function noriks_remove_upsell() {
 
     // Only allow removing upsell items
     if ( $item->get_meta( '_noriks_upsell' ) !== 'thank you upsell' ) {
-        wp_send_json_error( 'Samo upsell proizvode je moguće ukloniti' );
+        wp_send_json_error( 'Es koennen nur Upsell-Produkte entfernt werden' );
     }
 
     // Only allow while in primary-hold
@@ -236,15 +236,15 @@ function noriks_handle_add_upsell() {
     $nonce        = $_POST['nonce'] ?? '';
 
     if ( ! wp_verify_nonce( $nonce, 'noriks_upsell_' . $order_id ) ) {
-        wp_send_json_error( 'Nevažeći zahtjev' );
+        wp_send_json_error( 'Ungueltige Anfrage' );
     }
 
     $order = wc_get_order( $order_id );
-    if ( ! $order ) wp_send_json_error( 'Narudžba nije pronađena' );
+    if ( ! $order ) wp_send_json_error( 'Bestellung nicht gefunden' );
 
     // Only allow upsell on COD orders in primary-hold
     if ( $order->get_payment_method() !== 'cod' ) {
-        wp_send_json_error( 'Upsell dostupan samo za plaćanje pouzećem' );
+        wp_send_json_error( 'Upsell nur bei Zahlung per Nachnahme verfuegbar' );
     }
     if ( $order->get_status() !== 'primary-hold' ) {
         wp_send_json_error( 'Vrijeme za dodavanje je isteklo' );
@@ -258,7 +258,7 @@ function noriks_handle_add_upsell() {
 
     // Get the actual product (variation or simple)
     $product = $variation_id ? wc_get_product( $variation_id ) : wc_get_product( $product_id );
-    if ( ! $product ) wp_send_json_error( 'Proizvod nije pronađen' );
+    if ( ! $product ) wp_send_json_error( 'Produkt nicht gefunden' );
 
     // Duplicate check
     $check_product_id = $variation_id ? $product_id : $product->get_id();
@@ -267,7 +267,7 @@ function noriks_handle_add_upsell() {
         $item_variation_id = $item->get_variation_id();
         if ( $item_product_id == $check_product_id || ( $variation_id && $item_variation_id == $variation_id ) ) {
             if ( $item->get_meta( '_noriks_upsell' ) ) {
-                wp_send_json_error( 'Već ste dodali ovaj proizvod' );
+                wp_send_json_error( 'Sie haben dieses Produkt bereits hinzugefuegt' );
             }
         }
     }
@@ -304,7 +304,7 @@ function noriks_handle_add_upsell() {
         'total'    => $upsell_price * $quantity,
     ));
 
-    if ( ! $item_id ) wp_send_json_error( 'Greška pri dodavanju' );
+    if ( ! $item_id ) wp_send_json_error( 'Fehler beim Hinzufuegen' );
 
     // Mark as upsell
     $item = $order->get_item( $item_id );

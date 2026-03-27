@@ -72,7 +72,7 @@ if ( WC()->cart->is_empty() ) return;
         </div>
 
         <!-- PAYMENT + ORDER SUMMARY + BUTTON — via WC hooks -->
-        <h3 class="payment-title">Način plaćanja</h3>
+        <h3 class="payment-title">Zahlungsart</h3>
         <?php woocommerce_checkout_payment(); ?>
 
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>

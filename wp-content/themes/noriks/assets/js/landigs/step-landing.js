@@ -446,7 +446,7 @@
         openSidecart(trigger);
       })
       .catch(function () {
-        window.alert("Dodavanje u košaricu trenutno nije dostupno. Provjeri sidecart/plugin konfiguraciju.");
+        window.alert("Das Hinzufuegen zum Warenkorb ist derzeit nicht verfuegbar. Bitte pruefen Sie die Sidecart-/Plugin-Konfiguration.");
       });
   }
 
