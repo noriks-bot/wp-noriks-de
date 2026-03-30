@@ -33,12 +33,9 @@ if ( post_password_required() ) {
 ?>
 
  <?php
-                  
-                  // make here boxerice if else
-$is_boxers = has_term( array( 'bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $current_product_id );
-
-                  
-                  ?>
+$current_product_id = get_the_ID();
+$is_boxers = noriks_has_product_cat( 'boxers', $current_product_id );
+?>
 
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>   data-is-boxers="<?php echo $is_boxers ? '1' : '0'; ?>" >

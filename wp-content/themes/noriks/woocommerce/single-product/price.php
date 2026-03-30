@@ -393,7 +393,7 @@ wp_reset_postdata();
     $inline_pack = true;
   }
   
-  // bokserice
+  // boxershorts
   
   
   

@@ -435,7 +435,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi',
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
         
         
-        <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
+        <?php elseif( noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id ) ): ?>
         
         
         
@@ -495,7 +495,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi',
     </div>
 
 
-    <!-- 3 - savjeti za pranje-->
+    <!-- 3 - Pflegehinweise -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
@@ -506,7 +506,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi',
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
         
          
-        <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
+        <?php elseif( noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id ) ): ?>
         
         
         
@@ -521,7 +521,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi',
 
 
 
-    <!-- 4 povrati in menjave -->
+    <!-- 4 Rueckgabe und Umtausch -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_3","options"); ?></h3>
@@ -552,7 +552,7 @@ Ohne Papierkram, ohne Stress - wir loesen alles in wenigen Klicks. </p>
 
 
 
-    <!-- 5 - infomraicje o dostavi -->
+    <!-- 5 - Informationen zur Lieferung -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_4","options"); ?></h3>

@@ -539,6 +539,7 @@ if ( is_shop() ) {
 }
 
 
+.term-sets  .filter-tax .filter-items,
 .term-kompleti  .filter-tax .filter-items {
    display: grid;
   grid-template-columns: repeat(3, 1fr);
