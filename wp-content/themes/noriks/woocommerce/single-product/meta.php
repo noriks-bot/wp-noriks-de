@@ -196,13 +196,13 @@ global $product;
 
 <?php 
 
-$is_singles_boxers = has_term( array( 'singles-boxers', '1-komad-bokserice' ), 'product_cat', $current_product_id );
+$is_singles_boxers = has_term( array( '1-stueck-boxershorts' ), 'product_cat', $current_product_id );
 
-$is_boxers = noriks_has_product_cat( 'boxers', $current_product_id ) && ! has_term( array( 'black-friday', 'majice-i-bokserice-paketi', 't-shirt-boxershorts-pakete' ), 'product_cat', $current_product_id );
+$is_boxers = noriks_has_product_cat( 'boxers', $current_product_id ) && ! has_term( array( 'black-friday', 't-shirts-boxershorts-sets' ), 'product_cat', $current_product_id );
 
 $is_carape = noriks_has_product_cat( 'socks', $current_product_id );
 
-$is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi', 't-shirt-boxershorts-pakete' ), 'product_cat', $current_product_id ) || noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id );
+$is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' ), 'product_cat', $current_product_id ) || noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id );
 
 ?>
 
