@@ -14,14 +14,14 @@ include(get_template_directory() . '/functions/discounts.php');
 
 function noriks_term_group( $group ) {
     $groups = array(
-        'tshirts'       => array( 't-shirts', 'majice', 'orto-majice' ),
-        'boxers'        => array( 'boxershorts', 'bokserice', 'orto-bokserice', 'bokserice-sastavi-paket' ),
-        'boxers_build'  => array( 'boxershorts-paket-erstellen', 'bokserice-sastavi-paket' ),
-        'sets'          => array( 'sets', 'kompleti' ),
-        'socks'         => array( 'socken', 'carape', 'zimske-carape' ),
-        'starter'       => array( 'starterpakete', 'starter-paketi', 'orto-starter' ),
-        'ortho_combo'   => array( 'ortho-t-shirt-boxershorts', 'orto-majica-bokserica' ),
-        'ortho'         => array( 'orthopaedisch', 'orto' ),
+        'tshirts'       => array( 't-shirts', 'orto-majice' ),
+        'boxers'       => array( 'boxershorts', 'boxershorts-sets', 'orto-bokserice' ),
+        'boxers_build'       => array( 'boxershorts-sets' ),
+        'sets'       => array( 'sets' ),
+        'socks'       => array( 'socken', 'wintersocken' ),
+        'starter'       => array( 'starter-pakete', 'orto-starter' ),
+        'ortho_combo'       => array( 'orto-majica-bokserica' ),
+        'ortho'       => array( 'orto' ),
     );
 
     return $groups[ $group ] ?? array();
