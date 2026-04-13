@@ -42,18 +42,18 @@ if ( ! empty( $order->get_billing_first_name() ) ) {
 <?php if ( $email_improvements_enabled ) : ?>
 
 
-	<p style="color:black;">Tvoja narudžba je uspješno zaprimljena – hvala ti što si odabrao NORIKS!
+	<p style="color:black;">Deine Bestellung ist erfolgreich eingegangen - danke, dass du dich fuer NORIKS entschieden hast!
 	<br/>	<br/>
-	Sad pripremamo tvoj NORIKS proizvod i uskoro kreće na put.
+	Wir bereiten dein NORIKS-Produkt jetzt vor und bald macht es sich auf den Weg.
     <br/><br/>
-    Samo udobnost i dobar osjećaj – cijeli dan.<br/><br/>
+    Nur Komfort und ein gutes Gefuehl - den ganzen Tag.<br/><br/>
     
-    Javit ćemo ti čim tvoj paket krene prema tebi.<br/>
-    Ako ti bilo što zatreba – tu smo. 🙂<br/><br/>
+    Wir informieren dich, sobald dein Paket auf dem Weg zu dir ist.<br/>
+    Wenn du etwas brauchst, sind wir fuer dich da.<br/><br/>
     
     
-    <strong>Ako ste se zabunili oko veličine, količine ili boje u narudžbi – bez brige!</strong><br/>
-    Odgovorite direktno na ovaj e-mail i javite nam što treba promijeniti prije slanja paketa. Rado ćemo sve brzo srediti.<br/><br/>
+    <strong>Falls du dich bei Groesse, Menge oder Farbe vertan hast - kein Problem!</strong><br/>
+    Antworte einfach direkt auf diese E-Mail und teile uns mit, was vor dem Versand geaendert werden soll. Wir kuemmern uns gerne schnell darum.<br/><br/>
     
     NORIKS tim
     </p>
@@ -65,18 +65,18 @@ if ( ! empty( $order->get_billing_first_name() ) ) {
 	<?php /* translators: %s: Order number */ ?>
 	
 		
-	<p style="color:black;">Tvoja narudžba je uspješno zaprimljena – hvala ti što si odabrao NORIKS!
+	<p style="color:black;">Deine Bestellung ist erfolgreich eingegangen - danke, dass du dich fuer NORIKS entschieden hast!
 	<br/>	<br/>
-Sad pripremamo tvoj NORIKS proizvod i uskoro kreće na put.
+Wir bereiten dein NORIKS-Produkt jetzt vor und bald macht es sich auf den Weg.
     <br/><br/>
-    Samo udobnost i dobar osjećaj – cijeli dan.<br/><br/>
+    Nur Komfort und ein gutes Gefuehl - den ganzen Tag.<br/><br/>
     
-    Javit ćemo ti čim tvoj paket krene prema tebi.<br/>
-    Ako ti bilo što zatreba – tu smo. 🙂<br/><br/>
+    Wir informieren dich, sobald dein Paket auf dem Weg zu dir ist.<br/>
+    Wenn du etwas brauchst, sind wir fuer dich da.<br/><br/>
     
     
-    <strong>Ako ste se zabunili oko veličine, količine ili boje u narudžbi – bez brige!</strong><br/>
-    Odgovorite direktno na ovaj e-mail i javite nam što treba promijeniti prije slanja paketa. Rado ćemo sve brzo srediti.<br/><br/>
+    <strong>Falls du dich bei Groesse, Menge oder Farbe vertan hast - kein Problem!</strong><br/>
+    Antworte einfach direkt auf diese E-Mail und teile uns mit, was vor dem Versand geaendert werden soll. Wir kuemmern uns gerne schnell darum.<br/><br/>
     
     NORIKS tim
     </p>

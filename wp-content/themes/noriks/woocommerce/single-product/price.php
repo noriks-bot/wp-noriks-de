@@ -147,21 +147,21 @@ if( get_field('multipack_option_1', get_the_ID())  == true  ) {
 
 
 
-<?php if ($shirt_count == 1 && mb_stripos($product->get_name(), 'Čarape') === false): ?>
+<?php if ($shirt_count == 1 && mb_stripos($product->get_name(), 'Socken') === false): ?>
 
         
     <section class="color-selections">
         
         
         <section class="option-group">
- <!-- <h2 class="option-title">Boja</h2>-->
+ <!-- <h2 class="option-title">Farbe</h2>-->
 
   <?php
   
-// Check if current product is in category "singles-boxers"
-$is_singles_boxers = has_term( '1-komad-bokserice', 'product_cat', $current_product_id );
+// Check if current product is in the single boxershorts category.
+$is_singles_boxers = has_term( array( '1-komad-bokserice', 'single-boxershorts' ), 'product_cat', $current_product_id );
 
-$is_singles_majice = has_term( '1-komad-majice', 'product_cat', $current_product_id );
+$is_singles_majice = has_term( array( '1-komad-majice', 'single-t-shirts' ), 'product_cat', $current_product_id );
 
 
 
@@ -170,11 +170,11 @@ if ( $is_singles_boxers ) {
     
 ?>
 
-<h2 class="option-title">Boja</h2>
+<h2 class="option-title">Farbe</h2>
 
 
 <?php
-    // Query products from category "singles-boxers"
+    // Query products from the single boxershorts category.
     $args = array(
         'post_type'      => 'product',
         'posts_per_page' => -1,
@@ -182,7 +182,7 @@ if ( $is_singles_boxers ) {
             array(
                 'taxonomy' => 'product_cat',
                 'field'    => 'slug',
-                'terms'    => 'singles-boxers',
+                'terms'    => array( 'singles-boxers', '1-komad-bokserice', 'single-boxershorts' ),
             ),
         ),
         'orderby' => 'date',
@@ -194,12 +194,12 @@ if ( $is_singles_boxers ) {
     
     ?>
 
-<h2 class="option-title">Boja</h2>
+<h2 class="option-title">Farbe</h2>
 
 
 <?php
 
-    // Default → Query products from category "singles"
+    // Default -> query products from the single t-shirts category.
     $args = array(
         'post_type'      => 'product',
         'posts_per_page' => -1,
@@ -207,7 +207,7 @@ if ( $is_singles_boxers ) {
             array(
                 'taxonomy' => 'product_cat',
                 'field'    => 'slug',
-                'terms'    => 'singles',
+                'terms'    => array( 'singles', '1-komad-majice', 'single-t-shirts' ),
             ),
         ),
         'orderby' => 'date',
@@ -393,7 +393,7 @@ wp_reset_postdata();
     $inline_pack = true;
   }
   
-  // bokserice
+  // boxershorts
   
   
   
@@ -453,7 +453,7 @@ wp_reset_postdata();
     vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
         <path d="M11.4124 2.58464L2.08525 11.9118C1.86558 12.1315 1.86558 12.4876 2.08525 12.7073L5.78977 16.4118C6.00944 16.6315 6.3656 16.6315 6.58527 16.4118L15.9124 7.08466C16.1321 6.86499 16.1321 6.50883 15.9124 6.28916L12.2079 2.58464C11.9883 2.36497 11.6321 2.36497 11.4124 2.58464Z" stroke="#111213" stroke-width="0.84375"></path>
         <path d="M9.28125 4.71875L11.5312 6.96875M6.75 7.25L9 9.5M4.21875 9.78125L6.46875 12.0312" stroke="#111213" stroke-width="0.84375"></path>
-      </svg>Tablica veličina</a>';
+      </svg>Groessentabelle</a>';
                     
 	
 						

@@ -48,17 +48,17 @@
     <div class="marquee-content">
       <span><a href="/de/shop">Kostenloser Versand ab 70 EUR</a></span>
       <span><a href="/de/shop">30 Tage ohne Risiko testen</a></span>
-      <!--<span><a href="/de/shop">Zimska ponuda: Do 70% popusta!</a></span>-->
+      <!--<span><a href="/de/shop">Winterangebot: Bis zu 70 % Rabatt!</a></span>-->
 
       <!-- DUPLICATED for seamless infinite loop -->
       <span><a href="/de/shop">Kostenloser Versand ab 70 EUR</a></span>
       <span><a href="/de/shop">30 Tage ohne Risiko testen</a></span>
-     <!-- <span><a href="/de/shop">Zimska ponuda: Do 70% popusta!</a></span>-->
+     <!-- <span><a href="/de/shop">Winterangebot: Bis zu 70 % Rabatt!</a></span>-->
       
        <!-- DUPLICATED for seamless infinite loop -->
       <span><a href="/de/shop">Kostenloser Versand ab 70 EUR</a></span>
       <span><a href="/de/shop">30 Tage ohne Risiko testen</a></span>
-     <!-- <span><a href="/de/shop">Zimska ponuda: Do 70% popusta!</a></span>-->
+     <!-- <span><a href="/de/shop">Winterangebot: Bis zu 70 % Rabatt!</a></span>-->
     </div>
   </div>
 </div>
@@ -135,8 +135,8 @@
                         
                     <!--
                     <div class="dropdown-menu">
-                        <a href="/de/shop">Sastavi svoj paket</a>
-                        <a href="/de/product-category/bundles/">Gotovi paketi</a>
+                        <a href="/de/shop">Paket zusammenstellen</a>
+                        <a href="/de/product-category/sets/">Fertige Sets</a>
                     </div>
                     -->
                 </div>
@@ -149,8 +149,8 @@
                     </a>
                     <!--
                     <div class="dropdown-menu">
-                        <a href="/de/product-category/bokserice-sastavi-paket/">Sastavi svoj paket</a>
-                        <a href="/de/product-category/bokserice/">Gotovi paketi</a>
+                        <a href="/de/product-category/boxershorts-paket-erstellen/">Paket zusammenstellen</a>
+                        <a href="/de/product-category/boxershorts/">Fertige Sets</a>
                     </div>
                     -->
                 </div>

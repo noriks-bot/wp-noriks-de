@@ -6,7 +6,7 @@ add_filter( 'gettext', 'translate_attribute_labels', 20, 3 );
 
 function translate_attribute_labels( $translated_text, $text, $domain ) {
     if ( $text === 'Choose your size' ) {
-        $translated_text = 'Veličina';
+        $translated_text = 'Groesse';
     }
     return $translated_text;
 }

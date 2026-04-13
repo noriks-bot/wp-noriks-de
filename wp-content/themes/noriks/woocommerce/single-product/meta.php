@@ -90,7 +90,7 @@ global $product;
      
        
         <img src="https://noriks.com/de/wp-content/uploads/2025/07/footer_icon3-1.png" alt="Shipping Icon" class="feature__icon info-icon">
-          <p class="feature__text">Besplatna dostava za narudžbe iznad 70 €</p>
+          <p class="feature__text">Kostenloser Versand ab 70 €</p>
         </div>
 
     
@@ -133,7 +133,7 @@ global $product;
 
 <script>
   (function () {
-    const weekdays = ['nedjelja','ponedjeljak','utorak','srijeda','četvrtak','petak','subota'];
+    const weekdays = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
 
     // Helper to add business days (skip Saturday/Sunday)
     function addBusinessDays(date, days) {
@@ -196,13 +196,13 @@ global $product;
 
 <?php 
 
-$is_singles_boxers = has_term( 'singles-boxers', 'product_cat', $current_product_id );
+$is_singles_boxers = has_term( array( 'singles-boxers', '1-komad-bokserice' ), 'product_cat', $current_product_id );
 
-$is_boxers = has_term( array( 'bokserice','orto-bokserice', 'bokserice-sastavi-paket' ), 'product_cat', $current_product_id ) && ! has_term( array( 'black-friday', 'majice-i-bokserice-paketi	' ), 'product_cat', $current_product_id );
+$is_boxers = noriks_has_product_cat( 'boxers', $current_product_id ) && ! has_term( array( 'black-friday', 'majice-i-bokserice-paketi', 't-shirt-boxershorts-pakete' ), 'product_cat', $current_product_id );
 
-$is_carape = has_term( array( 'carape', 'zimske-carape' ), 'product_cat', $current_product_id );
+$is_carape = noriks_has_product_cat( 'socks', $current_product_id );
 
-$is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	', 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id );
+$is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi', 't-shirt-boxershorts-pakete' ), 'product_cat', $current_product_id ) || noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id );
 
 ?>
 
@@ -435,11 +435,11 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
         
         
-        <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
+        <?php elseif( noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id ) ): ?>
         
         
         
-                Naše premium majice izrađene su od vrhunske mješavine 60% prstenasto predenog pamuka i 40% poliestera, što osigurava izuzetno mekanu tkaninu otpornu na gužvanje.  <br><br>NORIKS bokserice izrađene su od vrhunske mješavine 95% modala i 5% elastana, što osigurava izuzetno mekanu i elastičnu tkaninu koja se savršeno prilagođava tijelu. Elastičan pojas dizajniran je za optimalno pristajanje, pružajući udobnost bez stezanja i savršen izgled ispod odjeć   <br>
+                Unsere Premium-T-Shirts bestehen aus einer hochwertigen Mischung aus 60 % ringgesponnener Baumwolle und 40 % Polyester und bieten dadurch einen besonders weichen, knitterarmen Stoff. <br><br>NORIKS Boxershorts bestehen aus einer hochwertigen Mischung aus 95 % Modal und 5 % Elasthan. Das sorgt fuer ein besonders weiches, elastisches Material, das sich optimal an den Koerper anpasst. Der elastische Bund ist fuer optimalen Sitz entwickelt und bietet Komfort ohne Einengen sowie eine saubere Optik unter der Kleidung.<br>
         
         <?php else: ?>
         
@@ -461,7 +461,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
      <!-- 2 - slika tablica velicina -->
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        <h3>Tablice veličina</h3>
+        <h3>Groessentabellen</h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
@@ -495,7 +495,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
     </div>
 
 
-    <!-- 3 - savjeti za pranje-->
+    <!-- 3 - Pflegehinweise -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
@@ -506,11 +506,11 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
         
          
-        <?php elseif(  has_term( array( 'orto-starter', 'orto-majica-bokserica' ), 'product_cat', $current_product_id )  ): ?>
+        <?php elseif( noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id ) ): ?>
         
         
         
-                         Perite boje s bojama.  Program za nježno pranje na hladnoj vodi.  Sušite ravno položeno ili u sušilici na niskoj temperaturi.  Ne izbjeljivati              
+                         Farben mit aehnlichen Farben waschen. Schonwaschgang mit kaltem Wasser. Flach trocknen oder bei niedriger Temperatur im Trockner trocknen. Nicht bleichen.              
         
         
           <?php else: ?>
@@ -521,7 +521,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
 
 
 
-    <!-- 4 povrati in menjave -->
+    <!-- 4 Rueckgabe und Umtausch -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_3","options"); ?></h3>
@@ -530,7 +530,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 'majice-i-bokserice-paketi	'
       <div class="accordion-content">
        <p></p>
        Wir sind so ueberzeugt, dass Ihnen NORIKS gefallen wird, dass Sie <b data-stringify-type="bold">30 Tage</b> fuer eine Rueckgabe oder einen kostenlosen Umtausch haben.
-Bez papirologije, bez stresa – riješimo u par klikova. </p>
+Ohne Papierkram, ohne Stress - wir loesen alles in wenigen Klicks. </p>
 
 <p>
     
@@ -544,7 +544,7 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
     info@noriks.com
   </a>
 </p>
-<p>Samo nam napiši mail da želiš zamjenu i <b data-stringify-type="bold">odmah ćemo sve srediti.</b></p>
+<p>Schreib uns einfach eine E-Mail, wenn du einen Umtausch moechtest, und <b data-stringify-type="bold">wir kuemmern uns sofort darum.</b></p>
        
        
       </div>
@@ -552,7 +552,7 @@ Bez papirologije, bez stresa – riješimo u par klikova. </p>
 
 
 
-    <!-- 5 - infomraicje o dostavi -->
+    <!-- 5 - Informationen zur Lieferung -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_4","options"); ?></h3>

@@ -438,14 +438,14 @@ background: #a91b0c !important;
 
 
 
-.variation-Veliinamajice  { display: inline !important; }
+.variation-GroesseTShirt  { display: inline !important; }
 
-.variation-Veliinabokseric   { display: inline !important; }
+.variation-GroesseBoxershorts   { display: inline !important; }
 
 
-.variation-Veliinamajice p  { display: inline !important; }
+.variation-GroesseTShirt p  { display: inline !important; }
 
-.variation-Veliinabokseric p  { display: inline !important; }
+.variation-GroesseBoxershorts p  { display: inline !important; }
 
 
 @media (min-width: 768px) {
@@ -457,4 +457,3 @@ background: #a91b0c !important;
         clear: right;
     }
 }
-

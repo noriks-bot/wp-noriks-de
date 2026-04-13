@@ -329,11 +329,11 @@
       link.href = config.landingUrl;
     });
 
-    document.querySelectorAll("a[href='https://ortowp.noriks.com/cart/']").forEach(function (link) {
+    document.querySelectorAll("a[href='https://ortowp.noriks.com/cart/'], a[href='https://ortowp.noriks.com/kosarica/']").forEach(function (link) {
       link.href = config.cartUrl;
     });
 
-    document.querySelectorAll("a[href='https://ortowp.noriks.com/kosarica/?add-more='], a.header__cart").forEach(function (link) {
+    document.querySelectorAll("a[href='https://ortowp.noriks.com/kosarica/?add-more='], a[href='https://ortowp.noriks.com/cart/?add-more='], a.header__cart").forEach(function (link) {
       link.href = config.cartUrl;
       link.classList.add("xoo-wsc-cart-trigger");
     });
@@ -446,7 +446,7 @@
         openSidecart(trigger);
       })
       .catch(function () {
-        window.alert("Dodavanje u košaricu trenutno nije dostupno. Provjeri sidecart/plugin konfiguraciju.");
+        window.alert("Das Hinzufuegen zum Warenkorb ist derzeit nicht verfuegbar. Bitte pruefen Sie die Sidecart-/Plugin-Konfiguration.");
       });
   }
 
