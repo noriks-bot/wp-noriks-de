@@ -198,11 +198,11 @@ global $product;
 
 $is_singles_boxers = has_term( array( '1-stueck-boxershorts' ), 'product_cat', $current_product_id );
 
-$is_boxers = noriks_has_product_cat( 'boxers', $current_product_id ) && ! has_term( array( 'black-friday', 't-shirts-boxershorts-sets' ), 'product_cat', $current_product_id );
+$is_boxers = noriks_has_product_cat( 'boxershorts', $current_product_id ) && ! has_term( array( 'black-friday', 't-shirts-boxershorts-sets' ), 'product_cat', $current_product_id );
 
-$is_carape = noriks_has_product_cat( 'socks', $current_product_id );
+$is_carape = noriks_has_product_cat( 'socken', $current_product_id );
 
-$is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' ), 'product_cat', $current_product_id ) || noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id );
+$is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' ), 'product_cat', $current_product_id ) || noriks_has_product_cat( array( 'starter-pakete', 'orto-starter' ), $current_product_id );
 
 ?>
 
@@ -435,7 +435,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
         
         
-        <?php elseif( noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id ) ): ?>
+        <?php elseif( noriks_has_product_cat( array( 'starter-pakete', 'orto-starter' ), $current_product_id ) ): ?>
         
         
         
@@ -506,7 +506,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
         
          
-        <?php elseif( noriks_has_product_cat( array( 'starter', 'ortho_combo' ), $current_product_id ) ): ?>
+        <?php elseif( noriks_has_product_cat( array( 'starter-pakete', 'orto-starter' ), $current_product_id ) ): ?>
         
         
         
