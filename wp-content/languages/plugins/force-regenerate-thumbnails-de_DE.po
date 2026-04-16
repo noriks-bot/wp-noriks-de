@@ -1,0 +1,139 @@
+# Translation of Plugins - Force Regenerate Thumbnails - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Force Regenerate Thumbnails - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-11-05 00:29:21+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Force Regenerate Thumbnails - Stable (latest release)\n"
+
+#: class-forceregeneratethumbnails.php:291
+msgid "Regenerate the thumbnails for this single image"
+msgstr "Regeneriere Vorschaubilder für dieses einzelne Bild"
+
+#: class-forceregeneratethumbnails.php:195
+msgid "Stopping..."
+msgstr "Abbruch..."
+
+#: class-forceregeneratethumbnails.php:499
+msgid "Regenerate All Thumbnails"
+msgstr "Regeneriere alle Vorschaubilder"
+
+#. Plugin Name of the plugin
+#: force-regenerate-thumbnails.php
+msgid "Force Regenerate Thumbnails"
+msgstr "Force Regenerate Thumbnails"
+
+#. translators: %d: the total number of images
+#: class-forceregeneratethumbnails.php:452
+msgid "Total: %s"
+msgstr "Insgesamt: %s"
+
+#. translators: %d: the number of successfully regenerated images
+#: class-forceregeneratethumbnails.php:455
+msgid "Success: %s"
+msgstr "Erfolg: %s"
+
+#. translators: %d: the number of regeneration failures
+#: class-forceregeneratethumbnails.php:458
+msgid "Failure: %s"
+msgstr "Fehler: %s"
+
+#: class-forceregeneratethumbnails.php:445
+msgid "Abort Process"
+msgstr "Prozess abbrechen"
+
+#: class-forceregeneratethumbnails.php:447
+msgid "Process Information"
+msgstr "Prozess Information"
+
+#: class-force-regenerate-thumbnails-cli.php:124
+#: class-forceregeneratethumbnails.php:653
+msgid "The originally uploaded image file cannot be found."
+msgstr "Die hochgeladene Original Bild-Datei konnte nicht gefunden werden."
+
+#: class-forceregeneratethumbnails.php:440
+#: class-forceregeneratethumbnails.php:480
+msgid "You must enable Javascript in order to proceed!"
+msgstr "Du musst JavaScript aktivieren, um fortfahren zu können!"
+
+#. translators: %d: the attachment ID number
+#: class-forceregeneratethumbnails.php:1082
+msgid "(ID %d)"
+msgstr "(ID %d)"
+
+#. translators: %s: list of deleted thumbs
+#: class-forceregeneratethumbnails.php:863
+msgid "Deleted: %s"
+msgstr "Gelöscht: %s"
+
+#. translators: %s: the full path of the image
+#: class-forceregeneratethumbnails.php:845
+msgid "Image: %s"
+msgstr "Bild: %s"
+
+#. translators: 1: attachment title 2: attachment ID number
+#: class-forceregeneratethumbnails.php:838
+msgid "%1$s (ID %2$d)"
+msgstr "%1$s (ID %2$d)"
+
+#. translators: %d: attachment ID number
+#: class-force-regenerate-thumbnails-cli.php:99
+#: class-forceregeneratethumbnails.php:609
+msgid "Skipped: %d"
+msgstr "Übersprungen: %d"
+
+#. translators: %s: Media Library (link)
+#: class-forceregeneratethumbnails.php:517
+msgid "Media Library"
+msgstr "Mediathek"
+
+#. Author URI of the plugin
+#: force-regenerate-thumbnails.php
+msgid "http://ewww.io/about/"
+msgstr "http://ewww.io/about/"
+
+#. Author of the plugin
+#: force-regenerate-thumbnails.php
+msgid "Exactly WWW"
+msgstr "Exactly WWW"
+
+#. Plugin URI of the plugin
+#: force-regenerate-thumbnails.php
+msgid "https://wordpress.org/plugins/force-regenerate-thumbnails/"
+msgstr "https://de.wordpress.org/plugins/force-regenerate-thumbnails/"
+
+#: class-forceregeneratethumbnails.php:473
+msgid "All Thumbnails"
+msgstr "Alle Vorschaubilder"
+
+#: class-forceregeneratethumbnails.php:196
+msgid "Unknown error occured."
+msgstr "Ein unbekannter Fehler ist aufgetreten."
+
+#. translators: %s: time elapsed
+#: class-forceregeneratethumbnails.php:876
+msgid "Successfully regenerated in %s seconds"
+msgstr "Erfolgreich regeneriert in %s Sekunden"
+
+#: class-forceregeneratethumbnails.php:590
+msgid "Your user account does not have permission to regenerate thumbnails."
+msgstr "Dein Benutzerkonto hat keine Berechtigung, Bilder zu regenerieren."
+
+#. translators: %d: The attachment ID that was invalid or not found.
+#. translators: %d: attachment ID number
+#: class-force-regenerate-thumbnails-cli.php:107
+#: class-forceregeneratethumbnails.php:620
+msgid "Failed: %d is an invalid media ID."
+msgstr "Fehlgeschlagen: %d ist eine ungültige Medien-ID."
+
+#. translators: %d: SVG attachment ID.
+#. translators: %d: attachment ID number
+#: class-force-regenerate-thumbnails-cli.php:116
+#: class-forceregeneratethumbnails.php:633
+msgid "Skipped: %d is a SVG"
+msgstr "Übersprungen: %d ist ein SVG"

@@ -379,7 +379,7 @@ if ( is_shop() ) {
     echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2-2"]');
 
 // CATEGORY: /sets + children
-} elseif ( is_product_category_or_child('boxershorts-sets') || is_product_category_or_child('boxershorts-sets') ) {
+} elseif ( is_product_category_or_child('sets') || is_product_category_or_child('sets') ) {
 
     echo do_shortcode('[yith_wcan_filters slug="default-preset"]');
 
