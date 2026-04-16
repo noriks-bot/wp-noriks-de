@@ -315,7 +315,7 @@ add_action( 'wp_footer', function() {
     <script id="noriks-checkout-validation">
     jQuery(function($){
       var messages = {
-        required: '\u2715 Obavezna informacija',
+        required: '\u2715 Pflichtfeld',
         billing_address_2: '\u2715 Falls Sie keine Hausnummer haben, geben Sie bitte BB ein',
       };
       var submitted = false; /* only validate after first submit attempt */
@@ -323,7 +323,7 @@ add_action( 'wp_footer', function() {
       $('form.checkout').on('checkout_place_order', function(){ submitted = true; });
       $(document).on('click', '#place_order', function(){
         submitted = true;
-        $(this).css('opacity','0.6').text('Obrada...');
+        $(this).css('opacity','0.6').text('Wird verarbeitet...');
         $('form.checkout').css({'opacity':'0.4','pointer-events':'none','transition':'opacity 0.3s'});
       });
       $(document.body).on('checkout_error', function(){
@@ -372,13 +372,13 @@ add_action( 'wp_footer', function() {
 
         /* Email format */
         if (isEmail && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
-          showError($row, '\u2715 Unesite ispravnu e-mail adresu');
+          showError($row, '\u2715 Bitte geben Sie eine gueltige E-Mail-Adresse ein');
           return false;
         }
 
         /* Phone format (at least 6 digits) */
         if (isPhone && val && val.replace(/\D/g,'').length < 6) {
-          showError($row, '\u2715 Unesite ispravan broj telefona');
+          showError($row, '\u2715 Bitte geben Sie eine gueltige Telefonnummer ein');
           return false;
         }
 
@@ -476,7 +476,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     /* Description injected via JS to survive update_checkout AJAX re-renders */
     // $fields['billing']['billing_email']['description'] = 'Zur Bestellbestaetigung und Sendungsverfolgung';
     $fields['billing']['billing_email']['required'] = true;
-    $fields['billing']['billing_country']['default'] = 'HR';
+    $fields['billing']['billing_country']['default'] = 'DE';
     unset( $fields['billing']['billing_company'] );
 
     // Vigoshop CSS classes
@@ -516,7 +516,7 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
     echo '<h3 class="checkout-billing-title">Zahlung und Versand</h3>';
 });
 
-add_filter( 'default_checkout_billing_country', function() { return 'HR'; });
+add_filter( 'default_checkout_billing_country', function() { return 'DE'; });
 add_filter( 'woocommerce_order_button_text', function() { return 'Bestellen'; });
 
 /**
@@ -595,11 +595,11 @@ add_action('woocommerce_review_order_before_submit', function(){
             var ok=r.ok;return r.text().then(function(html){return{ok:ok,html:html};});
         }).then(function(res){
             msg.style.display='block';
-            var isError=!res.ok||res.html.indexOf('error')!==-1||res.html.indexOf('ne postoji')!==-1||res.html.indexOf('nije valjan')!==-1||res.html.indexOf('removed')!==-1;
+            var isError=!res.ok||res.html.indexOf('error')!==-1||res.html.indexOf('existiert nicht')!==-1||res.html.indexOf('ungueltig')!==-1||res.html.indexOf('removed')!==-1;
             if(isError){
                 msg.style.background='#fde8e8';msg.style.color='#c00';
                 var txt=res.html.replace(/<[^>]*>/g,'').trim();
-                msg.innerHTML='❌ '+(txt||'Gutscheincode nije valjan.');
+                msg.innerHTML='❌ '+(txt||'Ungueltiger Gutscheincode.');
             }else{
                 msg.style.background='#e8fde8';msg.style.color='#080';
                 msg.innerHTML='✅ Gutschein angewendet!';
