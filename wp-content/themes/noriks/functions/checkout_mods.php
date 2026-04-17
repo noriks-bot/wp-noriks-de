@@ -382,6 +382,12 @@ add_action( 'wp_footer', function() {
           return false;
         }
 
+        /* Postcode — DE: exactly 5 digits */
+        if ($row.hasClass('validate-postcode') && val && !/^\d{5}$/.test(val)) {
+          showError($row, '\u2715 Die Postleitzahl muss 5 Ziffern haben');
+          return false;
+        }
+
         /* Valid */
         if (val) showValid($row);
         return true;
