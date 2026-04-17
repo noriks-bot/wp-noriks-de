@@ -14,7 +14,12 @@ defined( 'ABSPATH' ) || exit;
         $attrs = '';
         if ( !empty($cart_item['variation']) ) {
           $parts = array();
-          foreach ($cart_item['variation'] as $k=>$v) $parts[] = wc_attribute_label(str_replace('attribute_','',$k)).': '.$v;
+          foreach ($cart_item['variation'] as $k=>$v) {
+            $label = wc_attribute_label(str_replace('attribute_','',$k));
+            /* Shorten DE size labels: "groesse-des-t-shirts" → "Größe" */
+            if (stripos($label, 'groesse') !== false || stripos($label, 'größe') !== false) $label = 'Größe';
+            $parts[] = $label . ': ' . $v;
+          }
           $attrs = implode(', ',$parts);
         }
       ?>
