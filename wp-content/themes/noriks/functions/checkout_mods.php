@@ -323,11 +323,11 @@ add_action( 'wp_footer', function() {
       $('form.checkout').on('checkout_place_order', function(){ submitted = true; });
       $(document).on('click', '#place_order', function(){
         submitted = true;
-        $(this).css('opacity','0.6').text('Wird verarbeitet...');
+        $(this).css('opacity','0.6').text('Wird bearbeitet...');
         $('form.checkout').css({'opacity':'0.4','pointer-events':'none','transition':'opacity 0.3s'});
       });
       $(document.body).on('checkout_error', function(){
-        $('#place_order').css('opacity','1').text('Bestellen');
+        $('#place_order').css('opacity','1').text('Jetzt bestellen');
         $('form.checkout').css({'opacity':'1','pointer-events':''});
       });
 
@@ -553,7 +553,7 @@ add_filter( 'woocommerce_form_field_text', function( $field, $key ) {
  * Billing title
  */
 add_action( 'woocommerce_before_checkout_billing_form', function() {
-    echo '<h3 class="checkout-billing-title">Zahlung und Versand</h3>';
+    echo '<h3 class="checkout-billing-title">Bezahlung und Lieferung</h3>';
 });
 
 add_filter( 'default_checkout_billing_country', function() { return 'DE'; });
@@ -564,7 +564,7 @@ add_action( 'woocommerce_checkout_update_order_meta', function( $order_id ) {
         update_post_meta( $order_id, '_billing_wohnungsnr', sanitize_text_field( $_POST['billing_wohnungsnr'] ) );
     }
 });
-add_filter( 'woocommerce_order_button_text', function() { return 'Bestellen'; });
+add_filter( 'woocommerce_order_button_text', function() { return 'Jetzt bestellen'; });
 
 /**
  * Payment gateway order: COD → Stripe → PayPal

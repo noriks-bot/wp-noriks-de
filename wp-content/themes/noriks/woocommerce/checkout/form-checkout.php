@@ -66,7 +66,7 @@ if ( WC()->cart->is_empty() ) return;
 
         <!-- VAT -->
         <div id="hs-vat-tax-checkout-prompt">
-          <span class="tax-and-vat-checkout-claims">Keine zusaetzlichen Zollkosten</span>
+          <span class="tax-and-vat-checkout-claims">Keine zusätzlichen Zollkosten</span>
           <span class="tax-and-vat-checkout-claims">MwSt. ist im Preis enthalten</span>
         </div>
 
@@ -91,13 +91,13 @@ if ( WC()->cart->is_empty() ) return;
     <img decoding="async" src="https://images.vigo-shop.com/general/guarantee_money_back/satisfaction_icon_hr.png">
   </div>
   <div class="flex__item--autosize f--m checkout-warranty__text">
-    <strong>Sorgenfrei einkaufen</strong><br>Geld-zurueck innerhalb von 90 Tagen moeglich
+    <strong>Sorgenfrei einkaufen</strong><br>Geld-zurück innerhalb von 90 Tagen möglich
   </div>
 </div>
 
 <!-- Terms -->
 <div class="agreed_terms_txt">
-  <span class="policy-agreement-obligation">Mit Klick auf <strong>Jetzt bestellen</strong> bestaetige ich eine zahlungspflichtige Bestellung.</span><br>
+  <span class="policy-agreement-obligation">Mit Klick auf <strong>Jetzt bestellen</strong> bestätige ich eine zahlungspflichtige Bestellung.</span><br>
   <div class="terms-checkbox-and-links">
     <label class="checkbox">
       <input type="checkbox" class="input-checkbox" name="agree_to_checkout_terms" id="agree_to_terms_checkbox" value="1">

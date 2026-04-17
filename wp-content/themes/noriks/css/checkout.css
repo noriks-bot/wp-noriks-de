@@ -220,8 +220,6 @@ body.woocommerce-checkout #payment .payment_method_cod > label::after {
   content: 'Kostenlos' !important;
   background: #9ce79c !important;
   color: #228b22 !important;
-  background: #e3e6e8 !important;
-  color: #5f6061 !important;
 }
 
 /* Payment box (card fields) */
@@ -240,7 +238,7 @@ body.woocommerce-checkout #payment .payment_box fieldset {
 
 /* ===== Field descriptions via CSS ::after ===== */
 #billing_email_field::after {
-  content: 'Zur Bestellbestaetigung und Sendungsverfolgung';
+  content: 'Zur Bestellbestätigung und Sendungsverfolgung';
   display: block;
   font-size: 13px;
   color: #5f6061;
@@ -262,7 +260,7 @@ body.woocommerce-checkout #payment .payment_box fieldset {
   line-height: 1.4 !important;
 }
 #billing_phone_field::before {
-  content: 'Fuer Hilfe bei der Lieferung' !important;
+  content: 'Für die Zustellhilfe' !important;
   position: absolute !important;
   right: 0 !important;
   bottom: -20px !important;
@@ -406,5 +404,5 @@ body.woocommerce-checkout .noriks-order-summary .review-product-info div {
   font-weight: 500 !important;
 }
 
-/* More space between total and Bestellen button */
+/* More space between total and Jetzt bestellen button */
 .noriks-order-summary .vigo-checkout-total__sum { margin-bottom: 10px !important; }
