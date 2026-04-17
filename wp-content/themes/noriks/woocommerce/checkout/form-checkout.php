@@ -33,7 +33,7 @@ if ( WC()->cart->is_empty() ) return;
         <!-- SHIPPING -->
         <?php WC()->cart->calculate_totals(); ?>
         <div id="custom_shipping">
-          <h3>Versand</h3>
+          <h3>Lieferung</h3>
           <ul class="shipping_method_custom">
             <li class="standard-shipping shipping-tab">
               <input name="shipping_method[0]" data-index="0" id="shipping_method_0_standard_custom"

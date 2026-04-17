@@ -448,53 +448,77 @@ add_filter( 'body_class', function( $classes ) {
  * WC checkout field config — match vigoshop HR layout
  */
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
-    // Order — match vigoshop: name → address → phone → email
+    /* vigoshop.de layout:
+     * 1. Phone + Email (top)
+     * 2. Company (optional) — "Klingelschild/auf dem Briefkasten, Firma"
+     * 3. Vorname + Nachname (side by side)
+     * 4. Straße + Hausnr (side by side)
+     * 5. Wohnungsnr./Etage/Zimmernr. (optional) — billing_address_2 repurposed
+     * 6. Postleitzahl + Stadt/Ort (side by side)
+     */
     $fields['billing']['billing_phone']['priority']       = 10;
     $fields['billing']['billing_email']['priority']       = 20;
+    $fields['billing']['billing_company']['priority']     = 25;
     $fields['billing']['billing_first_name']['priority']  = 30;
     $fields['billing']['billing_last_name']['priority']   = 40;
     $fields['billing']['billing_address_1']['priority']   = 50;
-    $fields['billing']['billing_address_2']['priority']   = 60;
-    $fields['billing']['billing_postcode']['priority']    = 70;
-    $fields['billing']['billing_city']['priority']        = 80;
-    // phone/email priorities already set above (10/20)
+    $fields['billing']['billing_address_2']['priority']   = 55;
+    // billing_address_2 repurposed as Wohnungsnr below
+    // We need a new field for Hausnr — use billing_address_2 as Hausnr, add custom field for Wohnungsnr
+    // Actually simpler: address_1 = Straße, address_2 = Hausnr (required, side by side)
+    // Add company as Wohnungsnr (optional)
+    /* Wohnungsnr field (optional) — between Hausnr and PLZ */
+    $fields['billing']['billing_state']['priority']       = 57;
+    $fields['billing']['billing_state']['type']           = 'text';
+    $fields['billing']['billing_state']['label']          = 'Wohnungsnr./Etage/Zimmernr.';
+    $fields['billing']['billing_state']['placeholder']    = 'Wohnungsnr./Etage/Zimmernr. (optional)';
+    $fields['billing']['billing_state']['required']       = false;
+    $fields['billing']['billing_state']['class']          = array('form-row','form-row-wide','form-group','col-xs-12');
 
-    // Labels, placeholders, required
+    $fields['billing']['billing_postcode']['priority']    = 60;
+    $fields['billing']['billing_city']['priority']        = 70;
+
+    // Labels + placeholders — match vigoshop.de exactly
+    $fields['billing']['billing_phone']['label'] = 'Telefon';
+    $fields['billing']['billing_phone']['placeholder'] = 'Mobiltelefonnummer';
+    $fields['billing']['billing_phone']['required'] = true;
+    $fields['billing']['billing_email']['label'] = 'E-Mail-Adresse';
+    $fields['billing']['billing_email']['placeholder'] = 'E-Mail-Adresse';
+    $fields['billing']['billing_email']['required'] = true;
+
+    // Company field = "Klingelschild/auf dem Briefkasten, Firma (optional)"
+    $fields['billing']['billing_company']['label'] = 'Klingelschild/auf dem Briefkasten, Firma';
+    $fields['billing']['billing_company']['placeholder'] = 'Klingelschild/auf dem Briefkasten, Firma (optional)';
+    $fields['billing']['billing_company']['required'] = false;
+
     $fields['billing']['billing_first_name']['label'] = 'Vorname';
     $fields['billing']['billing_first_name']['placeholder'] = 'Vorname';
     $fields['billing']['billing_last_name']['label'] = 'Nachname';
     $fields['billing']['billing_last_name']['placeholder'] = 'Nachname';
-    $fields['billing']['billing_address_1']['label'] = 'Strasse';
-    $fields['billing']['billing_address_1']['placeholder'] = 'Strasse';
-    $fields['billing']['billing_address_2']['label'] = 'Hausnummer';
-    $fields['billing']['billing_address_2']['placeholder'] = 'Hausnummer';
+
+    $fields['billing']['billing_address_1']['label'] = 'Straße';
+    $fields['billing']['billing_address_1']['placeholder'] = 'Straße';
+    $fields['billing']['billing_address_2']['label'] = 'Hausnr.';
+    $fields['billing']['billing_address_2']['placeholder'] = 'Hausnr.';
     $fields['billing']['billing_address_2']['required'] = true;
+
     $fields['billing']['billing_postcode']['label'] = 'Postleitzahl';
     $fields['billing']['billing_postcode']['placeholder'] = 'Postleitzahl';
-    $fields['billing']['billing_city']['label'] = 'Stadt';
-    $fields['billing']['billing_city']['placeholder'] = 'Stadt auswaehlen';
-    $fields['billing']['billing_phone']['label'] = 'Telefon';
-    $fields['billing']['billing_phone']['placeholder'] = 'Mobiltelefonnummer';
-    $fields['billing']['billing_phone']['required'] = true;
-    /* Description injected via JS to survive update_checkout AJAX re-renders */
-    // $fields['billing']['billing_phone']['description'] = '...';
-    $fields['billing']['billing_email']['label'] = 'E-Mail-Adresse';
-    $fields['billing']['billing_email']['placeholder'] = 'E-Mail-Adresse';
-    /* Description injected via JS to survive update_checkout AJAX re-renders */
-    // $fields['billing']['billing_email']['description'] = 'Zur Bestellbestaetigung und Sendungsverfolgung';
-    $fields['billing']['billing_email']['required'] = true;
-    $fields['billing']['billing_country']['default'] = 'DE';
-    unset( $fields['billing']['billing_company'] );
+    $fields['billing']['billing_city']['label'] = 'Stadt / Ort';
+    $fields['billing']['billing_city']['placeholder'] = 'Stadt / Ort';
 
-    // Vigoshop CSS classes
-    $fields['billing']['billing_first_name']['class'] = array('form-row','form-row-first','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_last_name']['class']  = array('form-row','form-row-last','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_address_1']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_address_2']['class']  = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_postcode']['class']   = array('form-row','form-row-wide','address-field','form-group','col-xs-12','validate-required','validate-postcode');
-    $fields['billing']['billing_city']['class']       = array('form-row','form-row-wide','dropdown','form-group','col-xs-12','validate-required');
-    $fields['billing']['billing_phone']['class']      = array('form-row','form-row-wide','form-group','col-xs-12','validate-required','validate-phone');
-    $fields['billing']['billing_email']['class']      = array('form-row','form-row-wide','form-group','col-xs-12','validate-email');
+    $fields['billing']['billing_country']['default'] = 'DE';
+
+    // CSS classes — side by side pairs
+    $fields['billing']['billing_phone']['class']         = array('form-row','form-row-wide','form-group','col-xs-12','validate-required','validate-phone');
+    $fields['billing']['billing_email']['class']         = array('form-row','form-row-wide','form-group','col-xs-12','validate-email');
+    $fields['billing']['billing_company']['class']       = array('form-row','form-row-wide','form-group','col-xs-12');
+    $fields['billing']['billing_first_name']['class']    = array('form-row','form-row-first','form-group','col-xs-12','validate-required');
+    $fields['billing']['billing_last_name']['class']     = array('form-row','form-row-last','form-group','col-xs-12','validate-required');
+    $fields['billing']['billing_address_1']['class']     = array('form-row','form-row-first','address-field','form-group','col-xs-12','validate-required');
+    $fields['billing']['billing_address_2']['class']     = array('form-row','form-row-last','address-field','form-group','col-xs-12','validate-required');
+    $fields['billing']['billing_postcode']['class']      = array('form-row','form-row-first','address-field','form-group','col-xs-12','validate-required','validate-postcode');
+    $fields['billing']['billing_city']['class']          = array('form-row','form-row-last','dropdown','form-group','col-xs-12','validate-required');
 
     // Input class — vigoshop uses 'form-input' alongside WC's 'input-text'
     foreach ( $fields['billing'] as &$f ) {
@@ -509,7 +533,7 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
  */
 add_filter( 'woocommerce_form_field_text', function( $field, $key ) {
     if ( $key === 'billing_last_name' ) {
-        $field .= '<div class="form-row form-row-wide col-xs-12">Geben Sie die Adresse ein, unter der Sie <b>zwischen 8:00 und 16:00 Uhr</b> erreichbar sind.</div>';
+        $field .= '<div class="form-row form-row-wide col-xs-12">Bitte geben Sie die Adresse an, an der Sie <b>zwischen 8:00 und 18:00 Uhr</b> erreichbar sind.</div>';
     }
     return $field;
 }, 10, 2 );
