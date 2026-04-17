@@ -321,14 +321,34 @@ add_action( 'wp_footer', function() {
       var submitted = false; /* only validate after first submit attempt */
       /* Set submitted=true when WC native button is clicked */
       $('form.checkout').on('checkout_place_order', function(){ submitted = true; });
-      $(document).on('click', '#place_order', function(){
+      $(document).on('click', '#place_order', function(e){
         submitted = true;
+        /* Validate all fields before submit */
+        var allValid = true;
+        var firstInvalid = null;
+        $('.woocommerce-checkout .form-row.validate-required:visible, .woocommerce-checkout .form-row.validate-email:visible, .woocommerce-checkout .form-row.validate-phone:visible').each(function(){
+          var input = $(this).find('input, select').first();
+          if (input.length && !validateField(input[0], true)) {
+            allValid = false;
+            if (!firstInvalid) firstInvalid = input[0];
+          }
+        });
+        if (!allValid) {
+          if (firstInvalid) { firstInvalid.focus(); firstInvalid.scrollIntoView({behavior:'smooth', block:'center'}); }
+          e.preventDefault(); e.stopImmediatePropagation(); return false;
+        }
         $(this).css('opacity','0.6').text('Wird bearbeitet...');
         $('form.checkout').css({'opacity':'0.4','pointer-events':'none','transition':'opacity 0.3s'});
       });
       $(document.body).on('checkout_error', function(){
+        submitted = true;
         $('#place_order').css('opacity','1').text('Jetzt bestellen');
         $('form.checkout').css({'opacity':'1','pointer-events':''});
+        /* Re-validate all fields */
+        $('.woocommerce-checkout .form-row.validate-required:visible').each(function(){
+          var input = $(this).find('input, select').first();
+          if (input.length) validateField(input[0], true);
+        });
       });
 
       function showError($row, msg) {
