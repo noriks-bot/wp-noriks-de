@@ -468,12 +468,15 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     // Actually simpler: address_1 = Straße, address_2 = Hausnr (required, side by side)
     // Add company as Wohnungsnr (optional)
     /* Wohnungsnr field (optional) — between Hausnr and PLZ */
-    $fields['billing']['billing_state']['priority']       = 57;
-    $fields['billing']['billing_state']['type']           = 'text';
-    $fields['billing']['billing_state']['label']          = 'Wohnungsnr./Etage/Zimmernr.';
-    $fields['billing']['billing_state']['placeholder']    = 'Wohnungsnr./Etage/Zimmernr. (optional)';
-    $fields['billing']['billing_state']['required']       = false;
-    $fields['billing']['billing_state']['class']          = array('form-row','form-row-wide','form-group','col-xs-12');
+    $fields['billing']['billing_wohnungsnr'] = array(
+        'type'        => 'text',
+        'label'       => 'Wohnungsnr./Etage/Zimmernr.',
+        'placeholder' => 'Wohnungsnr./Etage/Zimmernr. (optional)',
+        'required'    => false,
+        'priority'    => 57,
+        'class'       => array('form-row','form-row-wide','form-group','col-xs-12'),
+        'input_class' => array('input-text','form-input'),
+    );
 
     $fields['billing']['billing_postcode']['priority']    = 60;
     $fields['billing']['billing_city']['priority']        = 70;
@@ -549,19 +552,11 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
 
 add_filter( 'default_checkout_billing_country', function() { return 'DE'; });
 
-/* Force billing_state to text input for DE (WC defaults to Bundesland dropdown) */
-add_filter( 'woocommerce_get_country_locale', function( $locale ) {
-    $locale['DE']['state'] = array(
-        'required' => false,
-        'hidden'   => false,
-        'label'    => 'Wohnungsnr./Etage/Zimmernr.',
-        'placeholder' => 'Wohnungsnr./Etage/Zimmernr. (optional)',
-    );
-    return $locale;
-});
-add_filter( 'woocommerce_states', function( $states ) {
-    $states['DE'] = array(); /* Remove Bundesland dropdown, make it text input */
-    return $states;
+/* Save Wohnungsnr to order meta */
+add_action( 'woocommerce_checkout_update_order_meta', function( $order_id ) {
+    if ( ! empty( $_POST['billing_wohnungsnr'] ) ) {
+        update_post_meta( $order_id, '_billing_wohnungsnr', sanitize_text_field( $_POST['billing_wohnungsnr'] ) );
+    }
 });
 add_filter( 'woocommerce_order_button_text', function() { return 'Bestellen'; });
 
