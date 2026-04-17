@@ -539,17 +539,7 @@ add_filter( 'woocommerce_available_payment_gateways', function( $gw ) {
 
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
-/**
- * COD fee — add 1.99€ surcharge when Cash on Delivery is selected
- */
-add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
-    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) return;
-
-    $chosen_gateway = WC()->session->get( 'chosen_payment_method' );
-    if ( $chosen_gateway === 'cod' ) {
-        $cart->add_fee( 'Nachnahme', 1.99, false );
-    }
-});
+/* COD fee removed for DE — no surcharge */
 
 /**
  * Update totals when payment method changes (AJAX)
