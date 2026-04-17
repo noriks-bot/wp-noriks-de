@@ -548,6 +548,21 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
 });
 
 add_filter( 'default_checkout_billing_country', function() { return 'DE'; });
+
+/* Force billing_state to text input for DE (WC defaults to Bundesland dropdown) */
+add_filter( 'woocommerce_get_country_locale', function( $locale ) {
+    $locale['DE']['state'] = array(
+        'required' => false,
+        'hidden'   => false,
+        'label'    => 'Wohnungsnr./Etage/Zimmernr.',
+        'placeholder' => 'Wohnungsnr./Etage/Zimmernr. (optional)',
+    );
+    return $locale;
+});
+add_filter( 'woocommerce_states', function( $states ) {
+    $states['DE'] = array(); /* Remove Bundesland dropdown, make it text input */
+    return $states;
+});
 add_filter( 'woocommerce_order_button_text', function() { return 'Bestellen'; });
 
 /**
