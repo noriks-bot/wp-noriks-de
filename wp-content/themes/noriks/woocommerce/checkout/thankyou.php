@@ -26,20 +26,20 @@ foreach ( $order->get_items() as $item ) {
     $cats = wp_get_post_terms( $item->get_product_id(), 'product_cat', array('fields' => 'slugs') );
     $cat_str = is_array($cats) ? strtolower(implode(' ', $cats)) : '';
     // Majica: category has "majic" OR name has "majic"
-    $is_t-shirt = ( strpos($cat_str, 'shirt') !== false || strpos($name, 'shirt') !== false );
+    $is_tshirt = ( strpos($cat_str, 'shirt') !== false || strpos($name, 'shirt') !== false );
     // Bokserice: category has "boxer/bokser/orto" OR SKU has "box" OR name has "bokser/airflow"
     $is_boks = ( strpos($cat_str, 'boxer') !== false || strpos($cat_str, 'boxer') !== false || strpos($cat_str, 'orto') !== false || strpos($sku, 'box') !== false || strpos($name, 'boxer') !== false || strpos($name, 'airflow') !== false );
     // Komplet
     $is_komplet = ( strpos($name, 'set') !== false || strpos($cat_str, 'set') !== false );
     if ( $is_boks ) $has_boxershorts = true;
-    if ( $is_t-shirt || $is_komplet ) $has_only_boxershorts = false;
+    if ( $is_tshirt || $is_komplet ) $has_only_boxershorts = false;
 }
 if ( !$has_boxershorts ) $has_only_boxershorts = false;
 
 // ONLY boxershorts in order → upsell MAJICE, else → upsell BOXERSHORTS
-$upsell_is_t-shirts = $has_only_boxershorts;
+$upsell_is_tshirts = $has_only_boxershorts;
 
-if ( $upsell_is_t-shirts ) {
+if ( $upsell_is_tshirts ) {
     $upsell_product_id = 250; // Schwarzes T-Shirt (variable)
     $upsell_name       = 'Schwarze T-Shirts';
     $upsell_qty_prices = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
@@ -890,7 +890,7 @@ body.woocommerce-order-received .woocommerce {
             fd.append('variation_id', select ? select.value : '');
             fd.append('sale_price', '<?php echo $upsell_sale_price; ?>');
             fd.append('quantity', qty);
-            fd.append('upsell_type', '<?php echo $upsell_is_t-shirts ? "post_purchase_step1_t-shirt" : "post_purchase_step1_bokserica"; ?>');
+            fd.append('upsell_type', '<?php echo $upsell_is_tshirts ? "post_purchase_step1_tshirt" : "post_purchase_step1_bokserica"; ?>');
             fd.append('nonce', nonce);
 
             fetch(ajaxUrl, { method: 'POST', body: fd })
