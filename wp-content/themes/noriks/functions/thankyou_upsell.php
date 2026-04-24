@@ -293,7 +293,8 @@ function noriks_handle_add_upsell() {
     // Prices depend on product type (boxershorts vs t-shirts)
     $boxershorts_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
     $tshirt_prices      = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
-    $product_name_lc    = strtolower( $product->get_name() );
+    $_parent_product = ($variation_id && $product_id) ? wc_get_product($product_id) : $product;
+    $product_name_lc    = strtolower( $_parent_product ? $_parent_product->get_name() : $product->get_name() );
     $is_tshirt          = strpos( $product_name_lc, 'shirt' ) !== false;
     $qty_prices         = $is_tshirt ? $tshirt_prices : $boxershorts_prices;
     $total_price = isset( $qty_prices[$quantity] ) ? $qty_prices[$quantity] : $active_price;
