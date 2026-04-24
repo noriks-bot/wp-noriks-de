@@ -210,7 +210,7 @@ function noriks_remove_upsell() {
 
     // Only allow while in primary-hold
     if ( $order->get_status() !== 'primary-hold' ) {
-        wp_send_json_error( 'Vrijeme za izmjene je isteklo' );
+        wp_send_json_error( 'Die Zeit fuer Aenderungen ist abgelaufen' );
     }
 
     $product_name = $item->get_name();
@@ -218,9 +218,9 @@ function noriks_remove_upsell() {
     $order->calculate_totals();
     $order->save();
 
-    $order->add_order_note( sprintf( 'Upsell uklojen: %s', $product_name ) );
+    $order->add_order_note( sprintf( 'Upsell entfernt: %s', $product_name ) );
 
-    wp_send_json_success( array( 'message' => 'Uklonjeno' ) );
+    wp_send_json_success( array( 'message' => 'Entfernt' ) );
 }
 
 
