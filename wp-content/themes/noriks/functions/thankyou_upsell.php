@@ -293,16 +293,14 @@ function noriks_handle_add_upsell() {
     // Prices depend on product type (boxershorts vs t-shirts)
     $boxershorts_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
     $tshirt_prices      = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
-    // ─── Detect product type: same logic as frontend thankyou.php ───
+    // ─── Detect product type: exact same logic as frontend thankyou.php ───
     $_detect_id = $product_id ?: $product->get_id();
     $_detect_prod = wc_get_product( $_detect_id );
-    $_det_name = strtolower( $_detect_prod ? $_detect_prod->get_name() : '' );
-    $_det_sku = strtolower( $_detect_prod ? $_detect_prod->get_sku() : '' );
-    $_det_cats = wp_get_post_terms( $_detect_id, 'product_cat', array( 'fields' => 'slugs' ) );
-    $_det_cat_str = is_array( $_det_cats ) ? strtolower( implode( ' ', $_det_cats ) ) : '';
-    $_is_majica_cat = (bool) preg_match( '/majic|shirt|magliett|tenisk|tri[čc]k|polo|póló|koszulk|tricou|μπλουζ|mplouzoakia/', $_det_cat_str );
-    $_is_majica_name = (bool) preg_match( '/majic|shirt|magliett|tenisk|tri[čc]k|polo|póló|koszulk|tricou|μπλουζ|mplouzoakia/', $_det_name );
-    $is_tshirt = $_is_majica_cat || $_is_majica_name;
+    $name = strtolower( $_detect_prod ? $_detect_prod->get_name() : '' );
+    $sku = strtolower( $_detect_prod ? $_detect_prod->get_sku() : '' );
+    $cats = wp_get_post_terms( $_detect_id, 'product_cat', array( 'fields' => 'slugs' ) );
+    $cat_str = is_array( $cats ) ? strtolower( implode( ' ', $cats ) ) : '';
+    $is_tshirt = ( strpos($cat_str, 'shirt') !== false || strpos($name, 'shirt') !== false );
     $qty_prices         = $is_tshirt ? $tshirt_prices : $boxershorts_prices;
     $total_price = isset( $qty_prices[$quantity] ) ? $qty_prices[$quantity] : $active_price;
     $upsell_price = $total_price / $quantity;
