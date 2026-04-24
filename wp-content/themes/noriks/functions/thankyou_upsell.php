@@ -293,8 +293,24 @@ function noriks_handle_add_upsell() {
     // Prices depend on product type (boxershorts vs t-shirts)
     $boxershorts_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
     $tshirt_prices      = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
-    $upsell_type = sanitize_text_field( $_POST['upsell_type'] ?? '' );
-    $is_tshirt = ( strpos( $upsell_type, 'majica' ) !== false );
+    // ─── Detect product type: t-shirt or boxershorts ───
+    // Method 1: upsell_type from frontend (step 1 sends majica/bokserica)
+    $upsell_type_detect = sanitize_text_field( $_POST['upsell_type'] ?? '' );
+    if ( strpos( $upsell_type_detect, 'majica' ) !== false ) {
+        $is_tshirt = true;
+    } elseif ( strpos( $upsell_type_detect, 'bokserica' ) !== false ) {
+        $is_tshirt = false;
+    } else {
+        // Method 2: product categories + name (works for step 2 grid + orto + any product)
+        $_detect_product = $product_id ? wc_get_product( $product_id ) : $product;
+        $_cat_slugs = '';
+        if ( $_detect_product ) {
+            $_terms = wp_get_post_terms( $_detect_product->get_id(), 'product_cat', array( 'fields' => 'slugs' ) );
+            if ( is_array( $_terms ) ) $_cat_slugs = strtolower( implode( ' ', $_terms ) );
+        }
+        $_detect_name = strtolower( $_detect_product ? $_detect_product->get_name() : '' );
+        $is_tshirt = (bool) preg_match( '/majic|shirt|magliett|tenisk|tri[čc]k|polo|póló|koszulk|tricou|μπλουζ|mplouzoakia/', $_cat_slugs . ' ' . $_detect_name );
+    }
     $qty_prices         = $is_tshirt ? $tshirt_prices : $boxershorts_prices;
     $total_price = isset( $qty_prices[$quantity] ) ? $qty_prices[$quantity] : $active_price;
     $upsell_price = $total_price / $quantity;
