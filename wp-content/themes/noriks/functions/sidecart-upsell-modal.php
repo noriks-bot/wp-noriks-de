@@ -546,7 +546,7 @@ function noriks_upsell_modal_markup() {
                 return;
             }
 
-            $btn.addClass('adding').text('DODAJEM...');
+            $btn.addClass('adding').text('Hinzufügen...');
 
             var qty = parseInt($('#noriks-qty-val').val()) || 1;
             var data = {
@@ -565,7 +565,7 @@ function noriks_upsell_modal_markup() {
             $.post(woocommerce_params.ajax_url, data, function(res) {
                 
                 if (res.success !== false && res.fragments) {
-                    $btn.removeClass('adding').addClass('added').text('✓ DODANO!');
+                    $btn.removeClass('adding').addClass('added').text('✓ HINZUGEFÜGT!');
                     
                     // Apply fragments to update side cart
                     $.each(res.fragments, function(key, value) {

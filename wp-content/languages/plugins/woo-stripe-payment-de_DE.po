@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Payment Plugins for Stripe WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-12 02:19:45+0000\n"
+"PO-Revision-Date: 2026-05-03 23:47:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2111,14 +2111,6 @@ msgstr "Neue Bank"
 msgid "when required"
 msgstr "wenn erforderlich"
 
-#: includes/gateways/class-wc-payment-gateway-stripe-link.php:59
-#: includes/gateways/settings/applepay-settings.php:80
-#: includes/gateways/settings/googlepay-settings.php:95
-#: includes/gateways/settings/payment-request-settings.php:80
-#: templates/checkout/checkout-banner.php:10
-msgid "Express Checkout"
-msgstr "Express-Zahlung"
-
 #: templates/checkout/ach.php:13
 msgid "pin"
 msgstr "Pin"
@@ -2131,6 +2123,14 @@ msgstr "Bitte aktualisiere die Produktmenge, bevor du bezahlst."
 #: includes/gateways/class-wc-payment-gateway-stripe-upm.php:727
 msgid "n/a"
 msgstr "n. a."
+
+#: includes/gateways/class-wc-payment-gateway-stripe-link.php:59
+#: includes/gateways/settings/applepay-settings.php:80
+#: includes/gateways/settings/googlepay-settings.php:95
+#: includes/gateways/settings/payment-request-settings.php:80
+#: templates/checkout/checkout-banner.php:10
+msgid "Express Checkout"
+msgstr "Express-Kasse"
 
 #: includes/gateways/class-wc-payment-gateway-stripe-ach.php:31
 msgid "ACH"
@@ -2714,11 +2714,6 @@ msgstr "Wertung"
 #: includes/admin/meta-boxes/views/html-order-pay.php:2
 msgid "Admins can process customer orders over the phone using this functionality."
 msgstr "Administratoren können mit dieser Funktion Kundenbestellungen via Telefon durchführen."
-
-#: includes/admin/views/html-user-profile.php:34
-#: includes/admin/views/html-user-profile.php:67
-msgid "Payment Gateway"
-msgstr "Zahlungs-Gateway"
 
 #: includes/class-wc-stripe-redirect-handler.php:57
 msgid "Error retrieving payment source. Reason: %s"
@@ -3348,12 +3343,6 @@ msgstr "Fehler beim Erfassen der Abbuchung in Stripe. Grund: %s"
 msgid "Charge Type"
 msgstr "Abbuchungstyp"
 
-#: includes/admin/meta-boxes/views/html-charge-data-subview.php:45
-#: includes/admin/views/html-user-profile.php:35
-#: includes/admin/views/html-user-profile.php:68
-msgid "Payment Method"
-msgstr "Bezahlmethode"
-
 #: includes/admin/settings/class-wc-stripe-api-settings.php:184
 msgid "Debug Log"
 msgstr "Debug-Protokoll"
@@ -3372,3 +3361,14 @@ msgstr "Bitte warten …"
 #: includes/abstract/abstract-wc-stripe-payment.php:120
 msgid "authorization"
 msgstr "Autorisierung"
+
+#: includes/admin/meta-boxes/views/html-charge-data-subview.php:45
+#: includes/admin/views/html-user-profile.php:35
+#: includes/admin/views/html-user-profile.php:68
+msgid "Payment Method"
+msgstr "Zahlungsart"
+
+#: includes/admin/views/html-user-profile.php:34
+#: includes/admin/views/html-user-profile.php:67
+msgid "Payment Gateway"
+msgstr "Zahlungsschnittstelle"

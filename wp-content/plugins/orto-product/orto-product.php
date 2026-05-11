@@ -432,7 +432,11 @@ function gck_render_bundle_selector() {
       .color-bez { background: #e4e0cf; }
       .color-smeda { background: #9f6f4e; }
       .color-zelena { background: #65633c; }
-      .color-tamnoplava { background: #2a3262; }
+      .color-tamnoplava, .color-marineblau { background: #2a3262; }
+
+
+.color-marineblau { background: #2a3262; }
+
 
       .bundle-option input[type="radio"] {
           -webkit-appearance: none;
