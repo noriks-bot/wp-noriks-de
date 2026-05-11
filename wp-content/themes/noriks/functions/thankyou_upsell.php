@@ -210,7 +210,7 @@ function noriks_remove_upsell() {
 
     // Only allow while in primary-hold
     if ( $order->get_status() !== 'primary-hold' ) {
-        wp_send_json_error( 'Vrijeme za izmjene je isteklo' );
+        wp_send_json_error( 'Die Zeit fuer Aenderungen ist abgelaufen' );
     }
 
     $product_name = $item->get_name();
@@ -218,9 +218,9 @@ function noriks_remove_upsell() {
     $order->calculate_totals();
     $order->save();
 
-    $order->add_order_note( sprintf( 'Upsell uklojen: %s', $product_name ) );
+    $order->add_order_note( sprintf( 'Upsell entfernt: %s', $product_name ) );
 
-    wp_send_json_success( array( 'message' => 'Uklonjeno' ) );
+    wp_send_json_success( array( 'message' => 'Entfernt' ) );
 }
 
 
@@ -293,8 +293,14 @@ function noriks_handle_add_upsell() {
     // Prices depend on product type (boxershorts vs t-shirts)
     $boxershorts_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
     $tshirt_prices      = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
-    $product_name_lc    = strtolower( $product->get_name() );
-    $is_tshirt          = strpos( $product_name_lc, 'shirt' ) !== false;
+    // ─── Detect product type: exact same logic as frontend thankyou.php ───
+    $_detect_id = $product_id ?: $product->get_id();
+    $_detect_prod = wc_get_product( $_detect_id );
+    $name = strtolower( $_detect_prod ? $_detect_prod->get_name() : '' );
+    $sku = strtolower( $_detect_prod ? $_detect_prod->get_sku() : '' );
+    $cats = wp_get_post_terms( $_detect_id, 'product_cat', array( 'fields' => 'slugs' ) );
+    $cat_str = is_array( $cats ) ? strtolower( implode( ' ', $cats ) ) : '';
+    $is_tshirt = ( strpos($cat_str, 'shirt') !== false || strpos($name, 'shirt') !== false );
     $qty_prices         = $is_tshirt ? $tshirt_prices : $boxershorts_prices;
     $total_price = isset( $qty_prices[$quantity] ) ? $qty_prices[$quantity] : $active_price;
     $upsell_price = $total_price / $quantity;
