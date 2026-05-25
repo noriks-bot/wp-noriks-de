@@ -486,7 +486,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
           <?php else: ?>
       
       
-       <img src="https://noriks.com/de/wp-content/uploads/2026/04/tablica_de.jpg">
+       <img src="<?php echo get_template_directory_uri(); ?>/img/tabela-velikosti-majice.jpg">
         
             
         <?php endif; ?>
