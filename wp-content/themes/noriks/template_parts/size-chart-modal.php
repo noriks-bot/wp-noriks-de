@@ -94,7 +94,6 @@
 @media (min-width: 769px) {
   .slike-mobile-only { display: none !important; }
   .info-box-mobile  { display: none !important; }
-  .size-chart-body { padding: 10px; }
 }
 </style>
 
