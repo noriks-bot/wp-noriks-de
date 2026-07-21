@@ -440,7 +440,19 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
         
         
                 Unsere Premium-T-Shirts bestehen aus einer hochwertigen Mischung aus 60 % ringgesponnener Baumwolle und 40 % Polyester und bieten dadurch einen besonders weichen, knitterarmen Stoff. <br><br>NORIKS Boxershorts bestehen aus einer hochwertigen Mischung aus 95 % Modal und 5 % Elasthan. Das sorgt fuer ein besonders weiches, elastisches Material, das sich optimal an den Koerper anpasst. Der elastische Bund ist fuer optimalen Sitz entwickelt und bietet Komfort ohne Einengen sowie eine saubere Optik unter der Kleidung.<br>
-        
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) ): ?>
+
+                NORIKS FisioRest ist ein therapeutisches Nackenkissen, das Traktion, Wärme und Vibrationsmassage in einem ergonomischen Design aus Memory-Schaum vereint. Es dehnt den Nacken sanft im richtigen Winkel, entlastet die Halswirbelsäule und löst mit Wärme und Massage die Muskelverspannung. Kabellos, wiederaufladbar und mit weicher, kühlender Seide umhüllt – auch sicher zum Schlafen.
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) ): ?>
+
+                Der NORIKS Hallux-valgus-Korrektor führt die Großzehe mit fortschrittlicher Ausrichtungstherapie und einem patentierten Gelenkmechanismus sanft in ihre natürliche Position zurück, lindert die Beschwerden und verhindert das weitere Wachstum der Wölbung. Das flexible Design ermöglicht es, damit auch zu gehen. Er passt an alle Fußgrößen, ohne linke oder rechte Seite. Für die Anwendung in Ruhe – beim Ausruhen, Fernsehen, Lesen oder Schlafen.
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ): ?>
+
+                Der NORIKS orthopädische Gurt stabilisiert gezielt den unteren Rücken mithilfe gezielter Kompression, richtet das Becken korrekt aus und entlastet den Ischiasnerv. Dünn und unauffällig unter der Kleidung, mit einstellbarem Grad der Unterstützung. Geeignet bei Kreuzschmerzen, Ischias, Muskelverspannungen und Problemen mit dem ISG-Gelenk.
+
         <?php else: ?>
         
         
@@ -459,42 +471,53 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
     
      
      <!-- 2 - slika tablica velicina -->
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // keine Größentabelle für bunion + fisiorest ?>
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3>Größentabellen</h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
-           <?php if( $is_boxers ): ?>
-       
-        
+
+           <?php if( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ): ?>
+
+          <div style="line-height:1.9;">
+            <strong>S/M</strong> : Hüftumfang 75–110 cm<br>
+            <strong>L/XL</strong> : Hüftumfang 110–140 cm<br><br>
+            Bitte messen Sie Ihren Hüftumfang, um Ihre Größe zu finden.
+          </div>
+
+        <?php elseif( $is_boxers ): ?>
+
+
           <img src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
-          
-          
-          
-        
+
+
+
+
         <?php elseif(  $is_carape ): ?>
-        
-        
+
+
                   <img src="https://noriks.com/de/wp-content/uploads/2026/04/nogavice_de.jpg">
-                  
+
     <?php elseif(  $is_mixed_bundle ): ?>
-    
+
      <img src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
-        
+
           <?php else: ?>
-      
-      
+
+
        <img src="https://noriks.com/de/wp-content/uploads/2026/04/tablica_de.jpg">
-        
-            
+
+
         <?php endif; ?>
       </div>
     </div>
+    <?php endif; // /keine Größentabelle für bunion + fisiorest ?>
 
 
     <!-- 3 - Pflegehinweise -->
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) ) ) ) : // keine Pflegehinweise für Gurt/bunion/fisiorest ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
@@ -503,20 +526,21 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
       <div class="accordion-content">
              <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
-        
-         
+
+
         <?php elseif( noriks_has_product_cat( array( 'starter-pakete', 'orto-starter' ), $current_product_id ) ): ?>
-        
-        
-        
-                         Farben mit aehnlichen Farben waschen. Schonwaschgang mit kaltem Wasser. Flach trocknen oder bei niedriger Temperatur im Trockner trocknen. Nicht bleichen.              
-        
-        
+
+
+
+                         Farben mit aehnlichen Farben waschen. Schonwaschgang mit kaltem Wasser. Flach trocknen oder bei niedriger Temperatur im Trockner trocknen. Nicht bleichen.
+
+
           <?php else: ?>
             <?php echo get_field("__overwrite_sekcije_bellow_3"); ?>
         <?php endif; ?>
       </div>
     </div>
+    <?php endif; // /keine Pflegehinweise für Gurt/bunion/fisiorest ?>
 
 
 
