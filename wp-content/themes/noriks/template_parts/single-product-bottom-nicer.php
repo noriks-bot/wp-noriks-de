@@ -673,9 +673,15 @@ endif;
   $is_ortopas_page    = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) );
   $is_bunion_page     = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $current_product_id) );
   $is_fisiorest_page  = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $current_product_id) );
+  $is_norikshers_review_page = ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $current_product_id) );
+
+  // Fallback product name shown in review cards.
+  $rv_fallback_title = $is_norikshers_review_page ? 'NORIKS HERS' : 'Ein graues T-Shirt';
 
   // Include review pools (own pool per orto product group)
-  if ( $is_fisiorest_page ) {
+  if ( $is_norikshers_review_page ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_norikshers.php';
+  } elseif ( $is_fisiorest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_fisiorest.php';
   } elseif ( $is_bunion_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_bunion.php';
@@ -750,14 +756,16 @@ endif;
       $is_ortopas   = false;
       $is_bunion    = false;
       $is_fisiorest = false;
+      $is_norikshers = false;
       if ( $product_id ) {
           $is_bokserice = noriks_has_product_cat( 'boxers', $product_id );
           $is_ortopas   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas', $product_id) );
           $is_bunion    = ( function_exists('noriks_is_type') && noriks_is_type('bunion', $product_id) );
           $is_fisiorest = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest', $product_id) );
+          $is_norikshers = ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $product_id) );
       }
 
-      $cache_key = $transient_key . ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) );
+      $cache_key = $transient_key . ( $is_norikshers ? '_norikshers' : ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) );
 
       if ( function_exists( 'get_transient' ) ) {
           $cached = get_transient( $cache_key );
@@ -774,7 +782,9 @@ endif;
           'order'   => 'DESC',
       ];
 
-      if ( $is_fisiorest ) {
+      if ( $is_norikshers ) {
+          $args['category'] = [ 'orto-norikshers', 'orto-noriks-hers' ];
+      } elseif ( $is_fisiorest ) {
           $args['category'] = [ 'orto-fisiorest' ];
       } elseif ( $is_bunion ) {
           $args['category'] = [ 'orto-bunion' ];
@@ -1026,7 +1036,7 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
   // Avatar pools based on page category
   $avatar_type = $is_bokserice_page ? 'bokserice' : 'majice';
   // Belt + bunion + fisiorest: text-only reviews (no avatar images).
-  $avatar_pool = ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) ? array() : get_review_avatar_pool($avatar_type);
+  $avatar_pool = ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page ) ? array() : get_review_avatar_pool($avatar_type);
 
   $product_pool = get_wc_product_pool();
 
@@ -1068,8 +1078,8 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
   $ship_count = count($auto_reviews_ship);
 ?>
 
-<?php if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page ) : ?>
-<style>/* belt + bunion + fisiorest: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
+<?php if ( $is_ortopas_page || $is_bunion_page || $is_fisiorest_page || $is_norikshers_review_page ) : ?>
+<style>/* belt + bunion + fisiorest + norikshers: text-only reviews, no avatar */ #reviews-section .avatar { display: none !important; }</style>
 <?php endif; ?>
 
 <section id="reviews-section" class="basic-reviews-section" style="margin-bottom:40px!important;padding-bottom:40px!important;">
@@ -1092,7 +1102,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
       <?php if (!empty($initial_product)) : foreach ($initial_product as $review) :
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
-        $title = !empty($review['product_title']) ? $review['product_title'] : 'Ein graues T-Shirt';
+        $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
         $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
@@ -1127,7 +1137,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
       <?php if (!empty($initial_ship)) : foreach ($initial_ship as $review) :
         $name  = $review['name'] ?? 'Anonymní';
         $text  = $review['text'] ?? '';
-        $title = !empty($review['product_title']) ? $review['product_title'] : 'Ein graues T-Shirt';
+        $title = !empty($review['product_title']) ? $review['product_title'] : $rv_fallback_title;
         $url   = !empty($review['product_url'])   ? $review['product_url']   : '#';
         $stars = '★★★★★';
         $date_display = $review['assigned_date'] ?? '';
@@ -1231,7 +1241,7 @@ $auto_reviews_ship = assign_unique_avatars_first_n($auto_reviews_ship, $avatar_p
         article.className = 'review-card is-new';
 
         const url       = review.product_url   || '#';
-        const title     = review.product_title || 'Ein graues T-Shirt';
+        const title     = review.product_title || '<?php echo esc_js($rv_fallback_title); ?>';
         const name      = review.name          || 'Anonym';
         const text      = review.text          || '';
         const headline  = review.headline      || '';
@@ -1491,6 +1501,7 @@ $faq_list3 = get_field('faq_list_3', 'option');
 $is_ortopas_faq   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
 $is_bunion_faq    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
 $is_fisiorest_faq = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
+$is_norikshers_faq = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
 
 // Hallux-valgus-Korrektor — FAQ zum Produkt (Übersetzung, NORIKS).
 $bunion_faq = array(
@@ -1526,10 +1537,25 @@ $fisiorest_faq = array(
   array( 'questioon' => 'Kann ich es zurückgeben, wenn ich keine Ergebnisse sehe?', 'answer' => 'Selbstverständlich! Wir bieten eine volle Geld-zurück-Garantie innerhalb von 90 Tagen ab Lieferung, falls Sie mit dem Produkt nicht zufrieden sind. Schreiben Sie uns an info@noriks.com und wir antworten innerhalb von 12 Stunden nach Erhalt Ihrer Nachricht!' ),
 );
 
-// Swap ONLY the product-info FAQ container ("...Produkt...") for the 3 orto
+// NORIKS HERS — FAQ zum Produkt (Übersetzung, NORIKS).
+$norikshers_faq = array(
+  array( 'questioon' => 'Worin unterscheidet es sich von herkömmlichen Faltenpflastern oder Narbencremes?', 'answer' => 'Die meisten Faltenpflaster bestehen aus Papier oder Hydrokolloid, und Narbencremes bleiben oft nur an der Hautoberfläche. NORIKS HERS verwendet Silikon in klinischer Qualität, auf das Dermatologen seit Jahren vertrauen, um die Textur von Narben und die Elastizität der Haut sichtbar zu verbessern — und das nun auch zur Reduzierung von Falten.' ),
+  array( 'questioon' => 'Kann ein einziger Streifen wirklich gegen Falten und Narben helfen?', 'answer' => 'Ja, denn Falten und Narben sind beide Zeichen von Kollagenabbau oder schwacher Hautregeneration. Silikon unterstützt die Feuchtigkeitsspeicherung, den Kollagenaufbau und die Glättung der Hauttextur, was beidem zugutekommt.' ),
+  array( 'questioon' => 'Wie lange dauert es, bis ich Ergebnisse sehe?', 'answer' => 'Die meisten Anwenderinnen bemerken bereits nach 1–3 Anwendungen eine sichtbare Glättung bei feinen Linien, und das Erscheinungsbild von Narben verbessert sich nach 2–3 Wochen regelmäßiger Anwendung. Tiefere Narben und Falten können länger brauchen, aber die Ergebnisse bauen sich mit der Zeit auf.' ),
+  array( 'questioon' => 'Ist es für empfindliche oder zu Unreinheiten neigende Haut sicher?', 'answer' => 'Absolut. NORIKS HERS ist hypoallergen, latexfrei und sanft genug für empfindliche Bereiche wie um die Augen oder den Mund, sogar für heilende Aknenarben. Wenn Ihre Haut sehr reaktiv ist, testen Sie es zuerst immer an einer kleinen Stelle.' ),
+  array( 'questioon' => 'Wie lange kann ich es tragen?', 'answer' => 'Für die besten Ergebnisse empfehlen wir, NORIKS HERS 6–8 Stunden über Nacht zu tragen. Sie können es auch tagsüber verwenden — achten Sie nur darauf, dass die Haut darunter sauber sowie öl- und serumfrei ist.' ),
+  array( 'questioon' => 'Wie lange hält eine Rolle?', 'answer' => 'Je nachdem, wie oft und wo Sie es verwenden, kann eine Rolle 3–6 Wochen halten. Da es wiederverwendbar ist, ist es deutlich kosteneffizienter als Einwegpflaster oder Cremes.' ),
+  array( 'questioon' => 'Bleibt es an Ort und Stelle, während ich schlafe?', 'answer' => 'Ja! NORIKS HERS ist mit einem hautfreundlichen, langlebigen Klebstoff hergestellt, der Ihren Bewegungen folgt. Es ist atmungsaktiv und bleibt an Ort und Stelle, selbst bei Seitenschläferinnen.' ),
+  array( 'questioon' => 'An welchen Stellen kann ich es verwenden?', 'answer' => 'Überall! Die meisten Kundinnen verwenden NORIKS HERS an: Stirnfalten, Zornesfalten, Lachfalten, Halsfalten, Aknenarben, Kaiserschnittnarben, Dehnungsstreifen sowie Operations- oder Verletzungsnarben.' ),
+  array( 'questioon' => 'Warum ist NORIKS HERS besser als billige Online-Pflaster?', 'answer' => 'Viele online verkaufte Pflaster verwenden minderwertiges, dünnes Material oder schlechten Klebstoff. NORIKS HERS verwendet Premium-Silikon, ist im Labor auf Sicherheit und Haltbarkeit getestet und bleibt die ganze Nacht an Ort und Stelle. Zudem bieten wir einen engagierten Kundenservice und schnelleren Ersatz, falls Sie Hilfe benötigen.' ),
+  array( 'questioon' => 'Gibt es eine Geld-zurück-Garantie?', 'answer' => 'Ja, wir bieten eine 30-tägige risikofreie Garantie. Wenn Sie nicht zufrieden sind, kontaktieren Sie uns einfach und wir finden eine Lösung.' ),
+);
+
+// Swap ONLY the product-info FAQ container ("...Produkt...") for the orto
 // products; delivery/returns containers stay untouched.
-$faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq ) {
+$faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq ) {
   $is_info = ( stripos( (string) $title, 'Produkt' ) !== false );
+  if ( $is_norikshers_faq && $is_info ) { return $norikshers_faq; }
   if ( $is_fisiorest_faq && $is_info ) { return $fisiorest_faq; }
   if ( $is_bunion_faq && $is_info )    { return $bunion_faq; }
   if ( $is_ortopas_faq && $is_info )   { return $ortopas_faq; }
