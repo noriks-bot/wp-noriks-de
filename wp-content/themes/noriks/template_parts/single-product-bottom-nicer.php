@@ -588,19 +588,23 @@ endif;
       <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
       <h1 style="color:black;     margin-bottom: 4px;">
           
-          <?php if ( !noriks_has_product_cat( 'boxers', get_the_ID() ) ): ?>
-          
+          <?php if ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>
+
+          Du bist nicht allein auf der Suche nach glatter, faltenfreier Haut.
+
+          <?php elseif ( !noriks_has_product_cat( 'boxers', get_the_ID() ) ): ?>
+
           <?php echo get_field("singlepp_content_standard_reviews_t2","options"); ?>
-          
+
           <?php else: ?>
-          
+
           Sie sind nicht allein auf der Suche nach den perfekten Boxershorts.
-          
+
           <?php endif; ?>
           
           
           </h1>
-    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?></p>
+    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Tausende Frauen verwenden bereits die HERS Silikon-Kollagen-Streifen für glattere, straffere und jugendlicher aussehende Haut.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
     </div>
   </section>
   </div>
