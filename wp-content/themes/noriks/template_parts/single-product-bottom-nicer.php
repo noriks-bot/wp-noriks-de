@@ -210,7 +210,7 @@ Aber der erste Schritt ist genau dieser: wenig Risiko, klarer Eindruck.
 
 
 <?php 
-if ( noriks_has_product_cat( 'tshirts', get_the_id() ) || has_term( 'black-friday', 'product_cat', get_the_id() ) ) : 
+if ( noriks_has_product_cat( 'tshirts', get_the_id() ) || has_term( 'black-friday', 'product_cat', get_the_id() ) || has_term( 'orto-majica-darila', 'product_cat', get_the_id() ) ) :
 ?>
 
 
