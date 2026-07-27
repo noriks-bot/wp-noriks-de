@@ -51,14 +51,14 @@ if ( $upsell_is_tshirts ) {
     );
     $upsell_title_text = 'Jetzt T-Shirts hinzufuegen - 50 % Rabatt';
 } else {
-    $upsell_product_id = 2781; // Schwarze Boxershorts
-    $upsell_name       = 'Schwarze Boxershorts';
+    $upsell_product_id = 2829; // Graue Boxershorts (siva verzija, ista struktura kot crna)
+    $upsell_name       = 'Graue Boxershorts';
     $upsell_qty_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
-    $upsell_qty_names  = array( 1 => '1x Schwarze Boxershorts', 3 => '3x Schwarze Boxershorts', 5 => '5x Schwarze Boxershorts' );
+    $upsell_qty_names  = array( 1 => '1x Graue Boxershorts', 3 => '3x Graue Boxershorts', 5 => '5x Graue Boxershorts' );
     $upsell_qty_images = array(
-        1 => 'https://noriks.com/de/wp-content/uploads/2025/11/crne-boksarice-produktna.jpg',
-        3 => 'https://noriks.com/de/wp-content/uploads/2025/11/boksarice_3x_crne.png',
-        5 => 'https://noriks.com/de/wp-content/uploads/2026/01/boksarice_5x_crne.png',
+        1 => 'https://noriks.com/de/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg',
+        3 => 'https://noriks.com/de/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg', // TODO: 3x siva kompozitna, ko obstaja
+        5 => 'https://noriks.com/de/wp-content/uploads/2025/11/sive-boksarice-produktna.jpg', // TODO: 5x siva kompozitna, ko obstaja
     );
     $upsell_title_text = 'Jetzt Boxershorts hinzufuegen - 50 % Rabatt';
 }
