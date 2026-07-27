@@ -420,6 +420,45 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
  <div class="accordion">
 
 
+    <!-- KidsNest: die ersten beiden Accordion-Plätze (langer Inhalt aus der Summary) -->
+    <?php if ( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ) : ?>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Das Gesicht Ihres Kindes formt sich genau jetzt — und Sie haben Zeit bis zum 9. Lebensjahr</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <p>Atemwegsforscher und Kinderzahnärzte warnen seit Jahren vor demselben Muster — und die meisten Eltern haben noch nie davon gehört. Es heißt <strong>Langgesicht-Syndrom</strong> (adenoides Gesicht).</p>
+        <p>In jeder Nacht, in der ein Kind mit offenem Mund auf dem falschen Kissen schläft, passieren vier Dinge gleichzeitig: Die Zunge fällt nach hinten, der Kiefer weicht zurück, der Gaumen verengt sich zu einem hohen Bogen, und das Gesicht beginnt vertikal statt horizontal zu wachsen. Nach Tausenden solcher Nächte zwischen dem 3. und 9. Lebensjahr verfestigen sich die Veränderungen.</p>
+        <p>Deshalb erscheinen 9-Jährige heute beim Kieferorthopäden mit zurückgezogenem Kinn, Augenringen, engstehenden Zähnen — und einer teuren Rechnung für die Zahnspange. Wie ein Kind zwischen dem 3. und 9. Lebensjahr atmet, prägt maßgeblich das Gesicht, das es ein Leben lang tragen wird.</p>
+        <p>NORIKS <strong>KidsNest</strong> wurde entwickelt, um an der eigentlichen Ursache anzusetzen — der falschen Position von Kopf und Kiefer während 9 Stunden Schlaf — mit einer <strong>ergonomischen 3-Zonen-Struktur</strong>, die Kopf, Nacken und Kiefer von der ersten Nacht an in der richtigen Ausrichtung hält.</p>
+        <p><strong>Was Sie bei Ihrem Kind sehen werden:</strong></p>
+        <ul style="margin:6px 0 12px;padding-left:18px;">
+          <li style="margin:0 0 7px;"><strong>Weniger Mundatmung:</strong> geschlossene Lippen während der Nacht, Rückkehr der Nasenatmung, Schluss mit trockenem Mund am Morgen.</li>
+          <li style="margin:0 0 7px;"><strong>Leisere Nächte:</strong> Das Schnarchen beruhigt sich bei den meisten Kindern innerhalb von 1–2 Wochen.</li>
+          <li style="margin:0 0 7px;"><strong>Unterstützung für den wachsenden Kiefer:</strong> die richtige Position Nacht für Nacht, in den Jahren, in denen es am wichtigsten ist.</li>
+          <li style="margin:0 0 7px;"><strong>Kluge Vorsorge:</strong> ein Kissen heute — statt teurer Korrekturen morgen.</li>
+        </ul>
+        <p><strong>Ein Kissen heute Abend. Oder Tausende später.</strong></p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <h3>Älter als 9? Das Zeitfenster wird enger. Der Schaden hört nicht auf.</h3>
+        <div class="toggle">+</div>
+      </div>
+      <div class="accordion-content">
+        <p>Der Rat, den Sie gehört haben, stimmt nur zur Hälfte. Ja, der obere Gaumen verfestigt sich um das 9. Lebensjahr. Aber das Gesicht entwickelt sich bis zum 20., der Unterkiefer wächst bis zum 17., und die Atemwege passen sich ständig an.</p>
+        <p>Deshalb legt jede Nacht der Mundatmung nach dem 9. Lebensjahr neuen Schaden auf den alten: Zähneknirschen, Kopfschmerzen, Schlaf, der nicht erholt, nachlassende Konzentration — und eine Müdigkeit, die alle mit Faulheit verwechseln. Ihr Teenager ist nicht faul. Er bekommt jede Nacht sechs Stunden lang kaum Luft.</p>
+        <p>KidsNest in der Größe <strong>9–18 Jahre</strong> ist für einen älteren Kopf, Nacken und breitere Schultern gemacht. Eine andere Kontur, eine andere Höhe, eine andere Stützung. Derselbe Grundmechanismus: die richtige Ausrichtung von Kopf, Nacken und Kiefer, die ganze Nacht, an einem Körper, der noch wächst.</p>
+        <p>Was Eltern bemerken: Das Schnarchen beruhigt sich in 7 bis 14 Nächten, die echte Morgenenergie kehrt zurück, die Kopfschmerzen verblassen, die Konzentration kommt wieder.</p>
+        <p>Das beste Zeitfenster ist nach wie vor vom 3. bis zum 9. Lebensjahr. Ein starkes Zeitfenster ist vom 8. bis zum 18. Keines ist vollständig geschlossen — aber jede Nacht des Wartens erhöht den Druck auf einen Körper, der versucht, sich zu erholen.</p>
+        <p><strong>Gestern ist vorbei. Heute Abend gehört noch Ihnen.</strong></p>
+      </div>
+    </div>
+    <?php endif; ?>
+
+
     <!-- 1 - detajli --> <!-- ausgeblendet auf norikshers -->
     <?php if ( ! ( function_exists('noriks_is_type') && noriks_is_type('norikshers', $current_product_id) ) ) : ?>
     <div class="accordion-item">
@@ -428,11 +467,23 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-          
-         <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
-         
-         
-         
+
+         <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+
+                NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven, waschbaren Bezug, der sich einfach abnehmen lässt.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–18 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+
+                NORIKS Inkontinenz-Boxershorts bestehen aus weicher, antibakterieller Bambusfaser mit einer wasserabweisenden Außenschicht. Im Zentrum sitzt der 7-schichtige PureDry™-Kern, der bis zu 300 ml Flüssigkeit sofort aufsaugt und einschließt — die Haut bleibt trocken und nichts dringt nach außen.<br><br>Der Schnitt ist dünn und diskret — sie sehen aus und fühlen sich an wie normale Unterwäsche, ohne aufzutragen und ohne „Windel-Gefühl“. Der Schutz an den Beinen verhindert seitliches Auslaufen, und die Geruchskontrolle sorgt den ganzen Tag für Frische.<br><br>Sie sind waschbar und wiederverwendbar — sie behalten ihre Saugkraft über Hunderte von Wäschen, als umweltfreundliche und kostensparende Alternative zu Einweg-Einlagen und Windeln.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
+
+                NORIKS FIT besteht aus einem fortschrittlichen ionischen Kompressionsgewebe, das eine anliegende, stützende Passform bietet. Die gezielte Kompression strafft Bauch und Hüften gleichmäßig, glättet die Silhouette und unterstützt eine aufrechte Haltung — ohne Einengen, das Atmung oder Bewegung einschränkt.<br><br>Die mikrogewebten Fasern fördern die Durchblutung und helfen Ihnen, tagsüber aufrechter zu stehen und sich sicherer zu fühlen. Das Gewebe ist leicht, atmungsaktiv und feuchtigkeitsableitend, sodass Sie trocken und komfortabel bleiben.<br><br>Der dünne, diskrete Schnitt macht es unter jedem Hemd unsichtbar, und es kann zugleich als Sportshirt dienen. Das Ergebnis: ein schärferer Look, bessere Haltung und mehr Selbstvertrauen — sobald Sie es anziehen.
+
+         <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
+
+
+
         <?php echo get_field("singlepp_acc_t_1","options"); ?>
         
         
@@ -481,7 +532,81 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
       </div>
       <div class="accordion-content">
 
-           <?php if( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ): ?>
+           <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+
+          <div class="kn-size">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest Größen nach Alter" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <p style="margin:0;line-height:1.6;"><strong>Liegt Ihr Kind zwischen zwei Größen?</strong> Wählen Sie immer die größere. Das Kissen ist so konzipiert, dass es eine gesunde Ausrichtung unterstützt, während das Kind wächst — die größere Größe bietet mehr Raum und eine längere Nutzungsdauer.</p>
+          </div>
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+
+          <div class="lbx-size">
+            <p style="margin:0 0 6px;font-weight:700;">So messen Sie Ihren Hüftumfang</p>
+            <p style="margin:0 0 14px;line-height:1.6;">Legen Sie das Maßband um die breiteste Stelle der Hüfte (über das Gesäß), ohne es zu straffen. Stehen Sie entspannt und aufrecht und notieren Sie das Maß in Zentimetern.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#12233b;color:#fff;">
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Größe</th>
+                  <th style="padding:8px 10px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Hüfte (cm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $lbx_sizes = array(
+                  array('S','bis 76 cm','do 30"'),
+                  array('M','77 – 85 cm','30 – 33"'),
+                  array('L','86 – 94 cm','34 – 37"'),
+                  array('XL','95 – 102 cm','37 – 40"'),
+                  array('2XL','103 – 114 cm','41 – 45"'),
+                  array('3XL','115 – 121 cm','45 – 48"'),
+                  array('4XL','122 – 129 cm','48 – 51"'),
+                  array('5XL','130 – 137 cm','51 – 54"'),
+                  array('6XL','138 – 145 cm','54 – 57"'),
+                  array('7XL','146 – 153 cm','57 – 60"'),
+                  array('8XL','154 cm und mehr','61" i više'),
+                );
+                foreach ( $lbx_sizes as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f7fafb' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eee;">
+                    <td style="padding:8px 10px;font-weight:700;"><?php echo esc_html($r[0]); ?></td>
+                    <td style="padding:8px 10px;"><?php echo esc_html($r[1]); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>Zwischen zwei Größen?</strong> Wir empfehlen immer die größere Größe für optimalen Komfort und maximale Saugkraft.</p>
+          </div>
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
+
+          <div class="kmf-size">
+            <table style="width:100%;border-collapse:collapse;font-size:15px;">
+              <thead>
+                <tr style="background:#111;color:#fff;">
+                  <th style="padding:9px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Größe</th>
+                  <th style="padding:9px 12px;text-align:left;background:#e9e9e9 !important;color:#111 !important;">Passendes Gewicht</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $kmf_sizes = array(
+                  array('S','50 – 70 kg'), array('M','70 – 90 kg'), array('L','90 – 110 kg'), array('XL','110 – 130 kg'),
+                  array('2XL','130 – 150 kg'), array('3XL','150 – 170 kg'), array('4XL','170 – 190 kg'), array('5XL','190 – 210 kg'),
+                );
+                foreach ( $kmf_sizes as $i => $r ) :
+                  $bg = ( $i % 2 ) ? '#f4f4f4' : '#fff'; ?>
+                  <tr style="background:<?php echo $bg; ?>;border-bottom:1px solid #eaeaea;">
+                    <td style="padding:9px 12px;font-weight:800;"><?php echo esc_html($r[0]); ?></td>
+                    <td style="padding:9px 12px;font-weight:700;"><?php echo esc_html($r[1]); ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+            <p style="margin:12px 0 0;line-height:1.6;">Wählen Sie die Größe nach Ihrem Gewicht. Zwischen zwei Größen? Für stärkere Kompression wählen Sie die kleinere Größe.</p>
+          </div>
+
+        <?php elseif( function_exists('noriks_is_type') && noriks_is_type('ortopas', $current_product_id) ): ?>
 
           <div style="line-height:1.9;">
             <strong>S/M</strong> : Hüftumfang 75–110 cm<br>
@@ -518,15 +643,23 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
     <?php endif; // /keine Größentabelle für bunion + fisiorest + norikshers ?>
 
 
-    <!-- 3 - Pflegehinweise -->
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) ) ) ) : // keine Pflegehinweise für Gurt/bunion/fisiorest/norikshers ?>
+    <!-- 3 - Pflegehinweise --> <!-- ausgeblendet auch auf kidsnest -->
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) ) ) : // keine Pflegehinweise für Gurt/bunion/fisiorest/norikshers/kidsnest ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">
-             <?php if( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
+             <?php if( function_exists('noriks_is_type') && noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
+
+                Waschen Sie sie bei 30–40 °C im Schonwaschgang. Ohne Weichspüler und Bleichmittel. An der Luft trocknen. Sie behalten ihre Saugkraft über Hunderte von Wäschen.
+
+             <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kompresijske-majice', $current_product_id ) ): ?>
+
+                Maschinenwäsche kalt im Schonwaschgang. Ohne Bleichmittel und Weichspüler. Nicht in den Trockner geben — an der Luft trocknen, um Kompression und Form zu erhalten.
+
+             <?php elseif( !$is_boxers &&  !$is_carape &&   !$is_mixed_bundle ): ?>
         <?php echo get_field("singlepp_acc_t_2","options"); ?>
 
 
