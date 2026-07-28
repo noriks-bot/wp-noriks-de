@@ -41,6 +41,14 @@ function noriks_pp_upsell_register_fields() {
 				'instructions' => 'Fügt die Box "Zusammen kaufen und sparen" direkt unter dem Button In den Warenkorb ein. Der Kunde wählt die Größe, 4 Stück werden zum Upsell-Preis hinzugefügt. Gilt nur für dieses Produkt.',
 				'ui'           => 1,
 			),
+			array(
+				'key'          => 'field_noriks_pp_upsell2',
+				'label'        => 'Upsell #2 unter dem Button anzeigen (2 T-Shirts: schwarz + grau)',
+				'name'         => 'noriks_pp_upsell2',
+				'type'         => 'true_false',
+				'instructions' => 'Zweite Upsell-Box: Set aus 2 T-Shirts (1 schwarz + 1 grau), der Kunde wählt eine Größe für beide. Unabhängig vom ersten Schalter.',
+				'ui'           => 1,
+			),
 		),
 		'location'   => array(
 			array(
