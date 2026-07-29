@@ -74,7 +74,7 @@ function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
 		'product_id' => 2793,                    // Plave Bokserice (varijabilni proizvod)
 		'qty'        => 4,                       // uvijek 4 komada, iste veličine
-		'total'      => 26.99,                   // ista cijena kao thank you upsell (4 komada)
+		'total'      => 19.99,                   // ista cijena kao thank you upsell (4 komada)
 		'title'      => '4x Blaue Boxershorts',
 		'desc'       => 'Atmungsaktiv und weich — mit %s%% Rabatt zur Bestellung hinzufügen.', // %s = izracunati popust
 		'size_attr'  => 'Größe',

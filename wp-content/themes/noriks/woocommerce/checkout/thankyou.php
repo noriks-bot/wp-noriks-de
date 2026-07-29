@@ -53,7 +53,7 @@ if ( $upsell_is_tshirts ) {
 } else {
     $upsell_product_id = 2829; // Graue Boxershorts (siva verzija, ista struktura kot crna)
     $upsell_name       = 'Graue Boxershorts';
-    $upsell_qty_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
+    $upsell_qty_prices = array( 1 => 4.99, 3 => 14.97, 5 => 24.95 );
     $upsell_qty_names  = array( 1 => '1x Graue Boxershorts', 3 => '3x Graue Boxershorts', 5 => '5x Graue Boxershorts' );
     $upsell_qty_images = array(
         1 => get_template_directory_uri() . '/img/upsell/siva-1x-v2.webp',

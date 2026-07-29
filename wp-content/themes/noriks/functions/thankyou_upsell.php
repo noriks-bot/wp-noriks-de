@@ -291,7 +291,7 @@ function noriks_handle_add_upsell() {
 
     $quantity = max( 1, absint( $_POST['quantity'] ?? 3 ) );
     // Prices depend on product type (boxershorts vs t-shirts)
-    $boxershorts_prices = array( 1 => 7.99, 3 => 19.99, 5 => 29.99 );
+    $boxershorts_prices = array( 1 => 4.99, 3 => 14.97, 5 => 24.95 );
     $tshirt_prices      = array( 1 => 12.99, 3 => 29.99, 6 => 39.99 );
     // ─── Detect product type: exact same logic as frontend thankyou.php ───
     $_detect_id = $product_id ?: $product->get_id();
