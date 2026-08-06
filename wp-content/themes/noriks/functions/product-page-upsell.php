@@ -2,14 +2,14 @@
 /**
  * NORIKS — upsell na stranici proizvoda ("Kupi zajedno i uštedi").
  *
- * Okvir se prikazuje ODMAH ISPOD gumba "Dodaj u košaricu" i nudi 4x Plave Bokserice
+ * Okvir se prikazuje ODMAH ISPOD gumba "Dodaj u košaricu" i nudi 4x Grüne Boxershorts
  * po istoj cijeni kao post-purchase upsell na thank you stranici (14,97 € za 3 kom).
  *
  * - Uključuje se ACF prekidačem `noriks_pp_upsell` (polje registrirano u KODU, dolje).
  *   Prekidač je per-proizvod, pa se upsell može uključiti samo tamo gdje ga želimo.
  * - Kupac bira SAMO veličinu (jedan izbornik, sva 4 komada iste veličine).
  * - Kad je kvačica označena, uz glavni proizvod se u košaricu dodaje zasebna stavka
- *   (varijacija plavih bokserica) s upsell cijenom.
+ *   (varijacija zelenih bokserica) s upsell cijenom.
  * - Stavka se u narudžbi označava meta poljem `_noriks_upsell` = 'product_page_upsell'
  *   (isti mehanizam kao sidecart i thank you upsell).
  *
@@ -35,7 +35,7 @@ function noriks_pp_upsell_register_fields() {
 		'fields' => array(
 			array(
 				'key'          => 'field_noriks_pp_upsell',
-				'label'        => 'Upsell unter dem Button anzeigen (4x Blaue Boxershorts)',
+				'label'        => 'Upsell unter dem Button anzeigen (4x Grüne Boxershorts)',
 				'name'         => 'noriks_pp_upsell',
 				'type'         => 'true_false',
 				'instructions' => 'Fügt die Box "Zusammen kaufen und sparen" direkt unter dem Button In den Warenkorb ein. Der Kunde wählt die Größe, 4 Stück werden zum Upsell-Preis hinzugefügt. Gilt nur für dieses Produkt.',
@@ -72,16 +72,16 @@ function noriks_pp_upsell_register_fields() {
  * ============================================================ */
 function noriks_pp_upsell_config() {
 	return apply_filters( 'noriks_pp_upsell_config', array(
-		'product_id' => 2793,                    // Plave Bokserice (varijabilni proizvod)
+		'product_id' => 2801,                    // Zelene Bokserice (varijabilni proizvod)
 		'qty'        => 4,                       // uvijek 4 komada, iste veličine
 		'total'      => 19.99,                   // ista cijena kao thank you upsell (4 komada)
-		'title'      => '4x Blaue Boxershorts',
+		'title'      => '4x Grüne Boxershorts',
 		'desc'       => 'Atmungsaktiv und weich — mit %s%% Rabatt zur Bestellung hinzufügen.', // %s = izracunati popust
 		'size_attr'  => 'Größe',
 		// Interna oznaka paketa (SKU konvencija kao kod bundle proizvoda + UPSELL na kraju).
-		'sku'        => 'NORIKS-BOX-BLUE-4-PACK-UPSELL',
+		'sku'        => 'NORIKS-BOX-GREEN-4-PACK-UPSELL',
 		// Kompozitna slika 4 komada na svijetlo sivoj podlozi (kvadratna).
-		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-modre.png',
+		'image'      => get_template_directory_uri() . '/img/upsell/upsell-4x-zelene.png',
 	) );
 }
 
