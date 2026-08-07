@@ -23,7 +23,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 2) Pocnite veceras — slika LIJEVO, tekst DESNO ============ -->
 <section class="kn-sec">
   <div class="kn-wrap kn-row2">
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'01-poravnan.webp' ); ?>" alt="Perfekt ausgerichtet — Kopf, Nacken und Wirbelsäule im Schlaf" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'01-poravnan-de.webp' ); ?>" alt="Perfekt ausgerichtet — Kopf, Nacken und Wirbelsäule im Schlaf" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="kn-copy">
       <p class="kn-eyebrow">Entwickelt mit Zahnärzten für die Atemwege von Kindern</p>
       <h2 class="kn-h2 kn-h2-blue">Beginnen Sie noch heute Abend, den verborgenen Schaden zu korrigieren.</h2>

@@ -575,7 +575,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
            <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
           <div class="kn-size">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine.webp" alt="KidsNest Größen nach Alter" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/kidsnest/tablica-velicine-de.webp" alt="KidsNest Größen nach Alter" style="width:100%;height:auto;border-radius:10px;display:block;margin:0 0 12px;" loading="lazy">
             <p style="margin:0;line-height:1.6;"><strong>Liegt Ihr Kind zwischen zwei Größen?</strong> Wählen Sie immer die größere. Das Kissen ist so konzipiert, dass es eine gesunde Ausrichtung unterstützt, während das Kind wächst — die größere Größe bietet mehr Raum und eine längere Nutzungsdauer.</p>
           </div>
 
