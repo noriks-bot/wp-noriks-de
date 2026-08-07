@@ -136,6 +136,16 @@
       
       
        
+      <?php elseif ( function_exists('noriks_is_type') && noriks_is_type( 'kompresijske-nogavice' ) ): ?>
+
+      <div style="line-height:1.9; text-align:left; margin:40px 0; padding:0 6px; font-size:15px; color:#111;">
+        <strong>S/M</strong> : Schuhgröße 36–40 / Wadenumfang : 23–36 cm<br>
+        <strong>L/XL</strong> : Schuhgröße 40–44 / Wadenumfang : 36–45 cm<br>
+        <strong>2XL</strong> : Schuhgröße 44–48 / Wadenumfang : 45–56 cm<br><br>
+        Bitte messen Sie den Wadenumfang an der breitesten Stelle, um Ihre Größe zu finden.<br><br>
+        Wir empfehlen, die Größe nach dem Wadenumfang zu wählen, nicht nach der üblichen Schuhgröße.
+      </div>
+
       <?php elseif ( noriks_has_product_cat( 'socks', get_the_ID() ) ): ?>
       
       
