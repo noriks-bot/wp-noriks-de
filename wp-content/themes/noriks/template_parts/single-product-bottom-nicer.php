@@ -20,6 +20,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
     } elseif ( noriks_is_type( 'ortopedski-jastuk' ) ) {
         // ERGOSIT ORTHOPÄDISCHES SITZKISSEN (orto-ortopedski-jastuk) — novi proizvod, why-sekcije po uputama
         get_template_part( 'template_parts/product-bottom/why-ortopedski-jastuk' );
+    } elseif ( noriks_is_type( 'kneefix' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kneefix' );
     } elseif ( noriks_is_type( 'kidsnest' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
     }
