@@ -500,7 +500,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
 
     <!-- 1 - detajli --> <!-- ausgeblendet auf norikshers + ortopedski jastuk -->
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) ) ) : ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_1","options"); ?></h3>
@@ -511,6 +511,10 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
          <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
                 NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven, waschbaren Bezug, der sich einfach abnehmen lässt.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–18 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) ): ?>
+
+                Die NORIKS KneeFix ist eine flexible Kniebandage, die vier Funktionen in einem Stützsystem vereint: einstellbare Kompression über ein präzises Drehrad, doppelte seitliche Stabilisatoren, ein Gelpolster, das die Kniescheibe entlastet, und einen rutschfesten Silikonrand, der die Bandage an Ort und Stelle hält.<br><br>Anders als starre Orthesen versteift die KneeFix das Knie nicht — sie stützt es während der natürlichen Bewegung. Die Kompression stellen Sie in Sekunden ein: morgens fester, nachmittags lockerer, je nachdem, wie lange Sie auf den Beinen sind. So gewinnt das Knie Stabilität beim Aufstehen, auf Treppen, beim Spazieren und bei längerem Stehen.<br><br>Das Gewebe ist leicht, atmungsaktiv und feuchtigkeitsableitend, daher lässt sich die Bandage stundenlang tragen — ohne Schwitzen und ohne Einschneiden. Sie ist dünn und diskret und unter der Hose kaum zu sehen.<br><br>Erhältlich in den Größen S bis 2XL nach Körpergewicht sowie in einer Ausführung für das linke und das rechte Knie, damit die Passform genau bleibt.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'leakboxers', $current_product_id ) ): ?>
 
@@ -694,7 +698,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
 
     <!-- 3 - Pflegehinweise --> <!-- ausgeblendet auch auf ortopedski jastuk + kidsnest -->
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) ) ) : // keine Pflegehinweise für Gurt/bunion/fisiorest/norikshers/ortopedski jastuk/kidsnest ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : // keine Pflegehinweise für Gurt/bunion/fisiorest/norikshers/ortopedski jastuk/kidsnest ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
