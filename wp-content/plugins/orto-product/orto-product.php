@@ -682,6 +682,17 @@ function gck_render_bundle_selector() {
       .color-smeda { background: #9f6f4e; }
       .color-zelena { background: #65633c; }
       .color-tamnoplava, .color-marineblau { background: #2a3262; }
+      /* DEUTSCHE Farbnamen — Attributwerte im DE-Shop (sonst bleibt der Kreis leer). */
+      .color-schwarz { background: #000; }
+      .color-weiss   { background: #fff; border: 1px solid #ccc; }
+      .color-weis    { background: #fff; border: 1px solid #ccc; }
+      .color-grau    { background: #706d78; }
+      .color-beige   { background: #e4e0cf; }
+      .color-braun   { background: #9f6f4e; }
+      .color-gruen   { background: #65633c; }
+      .color-grun    { background: #65633c; }
+      .color-blau    { background: #203240; }
+      .color-rot     { background: #ba212f; }
 
 
 .color-marineblau { background: #2a3262; }
