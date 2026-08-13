@@ -1676,7 +1676,7 @@ $kneefix_faq = array(
   ),
   array(
     'questioon' => 'Wie wähle ich die Größe?',
-    'answer'    => 'Die Größen richten sich nach dem Körpergewicht: S (50–60 kg), M (61–75 kg), L (76–90 kg), XL (91–110 kg) und 2XL (110 kg+).',
+    'answer'    => 'Die Größen richten sich nach dem Körpergewicht: M (50–75 kg), L (76–90 kg), XL (91–110 kg) und 2XL (110 kg+).',
   ),
 );
 
