@@ -99,7 +99,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <!-- ============ 7) Osmišljen s ortopedskim znanjem — slika LIJEVO, tekst DESNO + CTA ============ -->
 <section class="oj-sec oj-alt">
   <div class="oj-wrap oj-row2">
-    <div class="oj-media"><?php echo $oj_img('04_lijecnik_HR.png','Ärztliche Empfehlung — NORIKS ErgoSit'); ?></div>
+    <div class="oj-media"><?php echo $oj_img('erg-de-04.webp','Ärztliche Empfehlung — NORIKS ErgoSit'); ?></div>
     <div class="oj-copy">
       <h2 class="oj-h2">Mit orthopädischem Fachwissen entwickelt, für das tägliche Sitzen gemacht.</h2>
       <p>Mit den Erkenntnissen orthopädischer Experten und monatelangen ergonomischen Tests wurde NORIKS <strong>ErgoSit</strong> entwickelt, um die häufigsten Beschwerden durch langes Sitzen zu lindern — vom Druck auf das Steißbein bis zu Beschwerden im unteren Rücken und in den Hüften.</p>
