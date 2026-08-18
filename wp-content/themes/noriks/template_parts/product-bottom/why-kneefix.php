@@ -31,7 +31,7 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
 <!-- ============ 1) Wenn jeder Schritt unangenehm wird ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('13_stepenice.jpg','Knieschmerzen beim Treppabgehen'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-de-3.webp','Knieschmerzen beim Treppabgehen'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Wenn jeder Schritt unangenehm wird</h2>
       <p class="kfx-lead">Am Anfang ist es oft nur ein leichtes Ziehen.</p>
@@ -133,14 +133,14 @@ $kf_img = function( $file, $alt ) use ( $kf, $kf_path ) {
       <p>NORIKS KneeFix wurde entwickelt, um alltägliche Bewegungen angenehmer zu machen — ohne unnötige Einschränkungen. Das flexible Material passt sich Ihrem Tag besser an und stützt das Knie dort, wo Sie es brauchen.</p>
       <a class="kfx-cta" href="#bundle-selector">Größe wählen →</a>
     </div>
-    <div class="kfx-media"><?php echo $kf_img('05_lifestyle_DE.webp','KneeFix im Alltag — Spaziergang, Fahrrad, Training'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-de-1.webp','KneeFix im Alltag — Spaziergang, Fahrrad, Training'); ?></div>
   </div>
 </section>
 
 <!-- ============ 7) Empfohlen zur täglichen Knieunterstützung ============ -->
 <section class="kfx-sec">
   <div class="kfx-wrap kfx-row2">
-    <div class="kfx-media"><?php echo $kf_img('06_arzt_DE.webp','Empfohlen zur täglichen Knieunterstützung'); ?></div>
+    <div class="kfx-media"><?php echo $kf_img('kf-de-2.webp','Empfohlen zur täglichen Knieunterstützung'); ?></div>
     <div class="kfx-copy">
       <h2 class="kfx-h2">Empfohlen zur täglichen Knieunterstützung</h2>
       <ul class="kfx-check">
