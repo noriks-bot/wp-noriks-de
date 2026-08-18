@@ -43,7 +43,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
       <p>Das ergonomische Kinderkissen hält <strong>Kopf und Nacken in natürlicher Ausrichtung und hilft, das Abkippen des Kopfes</strong> während der Nacht zu verhindern. So bleibt die Wirbelsäule korrekt ausgerichtet — auch wenn sich Ihr Kind im Schlaf viel dreht.</p>
       <p><strong>Das Ergebnis: ruhigerer Schlaf und bessere Erholung.</strong></p>
     </div>
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'02-san.jpg' ); ?>" alt="Kind schläft ruhig auf dem KidsNest Kissen" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'kn-de-2.webp' ); ?>" alt="Kind schläft ruhig auf dem KidsNest Kissen" loading="lazy" onerror="this.style.display='none'"></div>
   </div>
 </section>
 
@@ -92,7 +92,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 6) Kvaliteta materijala — slika LIJEVO, tekst DESNO ============ -->
 <section class="kn-sec">
   <div class="kn-wrap kn-row2">
-    <div class="kn-media"><img src="<?php echo esc_url( $kn.'03-detalj.webp' ); ?>" alt="KidsNest — 3-Zonen-Struktur und atmungsaktives Gewebe aus der Nähe" loading="lazy" onerror="this.style.display='none'"></div>
+    <div class="kn-media"><img src="<?php echo esc_url( $kn.'kn-de-6.webp' ); ?>" alt="KidsNest — 3-Zonen-Struktur und atmungsaktives Gewebe aus der Nähe" loading="lazy" onerror="this.style.display='none'"></div>
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Qualität, die man spürt — Nacht für Nacht.</h2>
       <p>Das dichte, atmungsaktive Gestrick und die sorgfältig geformte Oberfläche sind nicht nur fürs Auge da — <strong>jede Zone hat ihre Aufgabe</strong>. Die Mitte nimmt den Kopf sanft auf, die Ränder stützen den Nacken, und die Struktur behält ihre Form auch nach Monaten täglicher Nutzung.</p>
