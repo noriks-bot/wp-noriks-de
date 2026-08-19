@@ -314,7 +314,7 @@
             width: 32px;
             letter-spacing: 1px;
           }
-          /* Sticky col 1 (Visina label) + col 2 (Velikost / height column) on horizontal scroll */
+          /* Sticky Spalte 1 (Groesse-Label) + Spalte 2 (Koerpergroesse) beim Querscrollen */
           table.noriks-sc thead th:first-child,
           table.noriks-sc tbody th.noriks-sc-vis-label {
             position: sticky;
