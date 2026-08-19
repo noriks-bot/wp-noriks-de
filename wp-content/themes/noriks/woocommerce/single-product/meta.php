@@ -661,7 +661,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
         <?php elseif( $is_boxers ): ?>
 
 
-          <img src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
+          <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
 
 
 
@@ -679,16 +679,16 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
         <?php elseif(  $is_carape ): ?>
 
 
-                  <img src="https://noriks.com/de/wp-content/uploads/2026/04/nogavice_de.jpg">
+                  <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/de/wp-content/uploads/2026/04/nogavice_de.jpg">
 
     <?php elseif(  $is_mixed_bundle ): ?>
 
-     <img src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
+     <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
 
           <?php else: ?>
 
 
-       <img src="https://noriks.com/de/wp-content/uploads/2026/04/tablica_de.jpg">
+       <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/de/wp-content/uploads/2026/04/tablica_de.jpg">
 
 
         <?php endif; ?>
