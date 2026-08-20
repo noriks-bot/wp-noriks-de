@@ -601,7 +601,37 @@ endif;
       <!--<h4 style="" class="highlight"><?php echo get_field("singlepp_content_standard_reviews_t1","options"); ?></h4>-->
       <h1 style="color:black;     margin-bottom: 4px;">
           
-          <?php if ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>
+          <?php if ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>
+          
+          
+          
+          Du bist nicht allein auf der Suche nach Entlastung für den Nacken.
+          
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>
+          
+          
+          
+          Du bist nicht allein auf der Suche nach Linderung bei Hallux valgus.
+          
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>
+          
+          
+          
+          Du bist nicht allein auf der Suche nach Entlastung für den Rücken.
+          
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>
+          
+          
+          
+          Du bist nicht allein auf der Suche nach perfekten Kompressionsstrümpfen.
+          
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>
+          
+          
+          
+          Du bist nicht allein auf der Suche nach perfekten Boxershorts.
+          
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>
 
           Du bist nicht allein auf der Suche nach glatter, faltenfreier Haut.
 
@@ -637,7 +667,7 @@ endif;
           
           
           </h1>
-    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Tausende Frauen verwenden bereits die HERS Silikon-Kollagen-Streifen für glattere, straffere und jugendlicher aussehende Haut.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') ): ?>Tausende Männer tragen bereits die NORIKS saugfähigen Boxershorts für Trockenheit und Selbstvertrauen – ohne Einlagen und Windeln.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') ): ?>Tausende Männer tragen bereits das NORIKS Kompressionsshirt für einen geglätteten Bauch, bessere Haltung und mehr Selbstvertrauen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>Tausende Kunden verwenden bereits das NORIKS ErgoSit orthopädische Sitzkissen, um ohne Schmerzen im Steißbein, Rücken und in den Hüften zu sitzen – im Auto, im Büro und zu Hause.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>Tausende Eltern haben das gewöhnliche Kissen bereits durch das NORIKS KidsNest ersetzt – leisere Nächte, Nasenatmung und Schlaf, der wirklich erholt.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
+    <p class="note" style="color: black; margin-top: 0px; margin-bottom: 5px;"><?php if ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') ): ?>Tausende nutzen bereits NORIKS FisioRest für weniger Schmerzen und Verspannungen im Nacken – Traktion, Vibration und Wärme in einem Gerät.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bunion') ): ?>Tausende tragen bereits den NORIKS Korrektor für weniger Schmerzen und eine geradere Zehenstellung – zu Hause, vor dem Fernseher oder im Schlaf.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopas') ): ?>Tausende tragen bereits den NORIKS Rückengurt für weniger Schmerzen und einen stabileren Rücken – bei der Arbeit, beim Heben und langem Sitzen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ): ?>Tausende Männer tragen bereits die NORIKS Kompressionsstrümpfe für leichtere und weniger müde Beine – bei der Arbeit, auf Reisen und beim Training.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('bokserice') ): ?>Tausende Männer tragen bereits die NORIKS Boxershorts – Komfort, der den ganzen Tag hält.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('norikshers') ): ?>Tausende Frauen verwenden bereits die HERS Silikon-Kollagen-Streifen für glattere, straffere und jugendlicher aussehende Haut.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('leakboxers') ): ?>Tausende Männer tragen bereits die NORIKS saugfähigen Boxershorts für Trockenheit und Selbstvertrauen – ohne Einlagen und Windeln.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice') ): ?>Tausende Männer tragen bereits das NORIKS Kompressionsshirt für einen geglätteten Bauch, bessere Haltung und mehr Selbstvertrauen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk') ): ?>Tausende Kunden verwenden bereits das NORIKS ErgoSit orthopädische Sitzkissen, um ohne Schmerzen im Steißbein, Rücken und in den Hüften zu sitzen – im Auto, im Büro und zu Hause.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>Tausende Eltern haben das gewöhnliche Kissen bereits durch das NORIKS KidsNest ersetzt – leisere Nächte, Nasenatmung und Schlaf, der wirklich erholt.<?php else: ?><?php echo get_field("singlepp_content_standard_reviews_t3","options"); ?><?php endif; ?></p>
     </div>
   </section>
   </div>
@@ -817,6 +847,7 @@ endif;
       $is_leakboxers = false;
       $is_kompmajice = false;
       $is_jastuk    = false;
+      $is_nogavice    = false;
       $is_kidsnest  = false;
       if ( $product_id ) {
           $is_bokserice = noriks_has_product_cat( 'boxers', $product_id );
@@ -827,10 +858,11 @@ endif;
           $is_leakboxers = ( function_exists('noriks_is_type') && noriks_is_type('leakboxers', $product_id) );
           $is_kompmajice = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-majice', $product_id) );
           $is_jastuk    = ( function_exists('noriks_is_type') && noriks_is_type('ortopedski-jastuk', $product_id) );
+          $is_nogavice    = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice', $product_id) );
           $is_kidsnest  = ( function_exists('noriks_is_type') && noriks_is_type('kidsnest', $product_id) );
       }
 
-      $cache_key = $transient_key . ( $is_kidsnest ? '_kidsnest' : ( $is_jastuk ? '_jastuk' : ( $is_leakboxers ? '_leakboxers' : ( $is_kompmajice ? '_kompmajice' : ( $is_norikshers ? '_norikshers' : ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_bokserice ? '_bokserice' : '_all' ) ) ) ) ) ) ) ) );
+      $cache_key = $transient_key . ( $is_kidsnest ? '_kidsnest' : ( $is_jastuk ? '_jastuk' : ( $is_leakboxers ? '_leakboxers' : ( $is_kompmajice ? '_kompmajice' : ( $is_norikshers ? '_norikshers' : ( $is_fisiorest ? '_fisiorest' : ( $is_bunion ? '_bunion' : ( $is_ortopas ? '_ortopas' : ( $is_bokserice ? '_bokserice' : ( $is_nogavice ? '_nogavice' : '_all' ) ) ) ) ) ) ) ) ) );
 
       if ( function_exists( 'get_transient' ) ) {
           $cached = get_transient( $cache_key );
@@ -865,6 +897,8 @@ endif;
           $args['category'] = [ 'orto-ortopas' ];
       } elseif ( $is_bokserice ) {
           $args['category'] = noriks_term_group( 'boxers' );
+      } elseif ( $is_nogavice ) {
+          $args['category'] = [ 'socken', 'orto-kompresijske-carape' ];
       } else {
           // Stranice majica: bazen SAMO iz kategorije majica (s podkategorijama).
           // Prije je uzimao sve osim bokserica, pa su recenzije o majicama
