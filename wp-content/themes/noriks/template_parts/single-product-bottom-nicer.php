@@ -905,6 +905,8 @@ endif;
           $args['category'] = noriks_term_group( 'boxers' );
       } elseif ( $is_nogavice ) {
           $args['category'] = [ 'socken', 'orto-kompresijske-carape' ];
+      } elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $product_id) ) {
+          $args['category'] = [ 'orto-kneefix' ];
       } else {
           // Stranice majica: bazen SAMO iz kategorije majica (s podkategorijama).
           // Prije je uzimao sve osim bokserica, pa su recenzije o majicama
