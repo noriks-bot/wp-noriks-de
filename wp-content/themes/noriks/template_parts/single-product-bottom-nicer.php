@@ -748,12 +748,16 @@ endif;
   $is_kneefix_page    = ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) );
 
   // Fallback product name shown in review cards.
-  $rv_fallback_title = $is_kneefix_page ? 'NORIKS KneeFix Kniebandage'
+  $rv_fallback_title = ( function_exists('noriks_is_type') && noriks_is_type('kompresijske-nogavice') ) ? 'NORIKS Kompressionsstrümpfe'
+                     : ( $is_ortopas_page ? 'NORIKS Rückengurt'
+                     : ( $is_bunion_page ? 'NORIKS Hallux-Korrektor'
+                     : ( $is_fisiorest_page ? 'NORIKS FisioRest'
+                     : ( $is_kneefix_page ? 'NORIKS KneeFix Kniebandage'
                      : ( $is_kidsnest_page ? 'NORIKS KidsNest Kissen'
                      : ( $is_jastuk_page ? 'NORIKS ErgoSit orthopädisches Sitzkissen'
                      : ( $is_leakboxers_page ? 'NORIKS saugfähige Boxershorts'
                      : ( $is_kompmajice_page ? 'NORIKS FIT Kompressionsshirt'
-                     : ( $is_norikshers_review_page ? 'NORIKS HERS' : 'Ein graues T-Shirt' ) ) ) ) );
+                     : ( $is_norikshers_review_page ? 'NORIKS HERS' : 'Ein graues T-Shirt' ) ) ) ) ) ) ) ) );
 
   // Include review pools (own pool per orto product group)
   if ( $is_kneefix_page ) {
