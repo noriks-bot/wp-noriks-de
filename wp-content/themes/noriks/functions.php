@@ -987,3 +987,5 @@ add_filter('tiny_mce_plugins', function ($plugins) {
 
 // Custom side cart upsell modal (replaces YITH Quick View)
 include(get_template_directory() . '/functions/sidecart-upsell-modal.php');
+
+require_once get_template_directory() . '/functions/manuals-page.php';
