@@ -460,7 +460,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
       <div class="accordion-content">
         <p>Der Rat, den Sie gehört haben, stimmt nur zur Hälfte. Ja, der obere Gaumen verfestigt sich um das 9. Lebensjahr. Aber das Gesicht entwickelt sich bis zum 20., der Unterkiefer wächst bis zum 17., und die Atemwege passen sich ständig an.</p>
         <p>Deshalb legt jede Nacht der Mundatmung nach dem 9. Lebensjahr neuen Schaden auf den alten: Zähneknirschen, Kopfschmerzen, Schlaf, der nicht erholt, nachlassende Konzentration — und eine Müdigkeit, die alle mit Faulheit verwechseln. Ihr Teenager ist nicht faul. Er bekommt jede Nacht sechs Stunden lang kaum Luft.</p>
-        <p>KidsNest in der Größe <strong>9–18 Jahre</strong> ist für einen älteren Kopf, Nacken und breitere Schultern gemacht. Eine andere Kontur, eine andere Höhe, eine andere Stützung. Derselbe Grundmechanismus: die richtige Ausrichtung von Kopf, Nacken und Kiefer, die ganze Nacht, an einem Körper, der noch wächst.</p>
+        <p>KidsNest in der Größe <strong>9–14 Jahre</strong> ist für einen älteren Kopf, Nacken und breitere Schultern gemacht. Eine andere Kontur, eine andere Höhe, eine andere Stützung. Derselbe Grundmechanismus: die richtige Ausrichtung von Kopf, Nacken und Kiefer, die ganze Nacht, an einem Körper, der noch wächst.</p>
         <p>Was Eltern bemerken: Das Schnarchen beruhigt sich in 7 bis 14 Nächten, die echte Morgenenergie kehrt zurück, die Kopfschmerzen verblassen, die Konzentration kommt wieder.</p>
         <p>Das beste Zeitfenster ist nach wie vor vom 3. bis zum 9. Lebensjahr. Ein starkes Zeitfenster ist vom 8. bis zum 18. Keines ist vollständig geschlossen — aber jede Nacht des Wartens erhöht den Druck auf einen Körper, der versucht, sich zu erholen.</p>
         <p><strong>Gestern ist vorbei. Heute Abend gehört noch Ihnen.</strong></p>
@@ -510,7 +510,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
          <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
-                NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven, waschbaren Bezug, der sich einfach abnehmen lässt.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–18 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
+                NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven, waschbaren Bezug, der sich einfach abnehmen lässt.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–14 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) ): ?>
 
