@@ -173,13 +173,13 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
   </div>
 </section>
 
-<!-- ============ 11) Isprobajte 60 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
+<!-- ============ 11) Isprobajte 30 dana — TAMNA, značka LIJEVO, tekst DESNO ============ -->
 <section class="oj-sec oj-guar-sec">
   <div class="oj-wrap">
   <div class="oj-guarantee oj-row2">
     <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_30_dana.png','30 Tage Geld-zurück-Garantie'); ?></div>
     <div class="oj-guar-copy">
-      <h2 class="oj-h2 oj-h2-light">Testen Sie es <em class="oj-pink-i">60 Tage</em> lang, ganz ohne Risiko</h2>
+      <h2 class="oj-h2 oj-h2-light">Testen Sie es <em class="oj-pink-i">30 Tage</em> lang, ganz ohne Risiko</h2>
       <p>Das richtige Kissen zu finden ist nicht leicht — viele werden platt oder bringen einfach nicht die erhoffte Entlastung. Deshalb kommt jedes NORIKS <strong>ErgoSit</strong> mit unserer <strong>30-Tage-Komfortgarantie</strong>.</p>
       <p>Nehmen Sie es mit ins Büro, ins Auto oder für lange Stunden zu Hause. Wenn Sie im täglichen Sitzen nicht weniger Schmerzen und mehr Komfort spüren, sorgt unser Team dafür, dass alles in Ordnung kommt.</p>
       <p>Denn wenn es um Ihre Gesundheit und Ihren Komfort geht, sind wir überzeugt: Den Unterschied sollten Sie <strong>spüren</strong> — nicht nur erhoffen.</p>

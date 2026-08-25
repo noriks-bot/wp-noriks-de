@@ -510,7 +510,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
     <div class="checkout-popup-wrapper">
         <div id="withdrawal-policy-content">
             <h2 class="ql-align-justify"><strong>Widerrufsrecht</strong></h2>
-            <p class="ql-align-justify">Sie koennen Ihren Kauf innerhalb von 90 Tagen nach Lieferung widerrufen, ohne Gruende anzugeben.</p>
+            <p class="ql-align-justify">Sie koennen Ihren Kauf innerhalb von 30 Tagen nach Lieferung widerrufen, ohne Gruende anzugeben.</p>
             <p class="ql-align-justify">Der Artikel sollte unbeschaedigt, vollstaendig und nach Moeglichkeit in der Originalverpackung zurueckgesendet werden.</p>
             <p class="ql-align-justify">Nach Anmeldung der Rueckgabe senden Sie das Produkt innerhalb von 14 Tagen an die Ruecksendeadresse, die Sie im Rueckgabeprozess oder vom Support erhalten.</p>
             <p class="ql-align-justify">Die direkten Kosten der Ruecksendung traegt der Kunde, sofern nicht anders angegeben. Nach Eingang und Pruefung der Ruecksendung erfolgt Rueckerstattung oder Umtausch innerhalb der angegebenen Bearbeitungsfrist.</p>

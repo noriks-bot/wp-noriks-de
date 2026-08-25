@@ -665,7 +665,7 @@
 
         <div class="noriks-sc-guarantee">
           <span class="noriks-sc-check">&#10003;</span>
-          <span>Unsicher? Kostenloser Größentausch innerhalb von 90 Tagen.</span>
+          <span>Unsicher? Größentausch innerhalb von 30 Tagen.</span>
         </div>
       </div>
 
