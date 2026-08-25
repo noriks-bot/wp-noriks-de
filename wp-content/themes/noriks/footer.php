@@ -105,9 +105,8 @@
 			<div class="nf-wrap nf-main-grid">
 
 				<div class="nf-brand-col">
-					<p class="nf-brand-tagline">Kleidung für eine kräftigere Statur, geschnitten, um wirklich zu passen.</p>
 					<p class="nf-brand-desc"><?php echo esc_html( $nf_brand ); ?></p>
-					<a class="nf-btn nf-btn-outline" href="/de/shop">Kollektion ansehen</a>
+					<a class="nf-btn nf-btn-outline" href="/de/shop">Jetzt shoppen</a>
 				</div>
 
 				<nav class="nf-links">
