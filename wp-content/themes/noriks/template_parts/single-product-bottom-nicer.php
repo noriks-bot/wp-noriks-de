@@ -1715,7 +1715,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Kann der Bezug gewaschen werden?', 'answer' => 'Ja. Der Bezug lässt sich abnehmen und in der Maschine waschen, sodass das Kissen frisch und sauber bleibt. Das Gewebe ist atmungsaktiv, hypoallergen und OEKO-TEX®-zertifiziert.' ),
   array( 'questioon' => 'Passt es auf meinen Stuhl oder Sitz?', 'answer' => 'ErgoSit hat eine universelle Form und passt auf die meisten Autositze, Büro- und Küchenstühle sowie Rollstühle. Es gibt keine Größen — ein Modell passt für alle.' ),
   array( 'questioon' => 'Wie schnell spüre ich einen Unterschied?', 'answer' => 'Die meisten Nutzer spüren schon ab dem ersten Tag weniger Druck auf dem Steißbein und ein bequemeres Sitzen. Für eine bessere Haltung und weniger Rückenschmerzen baut sich die Wirkung durch die regelmäßige Anwendung weiter auf.' ),
-  array( 'questioon' => 'Gibt es eine Geld-zurück-Garantie?', 'answer' => 'Ja, jedes NORIKS ErgoSit kommt mit einer 60-Tage-Komfortgarantie. Wenn Sie nicht weniger Schmerzen und mehr Komfort spüren, kontaktieren Sie uns und wir finden eine Lösung.' ),
+  array( 'questioon' => 'Gibt es eine Geld-zurück-Garantie?', 'answer' => 'Ja, jedes NORIKS ErgoSit kommt mit einer 30-Tage-Komfortgarantie. Wenn Sie nicht weniger Schmerzen und mehr Komfort spüren, kontaktieren Sie uns und wir finden eine Lösung.' ),
 );
 
 // KidsNest Kinderkissen — FAQ zum Produkt (NORIKS, abgeschwächte Aussagen).

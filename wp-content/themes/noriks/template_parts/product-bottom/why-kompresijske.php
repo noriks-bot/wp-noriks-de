@@ -60,7 +60,7 @@ $knv = get_template_directory_uri() . '/img/kompresijske-videos/';
           <tr><td>Verstärkter Reißverschluss, klemmt nie</td><td class="mid">—</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Atmungsaktives Gewebe</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr><td>Komfort den ganzen Tag (+12 Stunden)</td><td class="mid">~</td><td class="no">✕</td><td class="us ok">✓</td></tr>
-          <tr><td>60 Tage Geld-zurück-Garantie</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
+          <tr><td>30 Tage Geld-zurück-Garantie</td><td class="no">✕</td><td class="no">✕</td><td class="us ok">✓</td></tr>
           <tr class="knc-price"><td>Preis pro Paar</td><td>ab 85 €</td><td>~15 €</td><td class="us">ab 23,33 €</td></tr>
         </tbody>
       </table>

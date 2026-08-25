@@ -83,7 +83,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-stills-sec">
   <div class="oj-trustbar" aria-hidden="true">
     <div class="oj-trustbar-track">
-      <?php $oj_trust = array('120.000+ KUNDEN','BEWERTUNG 4,8/5','OEKO-TEX®','VON ÄRZTEN EMPFOHLEN','60 TAGE GARANTIE','ORTHOPÄDISCHES DESIGN');
+      <?php $oj_trust = array('120.000+ KUNDEN','BEWERTUNG 4,8/5','OEKO-TEX®','VON ÄRZTEN EMPFOHLEN','30 TAGE GARANTIE','ORTHOPÄDISCHES DESIGN');
       for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item">'.esc_html($t).'</span><span class="oj-trust-dot">•</span>'; } } ?>
     </div>
   </div>
@@ -177,10 +177,10 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-guar-sec">
   <div class="oj-wrap">
   <div class="oj-guarantee oj-row2">
-    <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_60_dana_HR.png','60 Tage Geld-zurück-Garantie'); ?></div>
+    <div class="oj-guar-badge"><?php echo $oj_img('15_znacka_30_dana.png','30 Tage Geld-zurück-Garantie'); ?></div>
     <div class="oj-guar-copy">
       <h2 class="oj-h2 oj-h2-light">Testen Sie es <em class="oj-pink-i">60 Tage</em> lang, ganz ohne Risiko</h2>
-      <p>Das richtige Kissen zu finden ist nicht leicht — viele werden platt oder bringen einfach nicht die erhoffte Entlastung. Deshalb kommt jedes NORIKS <strong>ErgoSit</strong> mit unserer <strong>60-Tage-Komfortgarantie</strong>.</p>
+      <p>Das richtige Kissen zu finden ist nicht leicht — viele werden platt oder bringen einfach nicht die erhoffte Entlastung. Deshalb kommt jedes NORIKS <strong>ErgoSit</strong> mit unserer <strong>30-Tage-Komfortgarantie</strong>.</p>
       <p>Nehmen Sie es mit ins Büro, ins Auto oder für lange Stunden zu Hause. Wenn Sie im täglichen Sitzen nicht weniger Schmerzen und mehr Komfort spüren, sorgt unser Team dafür, dass alles in Ordnung kommt.</p>
       <p>Denn wenn es um Ihre Gesundheit und Ihren Komfort geht, sind wir überzeugt: Den Unterschied sollten Sie <strong>spüren</strong> — nicht nur erhoffen.</p>
     </div>
