@@ -1734,7 +1734,7 @@ function gck_render_bundle_selector() {
                     <?php endif; /* $gck_shgifts vs SHBOX/normal render */ ?>
 
                     <?php if ( ! $gck_no_attrs ) : ?>
-                    <small style="display: block; line-height: 1;"><?php esc_html_e( 'Wir bieten 14 Tage Geld-zurück-Garantie oder kostenlosen Umtausch – sorgenfreies Einkaufen!
+                    <small style="display: block; line-height: 1;"><?php esc_html_e( 'Wir bieten 30 Tage Geld-zurück-Garantie oder kostenlosen Umtausch – sorgenfreies Einkaufen!
 ', 'gift-card-kompetentnost' ); ?></small>
                     <?php endif; ?>
                 </div>

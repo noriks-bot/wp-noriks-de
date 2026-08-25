@@ -834,7 +834,7 @@ Individuelle Ergebnisse koennen variieren. </em>
               <h2 style="margin-top: 25px; font-size: 2.2rem; line-height:1.1;" class="rich-text__heading rte h1 title-with-highlight" style="--hightlight-color:#6d388b"> Schliesse dich Tausenden an, die bereits gewechselt haben • 70 % Rabatt auf die erste Bestellung </h2>
               <div class="rich-text__text rte">
                 <h2 class="second-h2" style=" font-size: 1.7rem; line-height:1.1;" >
-                  <strong>6 Monate Garantie gegen Loecher • 14 Tage risikofrei testen</strong>
+                  <strong>6 Monate Garantie gegen Loecher • 30 Tage risikofrei testen</strong>
                 </h2>
               </div>
               <div style="margin-top: 15px;" class="rich-text__buttons">
@@ -1060,7 +1060,7 @@ Individuelle Ergebnisse koennen variieren. </em>
                         ">
                         <p class="announcement-bar__message">
                           <span>
-                            <a style="font-size: 1.2rem;" href="https://noriks.com/de/product-category/boxershorts/" title="">70 % Rabatt heute -> 14 Tage risikofrei testen</a>
+                            <a style="font-size: 1.2rem;" href="https://noriks.com/de/product-category/boxershorts/" title="">70 % Rabatt heute -> 30 Tage risikofrei testen</a>
                           </span>
                         </p>
                       </div>

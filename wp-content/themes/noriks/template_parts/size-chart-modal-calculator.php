@@ -454,7 +454,7 @@ border: 1px solid #ccc;
     
 
     
-    14 Tage Größentausch-Garantie
+    30 Tage Größentausch-Garantie
 
          
    
@@ -510,7 +510,7 @@ border: 1px solid #ccc;
     
 
     
-     14 Tage Größentausch-Garantie
+     30 Tage Größentausch-Garantie
 
          
    
