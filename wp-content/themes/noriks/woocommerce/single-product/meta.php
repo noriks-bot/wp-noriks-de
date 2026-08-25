@@ -741,7 +741,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
       </div>
       <div class="accordion-content">
        <p></p>
-       Wir sind so ueberzeugt, dass Ihnen NORIKS gefallen wird, dass Sie <b data-stringify-type="bold">30 Tage</b> fuer eine Rueckgabe oder einen kostenlosen Umtausch haben.
+       Wir sind so ueberzeugt, dass Ihnen NORIKS gefallen wird, dass Sie <b data-stringify-type="bold">14 Tage</b> fuer eine Rueckgabe oder einen kostenlosen Umtausch haben.
 Ohne Papierkram, ohne Stress - wir loesen alles in wenigen Klicks. </p>
 
 <p>

@@ -1778,7 +1778,7 @@ $ortopas_faq = array(
   array( 'questioon' => 'Kann ich den Gurt auch beim Schlafen tragen?', 'answer' => 'Ja, Sie können den Gurt auch nachts tragen. Die Tragedauer ist nicht begrenzt, und längeres Tragen hat keine negativen Auswirkungen.' ),
   array( 'questioon' => 'Wie eng sollte ich ihn anlegen?', 'answer' => 'Der Gurt sollte eng anliegen, aber nicht zu eng, um Beschwerden zu vermeiden. Sie sollten sich problemlos bewegen können, ohne dass der Gurt einschneidet oder verrutscht. Die Spannung lässt sich mit den elastischen Bändern leicht einstellen.' ),
   array( 'questioon' => 'Wem empfehlen Sie ihn?', 'answer' => 'Allen, die mit Kreuzschmerzen, Ischias, Muskelverspannungen, Bandscheibenvorfall, Hüft- oder Beckenschmerzen sowie Problemen mit dem ISG-Gelenk zu kämpfen haben. Unabhängig von Alter, Geschlecht, Größe und Gewicht.' ),
-  array( 'questioon' => 'Gibt es eine Geld-zurück-Garantie?', 'answer' => 'Wir bieten eine Zufriedenheitsgarantie! Wenn Sie mit dem NORIKS-Gurt nicht zufrieden sind, kontaktieren Sie uns unter info@noriks.com für eine Rückgabe und Erstattung innerhalb von 90 Tagen. Die Frist beginnt mit dem Erhalt des Gurts.' ),
+  array( 'questioon' => 'Gibt es eine Geld-zurück-Garantie?', 'answer' => 'Wir bieten eine Zufriedenheitsgarantie! Wenn Sie mit dem NORIKS-Gurt nicht zufrieden sind, kontaktieren Sie uns unter info@noriks.com für eine Rückgabe und Erstattung innerhalb von 14 Tagen. Die Frist beginnt mit dem Erhalt des Gurts.' ),
 );
 
 // FisioRest — FAQ zum Produkt (Übersetzung, NORIKS).
@@ -1790,7 +1790,7 @@ $fisiorest_faq = array(
   array( 'questioon' => 'Ist FisioRest kabellos?', 'answer' => 'Ja! NORIKS FisioRest ist vollständig kabellos und für den täglichen Gebrauch wiederaufladbar.' ),
   array( 'questioon' => 'Wie wird FisioRest gereinigt?', 'answer' => 'Der Stoff ist öl- und staubabweisend, wir empfehlen jedoch, FisioRest nach der Anwendung mit einem Desinfektionstuch abzuwischen, da der Kissenbezug nicht waschbar ist.' ),
   array( 'questioon' => 'Ist es für alle sicher?', 'answer' => 'NORIKS FisioRest ist so konzipiert, dass es für alle geeignet ist, unabhängig von Alter oder Geschlecht. Jede Situation ist jedoch anders. Für detaillierte, auf Ihre Bedürfnisse zugeschnittene Empfehlungen raten wir zu einer Rücksprache mit einem Arzt.' ),
-  array( 'questioon' => 'Kann ich es zurückgeben, wenn ich keine Ergebnisse sehe?', 'answer' => 'Selbstverständlich! Wir bieten eine volle Geld-zurück-Garantie innerhalb von 90 Tagen ab Lieferung, falls Sie mit dem Produkt nicht zufrieden sind. Schreiben Sie uns an info@noriks.com und wir antworten innerhalb von 12 Stunden nach Erhalt Ihrer Nachricht!' ),
+  array( 'questioon' => 'Kann ich es zurückgeben, wenn ich keine Ergebnisse sehe?', 'answer' => 'Selbstverständlich! Wir bieten eine volle Geld-zurück-Garantie innerhalb von 14 Tagen ab Lieferung, falls Sie mit dem Produkt nicht zufrieden sind. Schreiben Sie uns an info@noriks.com und wir antworten innerhalb von 12 Stunden nach Erhalt Ihrer Nachricht!' ),
 );
 
 // NORIKS HERS — FAQ zum Produkt (Übersetzung, NORIKS).

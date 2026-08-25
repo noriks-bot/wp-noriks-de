@@ -478,7 +478,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
     </div>
     <div class="flex__item--autosize f--m checkout-warranty__text">
         <strong>Sorgenfrei einkaufen </strong><br>
-        Geld-zurueck-Garantie innerhalb von 90 Tagen    </div>
+        Geld-zurueck-Garantie innerhalb von 14 Tagen    </div>
 </div>
 
 <div class="agreed_terms_txt">
