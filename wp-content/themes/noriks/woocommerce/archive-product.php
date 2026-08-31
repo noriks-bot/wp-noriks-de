@@ -356,12 +356,12 @@ $shop_filter_fields = get_field("shop_filter_fields", "option");
 // SHOP PAGE (/shop)
 if ( is_shop() ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /boxershorts + ALL CHILD CATEGORIES
 } elseif ( is_product_category_or_child('boxershorts') || is_product_category_or_child('boxershorts') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY GROUP
 } elseif (
@@ -371,27 +371,27 @@ if ( is_shop() ) {
     is_product_category_or_child('starter-pakete')
 ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-3"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /t-shirts + children
 } elseif ( is_product_category_or_child('t-shirts') || is_product_category_or_child('t-shirts') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2-2"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /sets + children
 } elseif ( is_product_category_or_child('sets') || is_product_category_or_child('sets') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset"]');
+    noriks_shop_filter_links();
 
 // CATEGORY: /socken + children
 } elseif ( is_product_category_or_child('socken') || is_product_category_or_child('socken') ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2"]');
+    noriks_shop_filter_links();
 
 // FALLBACK for any other product category
 } elseif ( is_product_category() ) {
 
-    echo do_shortcode('[yith_wcan_filters slug="default-preset-2-2"]');
+    noriks_shop_filter_links();
 }
 ?>
         </div>
