@@ -483,7 +483,7 @@ function gck_render_bundle_selector() {
         // must NOT match here — it keeps the default "majica" noun.
         $gck_garment = 'carapa';
     } elseif (
-        has_term( array( 'orto-kneefix', 'orto-controlpro' ), 'product_cat', $product_id )
+        has_term( array( 'orto-kneefix' ), 'product_cat', $product_id )
         || ( stripos( (string) $product->get_slug(), 'kneefix' ) !== false )
         || ( stripos( (string) $product->get_name(), 'kneefix' ) !== false )
     ) {
@@ -517,7 +517,7 @@ function gck_render_bundle_selector() {
     $gck_shgifts = has_term( 'orto-majica-darila', 'product_cat', $product_id );
 
     // KneeFix: dva izbornika (Velicina + Stranica) umjesto swatcheva boje.
-    $gck_side_select = has_term( 'orto-kneefix', 'orto-controlpro', 'product_cat', $product_id );
+    $gck_side_select = has_term( 'orto-kneefix', 'product_cat', $product_id );
 
     $custom_attrs = gck_get_custom_attributes_in_order( $product );
     if ( ! $gck_no_attrs && ! $gck_single_size && ! $gck_shgifts && count( $custom_attrs ) < 2 ) return;
