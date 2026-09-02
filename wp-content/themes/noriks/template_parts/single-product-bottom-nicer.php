@@ -22,6 +22,8 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-ortopedski-jastuk' );
     } elseif ( noriks_is_type( 'kneefix' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kneefix' );
+    } elseif ( noriks_is_type( 'controlpro' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-controlpro' );
     } elseif ( noriks_is_type( 'kidsnest' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
     }
@@ -647,10 +649,12 @@ endif;
 
           Sie sind nicht allein auf der Suche nach schmerzfreiem Sitzen.
 
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ): ?>Sie sind nicht der Einzige, dem Kegelübungen nichts gebracht haben.
           <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>
 
            Sie sind nicht allein auf der Suche nach einem stabileren Knie.
 
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ): ?>Tausende Männer nutzen NORIKS ControlPro bereits — echter Widerstand statt Anspannen ins Leere.
           <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>Tausende Kunden tragen die NORIKS KneeFix Bandage bereits für ein stabileres Knie – auf Treppen, beim Spaziergang und bei langem Stehen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>
 
           Sie sind nicht allein auf der Suche nach ruhigem Kinderschlaf.
@@ -758,9 +762,12 @@ endif;
                      : ( $is_leakboxers_page ? 'NORIKS saugfähige Boxershorts'
                      : ( $is_kompmajice_page ? 'NORIKS FIT Kompressionsshirt'
                      : ( $is_norikshers_review_page ? 'NORIKS HERS' : 'Ein graues T-Shirt' ) ) ) ) ) ) ) ) );
+  if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro Beckenbodentrainer'; }
 
   // Include review pools (own pool per orto product group)
-  if ( $is_kneefix_page ) {
+  if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_controlpro.php';
+  } elseif ( $is_kneefix_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_kneefix.php';
   } elseif ( $is_kidsnest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_kidsnest.php';
@@ -915,6 +922,8 @@ endif;
           $args['category'] = [ 'socken', 'orto-kompresijske-carape' ];
       } elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $product_id) ) {
           $args['category'] = [ 'orto-kneefix' ];
+        } elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro', $product_id) ) {
+          $args['category'] = [ 'orto-controlpro' ];
       } else {
           // Stranice majica: bazen SAMO iz kategorije majica (s podkategorijama).
           // Prije je uzimao sve osim bokserica, pa su recenzije o majicama
@@ -1809,9 +1818,22 @@ $norikshers_faq = array(
 
 // Swap ONLY the product-info FAQ container ("...Produkt...") for the orto
 // products; delivery/returns containers stay untouched.
-$faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$controlpro_faq = array(
+  array( 'questioon' => 'Wie wird es angewendet?', 'answer' => 'Setzen Sie sich auf einen Stuhl, platzieren Sie das Gerät <strong>zwischen den Knien</strong> und drücken Sie gegen den Widerstand. Empfohlen sind <strong>3 Sätze à 10 Wiederholungen täglich</strong>, etwa fünf Minuten.' ),
+  array( 'questioon' => 'Muss etwas eingeführt werden?', 'answer' => 'Nein. Keine Sonden, kein Einführen. Das Gerät arbeitet <strong>außerhalb des Körpers</strong>.' ),
+  array( 'questioon' => 'Wann sind Ergebnisse zu erwarten?', 'answer' => 'Die meisten Anwender berichten von ersten Veränderungen nach <strong>3 bis 6 Wochen</strong> regelmäßigen Trainings.' ),
+  array( 'questioon' => 'Braucht es Batterien oder eine App?', 'answer' => 'Nein. Das Gerät ist rein mechanisch — ohne Batterien, Kabel und App. Es hat lediglich einen <strong>Wiederholungszähler</strong>.' ),
+  array( 'questioon' => 'Worin unterscheidet es sich von EMS-Geräten?', 'answer' => 'EMS-Geräte kontrahieren den Muskel für Sie. ControlPro verlangt, dass Sie <strong>die Arbeit selbst machen</strong> — gegen echten Widerstand.' ),
+  array( 'questioon' => 'Ist es nach einer Prostata-OP geeignet?', 'answer' => 'Ja, viele nutzen es genau nach einer Prostata-Operation. Wenn Sie in der Genesung sind, sprechen Sie vorher mit Ihrem Arzt.' ),
+  array( 'questioon' => 'Wie wird es gereinigt?', 'answer' => 'Mit einem feuchten Tuch und mildem Reiniger abwischen. Nicht in Wasser tauchen.' ),
+  array( 'questioon' => 'Wie erfolgt der Versand?', 'answer' => 'Der Versand ist <strong>diskret</strong>, in einem neutralen Karton ohne Hinweis auf den Inhalt.' ),
+  array( 'questioon' => 'Kann ich es zurückgeben?', 'answer' => 'Ja, Sie haben <strong>30 Tage</strong> Rückgaberecht. Eine E-Mail genügt, ohne Formulare.' ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Produkt' ) !== false );
   if ( $is_kneefix_faq && $is_info )    { return $kneefix_faq; }
+  if ( $is_controlpro_faq && $is_info ) { return $controlpro_faq; }
   if ( $is_kidsnest_faq && $is_info )   { return $kidsnest_faq; }
   if ( $is_jastuk_faq && $is_info )     { return $jastuk_faq; }
   if ( $is_leakboxers_faq && $is_info ) { return $leakboxers_faq; }
