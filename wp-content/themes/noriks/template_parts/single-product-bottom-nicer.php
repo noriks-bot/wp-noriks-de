@@ -26,6 +26,12 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-controlpro' );
     } elseif ( noriks_is_type( 'kidsnest' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
+    } elseif ( noriks_is_type( 'cloath' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloath' );
+    } elseif ( noriks_is_type( 'cloud' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloud' );
+    } elseif ( noriks_is_type( 'hyd' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-hyd' );
     }
 }
 ?>
@@ -763,9 +769,18 @@ endif;
                      : ( $is_kompmajice_page ? 'NORIKS FIT Kompressionsshirt'
                      : ( $is_norikshers_review_page ? 'NORIKS HERS' : 'Ein graues T-Shirt' ) ) ) ) ) ) ) ) );
   if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro Beckenbodentrainer'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
 
   // Include review pools (own pool per orto product group)
-  if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_cloath.php';
+  } else  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_cloud.php';
+  } else  if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_hyd.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_controlpro.php';
   } elseif ( $is_kneefix_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_kneefix.php';
@@ -1831,8 +1846,45 @@ $controlpro_faq = array(
   array( 'questioon' => 'Kann ich es zurückgeben?', 'answer' => 'Ja, Sie haben <strong>30 Tage</strong> Rückgaberecht. Eine E-Mail genügt, ohne Formulare.' ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_cloath_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloath') );
+$cloath_faq = array(
+  array(
+    'questioon' => 'Was, wenn ich mit dem Kauf nicht zufrieden bin?',
+    'answer'    => 'Sie haben 30 Tage, um das Tuch risikofrei zu testen. Sind Sie mit dem Ergebnis nicht zufrieden, schreiben Sie unserem Support und wir erstatten den Betrag — ohne Papierkram und ohne Erklärungen.',
+  ),
+  array(
+    'questioon' => 'Woraus besteht das Tuch?',
+    'answer'    => 'Aus dichtem Mikrofasergewebe mit zweiseitigem Design: Die flauschige Seite nimmt Schmutz und Wasser auf, die genoppte Seite poliert. Der Rand ist mit einem weichen Band verstärkt, das nicht kratzt.',
+  ),
+  array(
+    'questioon' => 'Warum ist es teurer als gewöhnliche Tücher?',
+    'answer'    => 'Weil es dichter und schwerer ist als Standard-Mikrofaser — es nimmt ein Vielfaches an Wasser auf, fusselt nicht und hält Hunderte Wäschen aus. Eines ersetzt eine ganze Reihe billiger Tücher, die nach wenigen Wäschen ausfransen.',
+  ),
+  array(
+    'questioon' => 'Wie lange hält es im Vergleich zu gewöhnlichen Tüchern?',
+    'answer'    => 'Bei richtiger Pflege hält es Hunderte Anwendungen. Tücher aus dem Laden verlieren meist nach etwa 20 Wäschen ihre Dichte und hinterlassen Streifen.',
+  ),
+  array(
+    'questioon' => 'Hinterlässt es Streifen oder Flecken?',
+    'answer'    => 'Nein. Durch die Dichte und das zweiseitige Design wird das Wasser aufgenommen statt verteilt, sodass Glas und Spiegel streifenfrei bleiben — und fusselfrei.',
+  ),
+  array(
+    'questioon' => 'Wie wäscht man es am besten?',
+    'answer'    => 'In der Maschine bei 40 °C, mit Waschmittel ohne Weichspüler (Weichspüler verstopft die Fasern und mindert die Saugkraft). Kein Bleichmittel verwenden und nicht in den Trockner — an der Luft trocknen.',
+  ),
+  array(
+    'questioon' => 'Warum wirkt das Tuch auf manchen Aufnahmen dunkler?',
+    'answer'    => 'Das liegt am Licht. Das Tuch ist dunkelgrau mit schwarzem Rand; bei starkem Licht wirkt es heller, in Innenräumen dunkler.',
+  ),
+  array(
+    'questioon' => 'Eignet es sich als Geschenk?',
+    'answer'    => 'Ja — die Pakete 3+3 und 8+4 gehören zu den häufigsten Geschenken zum Einzug und zu Feiertagen. Das Tuch kommt ordentlich gefaltet und geschenkbereit.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Produkt' ) !== false );
+  if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
   if ( $is_kneefix_faq && $is_info )    { return $kneefix_faq; }
   if ( $is_controlpro_faq && $is_info ) { return $controlpro_faq; }
   if ( $is_kidsnest_faq && $is_info )   { return $kidsnest_faq; }
