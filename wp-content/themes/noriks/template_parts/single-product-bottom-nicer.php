@@ -1882,8 +1882,82 @@ $cloath_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_cloud_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloud') );
+$cloud_faq = array(
+  array(
+    'questioon' => 'Was, wenn mir das Kissen nicht zusagt?',
+    'answer'    => 'Sie haben 60 Nächte zum Testen. Sind Sie nicht zufrieden, schreiben Sie unserem Support und wir erstatten den vollen Betrag — ohne Bedingungen und ohne Papierkram.',
+  ),
+  array(
+    'questioon' => 'Wie wird das Kissen richtig verwendet?',
+    'answer'    => 'Legen Sie sich auf die Seite, platzieren Sie das Kissen zwischen den Knien und ziehen Sie das Band um das obere Bein. Hüften, Becken und Wirbelsäule sollten eine gerade Linie bilden. Das Band lässt sich abnehmen, dann können Sie das Kissen unter den Knöcheln oder im Nacken nutzen.',
+  ),
+  array(
+    'questioon' => 'Bleibt es wirklich an Ort und Stelle, wenn ich mich drehe?',
+    'answer'    => 'Ja. Das verstellbare Band mit Druckknöpfen führt um das Bein und hält das Kissen am Knie, sodass es nicht herausrutscht wie ein gewöhnliches Kissen. Das Band hat zwei Weiten je nach Beinumfang.',
+  ),
+  array(
+    'questioon' => 'Woraus besteht das Kissen?',
+    'answer'    => 'Der Kern besteht aus Memory-Schaum in medizinischer Qualität mit Perforationen für die Luftzirkulation. Der Bezug ist aus atmungsaktivem Gewebe, abnehmbar und waschbar. Die Materialien sind nach OEKO-TEX® STANDARD 100 und CertiPUR-EU zertifiziert.',
+  ),
+  array(
+    'questioon' => 'Ist es zu hart oder zu weich?',
+    'answer'    => 'Es ist mittelfest — fest genug, um den Beinabstand die ganze Nacht zu halten, aber unter Druck passt es sich der Knieform an. Es liegt nicht durch und kehrt nach dem Aufstehen in seine Form zurück.',
+  ),
+  array(
+    'questioon' => 'Wie wird es gewaschen?',
+    'answer'    => 'Nehmen Sie den Bezug ab und waschen Sie ihn bei 40 °C, ohne Weichspüler und Bleichmittel, und trocknen Sie ihn an der Luft. Den Schaum nicht in die Maschine geben — bei Bedarf mit einem feuchten Tuch abwischen und trocknen lassen.',
+  ),
+  array(
+    'questioon' => 'Wie lange dauert die Eingewöhnung?',
+    'answer'    => 'Die meisten spüren den Unterschied schon in der ersten oder zweiten Nacht. Wer mit geschlossenen Knien zu schlafen gewohnt ist, dem kann der Abstand die ersten Nächte ungewohnt vorkommen — der Körper passt sich meist innerhalb einer Woche an.',
+  ),
+  array(
+    'questioon' => 'Ist es in der Schwangerschaft geeignet?',
+    'answer'    => 'Ja. In der Schwangerschaft wird das Schlafen auf der linken Seite empfohlen, und das Kissen zwischen den Knien entlastet Hüften und unteren Rücken. Bei gesundheitlichen Komplikationen sprechen Sie vor der Anwendung mit Ihrem Arzt.',
+  ),
+);
+
+$is_hyd_faq = ( function_exists('noriks_is_type') && noriks_is_type('hyd') );
+$hyd_faq = array(
+  array(
+    'questioon' => 'Was ist Wasserstoffwasser?',
+    'answer'    => 'Es ist gewöhnliches Trinkwasser, in dem molekularer Wasserstoff (H₂) gelöst ist. Wasserstoff ist das kleinste Molekül und wird in Studien mit selektiver antioxidativer Wirkung in Verbindung gebracht.',
+  ),
+  array(
+    'questioon' => 'Wie lange dauert ein Zyklus?',
+    'answer'    => 'Der kurze Zyklus dauert 3 Minuten und liefert etwa 1.600 ppb Wasserstoff, der lange 10 Minuten und bis zu 3.000 ppb. Den Zyklus wählen Sie per Tastendruck.',
+  ),
+  array(
+    'questioon' => 'Kommt das Wasser mit Kunststoff in Berührung?',
+    'answer'    => 'Nein. Die Flasche besteht aus Borosilikatglas mit Edelstahlboden, sodass das Wasser weder Plastikgeschmack noch Partikel enthält.',
+  ),
+  array(
+    'questioon' => 'Welches Wasser kann ich verwenden?',
+    'answer'    => 'Jedes Trinkwasser — Leitungswasser, gefiltertes, abgefülltes oder destilliertes. Dank der PEM/SPE-Membran benötigt das Gerät keine Mineralien.',
+  ),
+  array(
+    'questioon' => 'Muss der Filter gewechselt werden?',
+    'answer'    => 'Nein. Der Generator hat einen Dauerfilter, es gibt also keine Verbrauchsmaterialien und keine Folgekosten.',
+  ),
+  array(
+    'questioon' => 'Wie wird geladen?',
+    'answer'    => 'Per USB-Kabel; eine volle Ladung dauert 30 bis 60 Minuten und reicht für mehrere Zyklen. Laden Sie die Flasche nicht, solange Wasser darin ist.',
+  ),
+  array(
+    'questioon' => 'Wann sollte ich das Wasser trinken?',
+    'answer'    => 'Am besten direkt nach dem Zyklus, innerhalb von etwa 30 Minuten, da die Wasserstoffkonzentration mit der Zeit sinkt.',
+  ),
+  array(
+    'questioon' => 'Was, wenn ich nicht zufrieden bin?',
+    'answer'    => 'Sie haben 30 Tage für die Rückerstattung. Zusätzlich erhalten Sie 1 Jahr Garantie auf das Gerät.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Produkt' ) !== false );
+  if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
+  if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
   if ( $is_kneefix_faq && $is_info )    { return $kneefix_faq; }
   if ( $is_controlpro_faq && $is_info ) { return $controlpro_faq; }
