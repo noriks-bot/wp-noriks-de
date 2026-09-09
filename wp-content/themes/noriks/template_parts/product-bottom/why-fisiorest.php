@@ -18,7 +18,7 @@ $fis_science = array(
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
 $fis_i = get_template_directory_uri() . '/img/fisiorest/';
-$fis_hero_video = $fis_v . 'hero.mp4';
+$fis_hero_video = $fis_v . 'hero-v2.mp4';
 
 // 3) Von Experten empfohlen
 $fis_experts = array(
@@ -151,7 +151,7 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Von Ingenieuren entwickelt. Nach physiotherapeutischen Standards gefertigt</h2>
       <p>Wir haben über 50.000 € und 2 Jahre Entwicklung investiert, damit NORIKS nicht nur ein Massagegerät für den Nacken ist. Es ist ein ganzheitliches Gerät zur Nackentherapie, das die Ursache wirklich behandelt. Jede Bestellung durchläuft eine sorgfältige Qualitätskontrolle, damit sie in einwandfreiem Zustand ankommt.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
