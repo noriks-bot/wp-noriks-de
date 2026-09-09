@@ -30,8 +30,8 @@ $fis_experts = array(
 $fis_ugc = array(
     array( 'img' => $fis_i.'fis-uporaba-1.jpg', 'cap' => '„Zum ersten Mal seit Langem bin ich endlich schmerzfrei…"' ),
     array( 'img' => $fis_i.'fis-uporaba-2.jpg', 'cap' => '„Das NORIKS-Kissen ist meine neue tägliche Notwendigkeit…"' ),
-    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Es hilft mir sehr, Verspannungen in Nacken und Schultern zu lösen."' ),
-    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Wenn Sie gerade Mutter geworden sind, könnte das genau das Richtige für Sie sein…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Wenn Sie gerade Mutter geworden sind, könnte das genau das Richtige für Sie sein…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Es hilft mir sehr, Verspannungen in Nacken und Schultern zu lösen."' ),
 );
 // 5) ThermoTrac 3-in-1
 $fis_thermo = array(
