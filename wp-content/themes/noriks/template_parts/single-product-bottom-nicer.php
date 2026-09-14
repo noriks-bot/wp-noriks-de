@@ -32,6 +32,14 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-cloud' );
     } elseif ( noriks_is_type( 'hyd' ) ) {
         get_template_part( 'template_parts/product-bottom/why-hyd' );
+    } elseif ( noriks_is_type( 'snug' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-snug' );
+    } elseif ( noriks_is_type( 'kompwom' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kompwom' );
+    } elseif ( noriks_is_type( 'pal' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-pal' );
+    } elseif ( noriks_is_type( 'red' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-red' );
     }
 }
 ?>
@@ -772,8 +780,21 @@ endif;
   if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
   if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug Ganzkörperkissen'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman formendes Shirt'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal Gehstock'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief Rotlichttherapie'; }
 
   // Include review pools (own pool per orto product group)
+  if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_snug.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_kompwom.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_pal.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_red.php';
+  } else
   if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_cloath.php';
   } else  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
@@ -1200,7 +1221,11 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('bra') ||
         noriks_is_type('hyd') ||
         noriks_is_type('snore') ||
-        noriks_is_type('cloud')
+        noriks_is_type('cloud') ||
+        noriks_is_type('snug') ||
+        noriks_is_type('kompwom') ||
+        noriks_is_type('pal') ||
+        noriks_is_type('red')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
@@ -1954,8 +1979,160 @@ $hyd_faq = array(
   ),
 );
 
-$faq_pick = function( $title, $list ) use ( $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$is_snug = ( function_exists('noriks_is_type') && noriks_is_type('snug') );
+$snug_faq = array(
+  array(
+    'questioon' => 'Welche Maße hat das Kissen?',
+    'answer'    => 'Eine Größe: <strong>105 cm lang und 30 cm breit</strong>. Es stützt von der Schulter bis zu den Knien, nimmt aber nicht das ganze Bett ein — deshalb lässt es sich leicht halten und man dreht sich leicht mit ihm um.',
+  ),
+  array(
+    'questioon' => 'Wird es mit der Zeit flach?',
+    'answer'    => 'Nein. Die Füllung besteht aus Tausenden feiner, elastischer Fasern, die in ihre Form zurückkehren. Die Stütze, die Sie in der ersten Nacht spüren, ist auch nach neunzig Nächten dieselbe.',
+  ),
+  array(
+    'questioon' => 'Womit ist es gefüllt?',
+    'answer'    => 'Mit hochelastischer Faserfüllung — außen weich und angenehm, innen fest und stützend. Ohne Memory-Schaum, der sich aufheizt.',
+  ),
+  array(
+    'questioon' => 'Wie wird es gewaschen?',
+    'answer'    => 'Der Bezug lässt sich abnehmen und bei 40 °C in der Maschine waschen. Das Kissen selbst gehört nicht in die Maschine — bei Bedarf lüften und an der Luft trocknen lassen.',
+  ),
+  array(
+    'questioon' => 'Ist es in der Schwangerschaft geeignet?',
+    'answer'    => 'Ja. Die S-Form stützt vorne den Bauch und hinten den Rücken, und die empfohlene Position in der Schwangerschaft ist das Schlafen auf der linken Seite. Bei gesundheitlichen Komplikationen sprechen Sie mit Ihrer Ärztin oder Ihrem Arzt.',
+  ),
+  array(
+    'questioon' => 'Wie lange dauert die Eingewöhnung?',
+    'answer'    => 'Die meisten finden ihre Position bis zur zweiten Nacht. Die S-Form ist anders als ein gerades Kissen, deshalb lernt der Körper in den ersten Nächten, wo er sich hinlegt.',
+  ),
+  array(
+    'questioon' => 'Welche Farben gibt es?',
+    'answer'    => 'Sechs Farben: Blau, Rosa, Grau, Grün, Lila und Dunkelblau. Die Farbe wählen Sie auf dieser Seite, bevor Sie das Kissen in den Warenkorb legen.',
+  ),
+  array(
+    'questioon' => 'Kann ich es zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Umtausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$is_kompwom = ( function_exists('noriks_is_type') && noriks_is_type('kompwom') );
+$kompwom_faq = array(
+  array(
+    'questioon' => 'Wie wähle ich die Größe?',
+    'answer'    => 'Nach dem Brustumfang — er entscheidet, wie das Shirt an Brust und Schultern sitzt. Wenn Sie zwischen zwei Größen liegen, nehmen Sie die <strong>größere</strong>. Verfügbar von S bis 3XL.',
+  ),
+  array(
+    'questioon' => 'Sieht man es unter der Kleidung?',
+    'answer'    => 'Nein. Das Gestrick ist nahtlos, dünn und matt, deshalb verschwindet es unter Hemd, Blazer oder einem engen Kleid. Es gibt keine Kante, die sich abzeichnet.',
+  ),
+  array(
+    'questioon' => 'Rollt es sich im Lauf des Tages auf?',
+    'answer'    => 'Nein. Die Kompression verteilt sich in die Breite, statt an einer Stelle zu drücken, deshalb bleibt das Shirt auch nach einem ganzen Tag an seinem Platz.',
+  ),
+  array(
+    'questioon' => 'Sind die 3D-Linien aufgedruckt?',
+    'answer'    => 'Nein. Die Bindung ist <strong>in den Stoff selbst eingewebt</strong>, deshalb reißt nichts und blättert mit der Zeit nichts ab, egal wie oft Sie es waschen.',
+  ),
+  array(
+    'questioon' => 'Wie stark komprimiert es?',
+    'answer'    => 'Fest, aber nie eng. Sie müssen normal atmen und essen können, ohne an das Shirt zu denken. Wenn der Abdruck auf der Haut zwanzig Minuten nach dem Ausziehen noch sichtbar ist, ist die Größe zu klein.',
+  ),
+  array(
+    'questioon' => 'Wie wird es gewaschen?',
+    'answer'    => 'In der Maschine bei <strong>30 °C</strong>. Ohne Bleichmittel, ohne Bügeln und ohne Trockner — an der Luft trocknen lassen.',
+  ),
+  array(
+    'questioon' => 'Welche Farben gibt es?',
+    'answer'    => 'Drei Farben: Schwarz, Dunkelgrau und Rosa. Farbe und Größe wählen Sie auf dieser Seite, bevor Sie das Shirt in den Warenkorb legen.',
+  ),
+  array(
+    'questioon' => 'Kann ich es zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Größentausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$is_pal = ( function_exists('noriks_is_type') && noriks_is_type('pal') );
+$pal_faq = array(
+  array(
+    'questioon' => 'Wozu dient der zweite Griff?',
+    'answer'    => 'Zum <strong>Aufstehen</strong>. Den unteren Griff fassen Sie, wenn Sie aus dem Sessel, aus dem Bett oder von einem niedrigen Stuhl aufstehen — der Druck geht senkrecht nach unten, Sie müssen sich also nicht nach vorne beugen und niemanden um Hilfe bitten.',
+  ),
+  array(
+    'questioon' => 'Steht er wirklich von allein?',
+    'answer'    => 'Ja. Der Fuß hat <strong>vier Gummifüße</strong>, die den Stock aufrecht halten, wenn Sie ihn loslassen. Er fällt nicht zu Boden, Sie müssen sich also nicht danach bücken.',
+  ),
+  array(
+    'questioon' => 'Rutscht er auf glatten Böden?',
+    'answer'    => 'Nein. Die Füße bestehen aus rutschfestem Gummi und halten auf Fliesen, Parkett und Laminat. Der Fuß passt sich draußen auch unebenem Untergrund an.',
+  ),
+  array(
+    'questioon' => 'Wie funktioniert das Licht?',
+    'answer'    => 'Das Licht ist im Griff eingebaut und wird per Knopf eingeschaltet. Es leuchtet den Weg vor Ihnen aus — für den nächtlichen Gang ins Bad oder einen Spaziergang in der Dämmerung.',
+  ),
+  array(
+    'questioon' => 'Was macht der Alarm?',
+    'answer'    => 'Ein Druck auf den Knopf löst ein <strong>lautes Tonsignal</strong> aus, das die Menschen im Haus warnt, wenn Sie stürzen oder Hilfe brauchen.',
+  ),
+  array(
+    'questioon' => 'Lässt sich die Höhe verstellen?',
+    'answer'    => 'Ja. Die Höhe ist in wenigen Sekunden eingestellt, ohne Werkzeug, so passt der Stock zu jeder Körpergröße.',
+  ),
+  array(
+    'questioon' => 'Ist er zusammenklappbar?',
+    'answer'    => 'Ja. Er lässt sich in mehrere Teile klappen und passt in eine Tasche oder ins Handschuhfach — praktisch für Reisen und Arztbesuche.',
+  ),
+  array(
+    'questioon' => 'Kann ich ihn zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Umtausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$is_red = ( function_exists('noriks_is_type') && noriks_is_type('red') );
+$red_faq = array(
+  array(
+    'questioon' => 'Wie hilft Rotlichttherapie beim Karpaltunnelsyndrom?',
+    'answer'    => 'Rotes und infrarotes Licht dringt ins Gewebe ein und regt die <strong>Produktion von Zellenergie (ATP)</strong> an, was hilft, die Entzündung rund um den Medianusnerv zu beruhigen, die Durchblutung zu verbessern und die natürliche Heilung zu unterstützen.',
+  ),
+  array(
+    'questioon' => 'Wie lange bis zu den ersten Ergebnissen?',
+    'answer'    => 'Die meisten Anwender spüren innerhalb von <strong>1 – 2 Wochen</strong> weniger nächtliches Kribbeln. Eine deutlichere Veränderung der Griffkraft kommt meist um die vierte Woche. Wir empfehlen regelmäßige, tägliche Anwendung über mindestens acht Wochen.',
+  ),
+  array(
+    'questioon' => 'Ist die tägliche Anwendung sicher?',
+    'answer'    => 'Ja. Das Gerät ist für <strong>tägliche Anwendungen von 15 Minuten</strong> ausgelegt. Das Licht erwärmt das Gewebe bei diesen Dosen nicht. Das Gerät schaltet sich am Ende der Anwendung selbst ab.',
+  ),
+  array(
+    'questioon' => 'Funktioniert es für beide Hände?',
+    'answer'    => 'Ja, die Manschette lässt sich <strong>an der linken wie an der rechten Hand</strong> anlegen. Wenn beide Hände betroffen sind, machen Sie zwei Anwendungen à 15 Minuten hintereinander oder wählen Sie das Paket mit zwei Geräten.',
+  ),
+  array(
+    'questioon' => 'Für welche Handgrößen passt sie?',
+    'answer'    => 'Die elastische Manschette mit verstellbarem Riemen passt für <strong>die meisten Handgrößen Erwachsener</strong>, auch für größere. Die Daumenöffnung hält das Gerät während der ganzen Anwendung an seinem Platz.',
+  ),
+  array(
+    'questioon' => 'Was ist im Paket enthalten?',
+    'answer'    => '1× NORIKS RED Manschette, <strong>1× USB-C-Ladekabel</strong> und eine Anleitung mit dem empfohlenen Therapieprotokoll.',
+  ),
+  array(
+    'questioon' => 'Wie lange hält der Akku?',
+    'answer'    => 'Eine Ladung reicht für <strong>bis zu 4 Anwendungen</strong>. Das Gerät lädt über USB-C-Kabel, Sie laden es also am Handyladegerät oder am Laptop.',
+  ),
+  array(
+    'questioon' => 'Ersetzt es den Arzt?',
+    'answer'    => 'Nein. NORIKS RED ist ein Gerät für zu Hause und <strong>ersetzt keine ärztliche Untersuchung</strong> und keine verordnete Behandlung. Bei anhaltenden oder starken Beschwerden suchen Sie eine Ärztin oder einen Arzt auf.',
+  ),
+  array(
+    'questioon' => 'Kann ich es zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Umtausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Produkt' ) !== false );
+  if ( $is_snug && $is_info ) { return $snug_faq; }
+  if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_pal && $is_info ) { return $pal_faq; }
+  if ( $is_red && $is_info ) { return $red_faq; }
   if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
   if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
   if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
