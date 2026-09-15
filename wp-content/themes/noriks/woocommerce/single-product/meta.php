@@ -526,7 +526,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
-                NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven, waschbaren Bezug, der sich einfach abnehmen lässt.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–14 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
+                NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven Strickbezug.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–14 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
 
          <?php elseif( function_exists('noriks_is_type') && noriks_is_type('controlpro', $current_product_id) ): ?>
 
