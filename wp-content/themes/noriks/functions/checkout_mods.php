@@ -528,33 +528,21 @@ add_filter( 'body_class', function( $classes ) {
 add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     /* vigoshop.de layout:
      * 1. Phone + Email (top)
-     * 2. Company (optional) — "Klingelschild/auf dem Briefkasten, Firma"
-     * 3. Vorname + Nachname (side by side)
-     * 4. Straße + Hausnr (side by side)
-     * 5. Wohnungsnr./Etage/Zimmernr. (optional) — billing_address_2 repurposed
-     * 6. Postleitzahl + Stadt/Ort (side by side)
+     * 2. Vorname + Nachname (side by side)
+     * 3. Straße + Hausnr (side by side)
+     * 4. Postleitzahl + Stadt/Ort (side by side)
+     *
+     * Firma (billing_company) in Wohnungsnr. sta odstranjena — nista potrebna.
      */
+
+    unset( $fields['billing']['billing_company'] );
     $fields['billing']['billing_phone']['priority']       = 10;
     $fields['billing']['billing_email']['priority']       = 20;
-    $fields['billing']['billing_company']['priority']     = 25;
     $fields['billing']['billing_first_name']['priority']  = 30;
     $fields['billing']['billing_last_name']['priority']   = 40;
     $fields['billing']['billing_address_1']['priority']   = 50;
     $fields['billing']['billing_address_2']['priority']   = 55;
-    // billing_address_2 repurposed as Wohnungsnr below
-    // We need a new field for Hausnr — use billing_address_2 as Hausnr, add custom field for Wohnungsnr
-    // Actually simpler: address_1 = Straße, address_2 = Hausnr (required, side by side)
-    // Add company as Wohnungsnr (optional)
-    /* Wohnungsnr field (optional) — between Hausnr and PLZ */
-    $fields['billing']['billing_wohnungsnr'] = array(
-        'type'        => 'text',
-        'label'       => 'Wohnungsnr./Etage/Zimmernr.',
-        'placeholder' => 'Wohnungsnr./Etage/Zimmernr. (optional)',
-        'required'    => false,
-        'priority'    => 57,
-        'class'       => array('form-row','form-row-wide','form-group','col-xs-12'),
-        'input_class' => array('input-text','form-input'),
-    );
+    // billing_address_1 = Straße, billing_address_2 = Hausnr. (obvezno, drug ob drugem)
 
     $fields['billing']['billing_postcode']['priority']    = 60;
     $fields['billing']['billing_city']['priority']        = 70;
@@ -566,11 +554,6 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_email']['label'] = 'E-Mail-Adresse';
     $fields['billing']['billing_email']['placeholder'] = 'E-Mail-Adresse';
     $fields['billing']['billing_email']['required'] = true;
-
-    // Company field = "Klingelschild/auf dem Briefkasten, Firma (optional)"
-    $fields['billing']['billing_company']['label'] = 'Klingelschild/auf dem Briefkasten, Firma';
-    $fields['billing']['billing_company']['placeholder'] = 'Klingelschild/auf dem Briefkasten, Firma (optional)';
-    $fields['billing']['billing_company']['required'] = false;
 
     $fields['billing']['billing_first_name']['label'] = 'Vorname';
     $fields['billing']['billing_first_name']['placeholder'] = 'Vorname';
@@ -593,7 +576,6 @@ add_filter( 'woocommerce_checkout_fields', function( $fields ) {
     // CSS classes — side by side pairs
     $fields['billing']['billing_phone']['class']         = array('form-row','form-row-wide','form-group','col-xs-12','validate-required','validate-phone');
     $fields['billing']['billing_email']['class']         = array('form-row','form-row-wide','form-group','col-xs-12','validate-email');
-    $fields['billing']['billing_company']['class']       = array('form-row','form-row-wide','form-group','col-xs-12');
     $fields['billing']['billing_first_name']['class']    = array('form-row','form-row-first','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_last_name']['class']     = array('form-row','form-row-last','form-group','col-xs-12','validate-required');
     $fields['billing']['billing_address_1']['class']     = array('form-row','form-row-first','address-field','form-group','col-xs-12','validate-required');
@@ -630,12 +612,6 @@ add_action( 'woocommerce_before_checkout_billing_form', function() {
 
 add_filter( 'default_checkout_billing_country', function() { return 'DE'; });
 
-/* Save Wohnungsnr to order meta */
-add_action( 'woocommerce_checkout_update_order_meta', function( $order_id ) {
-    if ( ! empty( $_POST['billing_wohnungsnr'] ) ) {
-        update_post_meta( $order_id, '_billing_wohnungsnr', sanitize_text_field( $_POST['billing_wohnungsnr'] ) );
-    }
-});
 add_filter( 'woocommerce_order_button_text', function() { return 'Jetzt bestellen'; });
 
 /**
