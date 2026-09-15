@@ -310,17 +310,11 @@ add_action( 'wp_footer', function() {
       font-weight: 700 !important;
       pointer-events: none !important;
     }
-    /* Fallback: also style WC default invalid class (server-side errors) */
-    body.woocommerce-checkout .form-row.woocommerce-invalid input,
-    body.woocommerce-checkout .form-row.woocommerce-invalid select,
-    body.woocommerce-checkout .form-row.woocommerce-invalid .select2-selection,
-    body.woocommerce-checkout .form-row.woocommerce-invalid-required-field input,
-    body.woocommerce-checkout .form-row.woocommerce-invalid-required-field select,
-    body.woocommerce-checkout .form-row.woocommerce-invalid-required-field .select2-selection {
-      border: 2px solid #CC0000 !important;
-      background-color: #fff !important;
-      box-shadow: none !important;
-    }
+    /* Rdeco obrobo risemo SAMO po nasem razredu .noriks-invalid, ki vedno pride
+       skupaj s sporocilom pod poljem. WooCommerceov lasten woocommerce-invalid
+       (checkout.js ga doda ze ob blur na prazno obvezno polje) namenoma pustimo
+       neoznacen — sicer kupec dobi rdec okvir brez pojasnila, se preden karkoli
+       odda. Tako je na SK, CZ, PL, HU, RO in GR. */
     </style>
 
     <script id="noriks-checkout-validation">
