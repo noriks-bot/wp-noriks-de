@@ -508,11 +508,32 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
       </div>
       <div class="accordion-content">
 
-         <?php if( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
+                  <?php if( function_exists('noriks_is_type') && noriks_is_type('snug', $current_product_id) ): ?>
+
+                <strong>NORIKS Snug</strong> ist ein Ganzkörperkissen in S-Form. Die meisten Körperkissen sind gerade — Ihr Körper ist es nicht. Deshalb folgt Snug der Körperlinie und stützt Schultern, Hüften und Knie zugleich.<br><br>Wenn Sie ohne Stütze auf der Seite schlafen, trägt die Schulter das ganze Gewicht, die Hüfte sackt ab und die Wirbelsäule verdreht sich. Drei Stützpunkte verteilen das Gewicht, sodass keine Stelle die ganze Last trägt.<br><br>Die Maße sind 105 cm Länge und 30 cm Breite — genug, um Sie von der Schulter bis zu den Knien zu stützen, ohne das ganze Bett einzunehmen. Die Füllung besteht aus Tausenden feiner, elastischer Fasern, die in ihre Form zurückkehren und auch nach Monaten nicht flach werden.<br><br>Der kühlende Bezug lässt sich abnehmen und bei 40 °C in der Maschine waschen, und das Gewebe lässt die ganze Nacht Luft durch. Erhältlich in sechs Farben: Blau, Rosa, Grau, Grün, Lila und Dunkelblau.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
+
+                <strong>NORIKS FIT Woman</strong> ist ein formendes Shirt, bei dem das Relief in den Stoff selbst eingewebt und nicht aufgedruckt ist. Ein breites Band verläuft über Bauch und Hüften, ein zweites über den Rücken.<br><br>Die Kompression verteilt sich in die Breite, statt an einer Stelle zu drücken, deshalb schneidet nichts ein. Der Bauch bleibt geglättet, die Taille schmaler, und der Rücken bekommt eine Stütze, die hilft, aufrechter zu stehen.<br><br>Das Gestrick ist nahtlos, dünn und matt — es verschwindet unter Hemd, Blazer oder einem engen Kleid. Es rollt sich im Lauf des Tages nicht auf und zeichnet sich unter der Kleidung nicht ab.<br><br>Waschen Sie in der Maschine bei 30 °C, ohne Bleichmittel, Bügeln und Trockner. Erhältlich in drei Farben (Schwarz, Dunkelgrau, Rosa) und in Größen von S bis 3XL. Wenn Sie zwischen zwei Größen liegen, nehmen Sie die größere.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('pal', $current_product_id) ): ?>
+
+                <strong>NORIKS Pal</strong> ist ein Gehstock, der um ein einziges Problem herum entwickelt wurde: das Aufstehen. Neben dem oberen Griff hat er einen zweiten, tiefer liegenden Griff, an dem Sie sich festhalten, wenn Sie aus dem Sessel, aus dem Bett oder von einem niedrigen Stuhl aufstehen — ohne sich nach vorne zu beugen und ohne fremde Hilfe.<br><br>Vier Gummifüße halten den Stock aufrecht, wenn Sie ihn loslassen. Er fällt nicht zu Boden, Sie müssen sich also nicht danach bücken. Der Fuß ist rutschfest und bleibt auf Fliesen, Parkett und auf unebenem Gelände stabil.<br><br>Im Griff ist eine Leuchte eingebaut, die den Weg vor Ihnen ausleuchtet — für den Gang ins Bad bei Nacht oder einen Spaziergang in der Dämmerung. Daneben gibt es einen akustischen Alarm, der die Menschen im Haus warnt, wenn Sie stürzen oder Hilfe brauchen.<br><br>Der Stock ist zusammenklappbar und passt in eine Tasche oder ins Handschuhfach, und die Höhe lässt sich in wenigen Sekunden ohne Werkzeug für jede Körpergröße einstellen.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('red', $current_product_id) ): ?>
+
+                <strong>NORIKS RedRelief</strong> ist eine Handgelenkmanschette, die die beiden am besten untersuchten Wellenlängen der Rotlichttherapie vereint: rotes Licht mit 660 nm beruhigt die oberflächliche Entzündung, infrarotes Licht mit 850 nm dringt tiefer vor, bis zum Gewebe rund um den Medianusnerv.<br><br>Das Licht wird im Gewebe in Zellenergie (ATP) umgewandelt und regt die lokale Durchblutung an — zwei Prozesse, die Teil der natürlichen Erholung des Körpers sind. Deshalb wird es bei Karpaltunnelsyndrom, Sehnenscheidenentzündung, Arthritis sowie Hand- und Handgelenkschmerzen eingesetzt.<br><br>In der Manschette sind 48 Doppel-LEDs verbaut, verteilt über die gesamte Innenseite, sodass das Licht das ganze Handgelenk abdeckt und nicht nur eine Stelle. Es stehen 4 Betriebsarten und 3 Leistungsstufen zur Verfügung.<br><br>Das Gerät ist kabellos und lädt über ein USB-C-Kabel — eine Ladung reicht für bis zu 4 Anwendungen. Es wiegt nur 126 g, hat eine Daumenöffnung und einen verstellbaren Riemen und passt so an die linke wie an die rechte Hand. Empfohlen wird eine Anwendung von 15 Minuten täglich; das Gerät schaltet sich am Ende selbst ab.
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type( 'kidsnest', $current_product_id ) ): ?>
 
                 NORIKS KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA — mit einem atmungsaktiven, waschbaren Bezug, der sich einfach abnehmen lässt.<br><br>Seine ergonomische 3-Zonen-Struktur nimmt den Kopf sanft auf, stützt den Nacken und hilft, die Wirbelsäule in natürlicher Ausrichtung zu halten — auch wenn sich das Kind nachts viel dreht. So fördert es die Nasenatmung und einen ruhigeren, tieferen Schlaf.<br><br>Erhältlich in drei Größen (1–3, 3–9 und 9–14 Jahre), wächst es mit Ihrem Kind mit und bietet in jeder Entwicklungsphase die richtige Stützhöhe.
 
-         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) ): ?>
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('controlpro', $current_product_id) ): ?>
+
+                NORIKS ControlPro ist ein mechanischer Beckenbodentrainer mit echtem physischem Widerstand. Statt ins Leere zu spannen, bekommen Sie etwas, wogegen Sie drücken können — dasselbe Prinzip der progressiven Belastung, mit dem jeder andere Muskel im Körper stärker wird.<br><br>Die Anwendung erfolgt im Sitzen: Sie platzieren das Gerät zwischen den Knien und drücken gegen den Widerstand — 3 Sätze à 10 Wiederholungen täglich, etwa fünf Minuten. Ohne Sonden und Einführen, ohne Kabel, Gel, Batterien und App. Der eingebaute Wiederholungszähler zeigt, wie viel Sie geschafft haben.<br><br>Die Konstruktion ist stabil, mit weichen Auflagen an den Stützen, die auch nach mehreren Sätzen nicht drücken. Der Widerstand steigt progressiv, während die Muskeln stärker werden.<br><br>Gedacht ist es für Männer, die die Kontrolle über die Blase zurückgewinnen möchten — nach einer Prostata-Operation, bei Belastungsinkontinenz oder nach langen Monaten Kegelübungen ohne Ergebnis. Der Versand erfolgt diskret, in einem neutralen Karton ohne Aufdruck.
+
+
+         <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) ): ?>
 
                 Die NORIKS KneeFix ist eine flexible Kniebandage, die vier Funktionen in einem Stützsystem vereint: einstellbare Kompression über ein präzises Drehrad, doppelte seitliche Stabilisatoren, ein Gelpolster, das die Kniescheibe entlastet, und einen rutschfesten Silikonrand, der die Bandage an Ort und Stelle hält.<br><br>Anders als starre Orthesen versteift die KneeFix das Knie nicht — sie stützt es während der natürlichen Bewegung. Die Kompression stellen Sie in Sekunden ein: morgens fester, nachmittags lockerer, je nachdem, wie lange Sie auf den Beinen sind. So gewinnt das Knie Stabilität beim Aufstehen, auf Treppen, beim Spazieren und bei längerem Stehen.<br><br>Das Gewebe ist leicht, atmungsaktiv und feuchtigkeitsableitend, daher lässt sich die Bandage stundenlang tragen — ohne Schwitzen und ohne Einschneiden. Sie ist dünn und diskret und unter der Hose kaum zu sehen.<br><br>Erhältlich in den Größen S bis 2XL nach Körpergewicht sowie in einer Ausführung für das linke und das rechte Knie, damit die Passform genau bleibt.
 
@@ -568,7 +589,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
 
      <!-- 2 - slika tablica velicina -->
-     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : // keine Größentabelle für bunion + fisiorest + norikshers + ortopedski jastuk ?>
+     <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('snug', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('pal', $current_product_id) ) && ! ( function_exists('noriks_is_type') && noriks_is_type('red', $current_product_id) )) : // keine Größentabelle für bunion + fisiorest + norikshers + ortopedski jastuk ?>
      <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3>Größentabellen</h3>
@@ -681,7 +702,55 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
                   <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/de/wp-content/uploads/2026/04/nogavice_de.jpg">
 
-    <?php elseif(  $is_mixed_bundle ): ?>
+    <?php elseif( function_exists('noriks_is_type') && noriks_is_type('kompwom', $current_product_id) ): ?>
+
+          <div class="kwm-size">
+            <p style="margin:0 0 14px;line-height:1.6;">Wählen Sie die Größe nach dem <strong>Brustumfang</strong> — er entscheidet, wie das Shirt an Brust und Schultern sitzt. Wenn Sie zwischen zwei Größen liegen, nehmen Sie die <strong>größere</strong>.</p>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <thead>
+                <tr style="background:#a8536b;color:#fff;">
+                  <th style="padding:9px 10px;text-align:left;">Größe</th>
+                  <th style="padding:9px 10px;text-align:left;">Brustumfang</th>
+                  <th style="padding:9px 10px;text-align:left;">Taillenumfang</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">S<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 0–4</span></td>
+                    <td style="padding:9px 10px;">78 – 83 cm</td>
+                    <td style="padding:9px 10px;">65 – 71 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">M<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 6–8</span></td>
+                    <td style="padding:9px 10px;">83 – 89 cm</td>
+                    <td style="padding:9px 10px;">71 – 77 cm</td>
+                  </tr>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">L<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 10–12</span></td>
+                    <td style="padding:9px 10px;">89 – 95 cm</td>
+                    <td style="padding:9px 10px;">77 – 83 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 14</span></td>
+                    <td style="padding:9px 10px;">95 – 102 cm</td>
+                    <td style="padding:9px 10px;">83 – 88 cm</td>
+                  </tr>
+                  <tr style="background:#fff;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">2XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 16–18</span></td>
+                    <td style="padding:9px 10px;">102 – 108 cm</td>
+                    <td style="padding:9px 10px;">88 – 94 cm</td>
+                  </tr>
+                  <tr style="background:#fbf7f8;border-bottom:1px solid #f0e6ea;">
+                    <td style="padding:9px 10px;font-weight:700;">3XL<span style="display:block;font-size:11.5px;font-weight:600;color:#a08d95;">US 20</span></td>
+                    <td style="padding:9px 10px;">108 – 115 cm</td>
+                    <td style="padding:9px 10px;">94 – 100 cm</td>
+                  </tr>
+              </tbody>
+            </table>
+            <p style="margin:14px 0 0;line-height:1.6;"><strong>So messen Sie:</strong> die Brust an der breitesten Stelle, die Taille an der schmalsten. Messen Sie über der Unterwäsche, das Band anliegend, aber nicht straff.</p>
+          </div>
+
+        <?php elseif(  $is_mixed_bundle ): ?>
 
      <img class="js-open-size-chart" style="cursor:pointer;" src="https://noriks.com/de/wp-content/uploads/2026/04/bokserice_de.jpg">
 
@@ -698,7 +767,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
 
 
     <!-- 3 - Pflegehinweise --> <!-- ausgeblendet auch auf ortopedski jastuk + kidsnest -->
-    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) )) : // keine Pflegehinweise für Gurt/bunion/fisiorest/norikshers/ortopedski jastuk/kidsnest ?>
+    <?php if ( ! ( function_exists('noriks_is_type') && ( noriks_is_type('ortopas', $current_product_id) || noriks_is_type('bunion', $current_product_id) || noriks_is_type('fisiorest', $current_product_id) || noriks_is_type('norikshers', $current_product_id) || noriks_is_type('ortopedski-jastuk', $current_product_id) || noriks_is_type('kidsnest', $current_product_id) ) )  && ! ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $current_product_id) || noriks_is_type('controlpro', $current_product_id) )) : // keine Pflegehinweise für Gurt/bunion/fisiorest/norikshers/ortopedski jastuk/kidsnest ?>
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <h3><?php echo get_field("singlepp_acc_h_2","options"); ?></h3>
@@ -736,7 +805,7 @@ $is_mixed_bundle = has_term( array( 'black-friday', 't-shirts-boxershorts-sets' 
     <!-- 4 Rueckgabe und Umtausch -->
     <div class="accordion-item">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        <h3><?php echo get_field("singlepp_acc_h_3","options"); ?></h3>
+        <h3><?php echo function_exists('noriks_strip_free') ? noriks_strip_free( get_field("singlepp_acc_h_3","options") ) : get_field("singlepp_acc_h_3","options"); ?></h3>
         <div class="toggle">+</div>
       </div>
       <div class="accordion-content">

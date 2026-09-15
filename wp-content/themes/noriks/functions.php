@@ -8,7 +8,9 @@
 include(get_template_directory() . '/functions/product-type.php');
 include(get_template_directory() . '/functions/pack-switcher.php'); // Auswahl der Paketgroesse + andere Farbkombinationen (Xer-Sets)
 include(get_template_directory() . '/functions/flash-deals-banner.php'); // traka sezonske rasprodaje
+include(get_template_directory() . '/functions/size-chart-once.php'); // tabela velikosti samo enkrat
 include(get_template_directory() . '/functions/checkout_mods.php');
+include(get_template_directory() . '/functions/acf-text-fix.php'); // popravki besedil iz ACF nastavitev
 include(get_template_directory() . '/functions/out-of-stock-notice.php'); // obvestilo ni na zalogi
 include(get_template_directory() . '/functions/phone-validate.php');
 include(get_template_directory() . '/functions/shop-filter-links.php'); // filtri kategorij brez YITH vticnika // nezno preverjanje telefonske stevilke
@@ -86,11 +88,60 @@ function auto_apply_coupon_from_url() {
 
 // In functions.php oder als mu-plugin hinzufuegen
 
+<<<<<<< HEAD
 /**
 * Note: This file may contain artifacts of previous malicious infection.
 * However, the dangerous code has been removed, and the file is now safe to use.
 */
 
+=======
+function noriks_get_abandoned_carts($request) {
+    global $wpdb;
+    $table = $wpdb->prefix . 'cartflows_ca_cart_abandonment';
+    
+    $results = $wpdb->get_results("
+        SELECT id, email, cart_contents, cart_total, 
+               other_fields, order_status, time
+        FROM $table 
+        WHERE order_status = 'abandoned'
+        ORDER BY time DESC LIMIT 500
+    ", ARRAY_A);
+    
+    foreach($results as &$row) {
+        $row['cart_contents'] = maybe_unserialize($row['cart_contents']);
+        $row['other_fields'] = maybe_unserialize($row['other_fields']);
+        // Normalisierte fb_campaign Struktur (campaign_id, ad_id, adset_id, fbclid, ...)
+        if (function_exists('noriks_build_fb_campaign')) {
+            $row['fb_campaign'] = noriks_build_fb_campaign($row['other_fields']);
+        }
+    }
+    return new WP_REST_Response($results, 200);
+}
+>>>>>>> e782371d578dc7721a4d9dc1905311dbe804ef57
+
+
+
+// Bulk cleanup abandoned carts that have orders
+add_action('rest_api_init', function() {
+    register_rest_route('noriks/v1', '/abandoned-carts/cleanup', array(
+        'methods' => 'POST',
+        'callback' => function($req) {
+            global $wpdb;
+            $table = $wpdb->prefix . 'cartflows_ca_cart_abandonment';
+            $body = json_decode($req->get_body(), true);
+            $ids = array_map('intval', $body['ids'] ?? []);
+            if (empty($ids)) return new WP_REST_Response(['error' => 'No IDs'], 400);
+            $cleaned = 0;
+            foreach ($ids as $id) {
+                if ($wpdb->update($table, ['order_status' => 'completed'], ['id' => $id, 'order_status' => 'abandoned'])) $cleaned++;
+            }
+            return new WP_REST_Response(['cleaned' => $cleaned, 'total' => count($ids)], 200);
+        },
+        'permission_callback' => function() {
+            return isset($_GET['key']) && $_GET['key'] === 'n0r1k5-c4rt-4cc355';
+        }
+    ));
+});
 
 
 
@@ -787,7 +838,7 @@ function add_second_product_thumbnail() {
 /* Slick/Glide carousel assets removed */
 
 add_action( 'woocommerce_before_variations_form', function() {
-    get_template_part( 'template_parts/size-chart-modal' );
+    noriks_size_chart_once();
 });
 
 add_filter('woocommerce_get_image_size_thumbnail', 'custom_large_shop_thumbnail');

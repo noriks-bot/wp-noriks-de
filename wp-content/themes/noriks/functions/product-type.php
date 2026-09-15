@@ -32,6 +32,8 @@ function noriks_product_type_map() : array {
         'ortopas'                 => array( 'orto-ortopas', 'ortopas' ),
         // KneeFix ortopedska steznica za koljeno.
         'kneefix'                 => array( 'orto-kneefix' ),
+        // ControlPro trener dna zdjelice (bez atributa).
+        'controlpro'              => array( 'orto-controlpro', 'controlpro' ),
         'bunion'                  => array( 'orto-bunion', 'bunion' ),
         'fisiorest'               => array( 'orto-fisiorest', 'fisiorest' ),
         'norikshers'              => array( 'orto-norikshers', 'orto-noriks-hers', 'norikshers' ),
@@ -44,6 +46,16 @@ function noriks_product_type_map() : array {
         'majica-darila'           => array( 'orto-majica-darila', 'majica-darila' ),
         'majice-bokserice-paketi' => array( 'sets', 'sady', 'kompleti', 'majice-i-bokserice-paketi' ),
         'black-friday'            => array( 'black-friday' ),
+        // Polar NORIKS Cloth — krpa za ciscenje (bez atributa)
+        'cloath'                  => array( 'orto-cloath' ),
+        // NORIKS Cloud — ortopedski jastuk za koljena (bez atributa)
+        'cloud'                   => array( 'orto-cloud' ),
+        'red'                     => array( 'orto-red' ),
+        'pal'                     => array( 'orto-pal' ),
+        'kompwom'                 => array( 'orto-kompwom' ),
+        'snug'                    => array( 'orto-snug' ),
+        // NORIKS HYD — boca za vodikovu vodu (bez atributa)
+        'hyd'                     => array( 'orto-hyd' ),
         'orto'                    => array( 'orto' ),
     );
 }

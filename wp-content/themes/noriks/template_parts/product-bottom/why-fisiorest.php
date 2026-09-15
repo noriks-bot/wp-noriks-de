@@ -17,20 +17,21 @@ $fis_science = array(
     array( 'title' => 'Stressabbau',         'text' => 'Warme Massage und Dehnung <strong>lösen angestaute Verspannungen</strong> für mehr Wohlbefinden.' ),
 );
 $fis_v = get_template_directory_uri() . '/img/fisiorest-videos/';
-$fis_hero_video = $fis_v . 'hero.mp4';
+$fis_i = get_template_directory_uri() . '/img/fisiorest/';
+$fis_hero_video = $fis_v . 'hero-v2.mp4';
 
 // 3) Von Experten empfohlen
 $fis_experts = array(
-    array( 'vid' => $fis_v.'v01.mp4', 'name' => 'Marina Bauer',    'role' => 'Zertifizierte Massagetherapeutin', 'org' => '' ),
-    array( 'vid' => $fis_v.'v08.mp4', 'name' => 'Dr. Anna Fischer', 'role' => 'Doktorin der Physiotherapie',       'org' => '' ),
-    array( 'vid' => $fis_v.'v03.mp4', 'name' => 'Dr. Jonas Wagner', 'role' => 'Doktor der Chiropraktik',           'org' => '' ),
+    array( 'img' => $fis_i.'fis-strucnjak-1.jpg', 'name' => 'Marina Bauer', 'role' => 'Zertifizierte Massagetherapeutin', 'org' => '' ),
+    array( 'img' => $fis_i.'fis-strucnjak-2.jpg', 'name' => 'Anna Fischer', 'role' => 'Physiotherapeutin', 'org' => '' ),
+    array( 'img' => $fis_i.'fis-strucnjak-3.jpg', 'name' => 'Jana Wagner', 'role' => 'Chiropraktikerin', 'org' => '' ),
 );
 // 4) Erfahrungen der Nutzer
 $fis_ugc = array(
-    array( 'vid' => $fis_v.'v09c.mp4', 'cap' => '„Zum ersten Mal seit Langem bin ich endlich schmerzfrei…"' ),
-    array( 'vid' => $fis_v.'v06.mp4', 'cap' => '„Das NORIKS-Kissen ist meine neue tägliche Notwendigkeit…"' ),
-    array( 'vid' => $fis_v.'v11c.mp4', 'cap' => '„Es hilft mir sehr, Verspannungen in Nacken und Schultern zu lösen."' ),
-    array( 'vid' => $fis_v.'v02c.mp4', 'cap' => '„Wenn Sie gerade Mutter geworden sind, könnte das genau das Richtige für Sie sein…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-1.jpg', 'cap' => '„Zum ersten Mal seit Langem bin ich endlich schmerzfrei…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-2.jpg', 'cap' => '„Das NORIKS-Kissen ist meine neue tägliche Notwendigkeit…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-3.jpg', 'cap' => '„Wenn Sie gerade Mutter geworden sind, könnte das genau das Richtige für Sie sein…"' ),
+    array( 'img' => $fis_i.'fis-uporaba-4.jpg', 'cap' => '„Es hilft mir sehr, Verspannungen in Nacken und Schultern zu lösen."' ),
 );
 // 5) ThermoTrac 3-in-1
 $fis_thermo = array(
@@ -85,7 +86,7 @@ $fis_upgrades = array(
     <div class="fis-exp-cards">
       <?php foreach ( $fis_experts as $e ) : ?>
         <div class="fis-exp-card">
-          <video src="<?php echo esc_url( $e['vid'] ); ?>" muted autoplay loop playsinline preload="metadata"></video>
+          <img src="<?php echo esc_url( $e['img'] ); ?>" alt="<?php echo esc_attr( $e['name'] . ' — ' . $e['role'] ); ?>" loading="lazy">
           <div class="fis-exp-cap">
             <div class="fis-exp-name"><?php echo esc_html( $e['name'] ); ?></div>
             <div class="fis-exp-role"><?php echo esc_html( $e['role'] ); ?></div>
@@ -103,7 +104,7 @@ $fis_upgrades = array(
     <div class="fis-ugc-grid">
       <?php foreach ( $fis_ugc as $u ) : ?>
         <div class="fis-ugc-card">
-          <div class="fis-ugc-media"><video src="<?php echo esc_url( $u['vid'] ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+          <div class="fis-ugc-media"><img src="<?php echo esc_url( $u['img'] ); ?>" alt="<?php echo esc_attr( $u['cap'] ); ?>" loading="lazy"></div>
           <p class="fis-ugc-cap"><?php echo esc_html( $u['cap'] ); ?></p>
         </div>
       <?php endforeach; ?>
@@ -150,14 +151,14 @@ $fis_upgrades = array(
       <h2 class="fis-h2">Von Ingenieuren entwickelt. Nach physiotherapeutischen Standards gefertigt</h2>
       <p>Wir haben über 50.000 € und 2 Jahre Entwicklung investiert, damit NORIKS nicht nur ein Massagegerät für den Nacken ist. Es ist ein ganzheitliches Gerät zur Nackentherapie, das die Ursache wirklich behandelt. Jede Bestellung durchläuft eine sorgfältige Qualitätskontrolle, damit sie in einwandfreiem Zustand ankommt.</p>
     </div>
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'hero-v2.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
   </div>
 </section>
 
 <!-- ============ 8) 14x günstiger ============ -->
 <section class="fis-cheaper">
   <div class="fis-wrap fis-row2">
-    <div class="fis-row2-media"><video src="<?php echo esc_url( $fis_v.'v08.mp4' ); ?>" muted autoplay loop playsinline preload="metadata"></video></div>
+    <div class="fis-row2-media"><img src="<?php echo esc_url( $fis_i.'fis-produkt-kvadrat.jpg' ); ?>" alt="NORIKS FisioRest" loading="lazy"></div>
     <div class="fis-row2-copy">
       <p class="fis-eyebrow">SICHERE UND ENTSPANNENDE THERAPIE</p>
       <h2 class="fis-h2">14× günstiger als wöchentliche Termine</h2>
@@ -187,7 +188,8 @@ $fis_upgrades = array(
   .fis-exp-author { color: #1c1c1c; }
   .fis-exp-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .fis-exp-card { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 3/4; background: #222; }
-  .fis-exp-card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fis-exp-card video,
+  .fis-exp-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .fis-exp-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 14px; color: #fff; background: linear-gradient(0deg, rgba(0,0,0,.75), rgba(0,0,0,0)); }
   .fis-exp-name { font-weight: 800; font-size: 18px; }
   .fis-exp-role { font-size: 13px; }
@@ -197,7 +199,8 @@ $fis_upgrades = array(
   .fis-ugc { background: #223047; padding: 40px 0; }
   .fis-ugc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
   .fis-ugc-media { border-radius: 12px; overflow: hidden; aspect-ratio: 3/4; background: #000; }
-  .fis-ugc-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fis-ugc-media video,
+  .fis-ugc-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .fis-ugc-cap { color: #eee; font-size: 14px; line-height: 1.5; margin: 10px 0 0; }
 
   /* 5) ThermoTrac */
@@ -220,9 +223,11 @@ $fis_upgrades = array(
   .fis-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
   .fis-row2-copy p { font-size: 15.5px; line-height: 1.65; color: #333; }
   .fis-row2-media { border-radius: 16px; overflow: hidden; }
-  .fis-row2-media video { width: 100%; height: auto; display: block; }
-  .fis-cheaper .fis-row2-media { aspect-ratio: 16 / 10; }
-  .fis-cheaper .fis-row2-media video { height: 100%; object-fit: cover; }
+  .fis-row2-media video,
+  .fis-row2-media img { width: 100%; height: auto; display: block; }
+  .fis-cheaper .fis-row2-media { aspect-ratio: 1 / 1; }
+  .fis-cheaper .fis-row2-media video,
+  .fis-cheaper .fis-row2-media img { height: 100%; object-fit: cover; }
 
   @media (max-width: 900px) {
     .fis-exp-grid { grid-template-columns: 1fr; gap: 24px; }

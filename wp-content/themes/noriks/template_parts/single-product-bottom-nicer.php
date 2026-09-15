@@ -22,8 +22,24 @@ if ( function_exists( 'noriks_is_type' ) ) {
         get_template_part( 'template_parts/product-bottom/why-ortopedski-jastuk' );
     } elseif ( noriks_is_type( 'kneefix' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kneefix' );
+    } elseif ( noriks_is_type( 'controlpro' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-controlpro' );
     } elseif ( noriks_is_type( 'kidsnest' ) ) {
         get_template_part( 'template_parts/product-bottom/why-kidsnest' );
+    } elseif ( noriks_is_type( 'cloath' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloath' );
+    } elseif ( noriks_is_type( 'cloud' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-cloud' );
+    } elseif ( noriks_is_type( 'hyd' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-hyd' );
+    } elseif ( noriks_is_type( 'snug' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-snug' );
+    } elseif ( noriks_is_type( 'kompwom' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-kompwom' );
+    } elseif ( noriks_is_type( 'pal' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-pal' );
+    } elseif ( noriks_is_type( 'red' ) ) {
+        get_template_part( 'template_parts/product-bottom/why-red' );
     }
 }
 ?>
@@ -647,10 +663,12 @@ endif;
 
           Sie sind nicht allein auf der Suche nach schmerzfreiem Sitzen.
 
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ): ?>Sie sind nicht der Einzige, dem Kegelübungen nichts gebracht haben.
           <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>
 
            Sie sind nicht allein auf der Suche nach einem stabileren Knie.
 
+          <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ): ?>Tausende Männer nutzen NORIKS ControlPro bereits — echter Widerstand statt Anspannen ins Leere.
           <?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix') ): ?>Tausende Kunden tragen die NORIKS KneeFix Bandage bereits für ein stabileres Knie – auf Treppen, beim Spaziergang und bei langem Stehen.<?php elseif ( function_exists('noriks_is_type') && noriks_is_type('kidsnest') ): ?>
 
           Sie sind nicht allein auf der Suche nach ruhigem Kinderschlaf.
@@ -758,9 +776,34 @@ endif;
                      : ( $is_leakboxers_page ? 'NORIKS saugfähige Boxershorts'
                      : ( $is_kompmajice_page ? 'NORIKS FIT Kompressionsshirt'
                      : ( $is_norikshers_review_page ? 'NORIKS HERS' : 'Ein graues T-Shirt' ) ) ) ) ) ) ) ) );
+  if ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) { $rv_fallback_title = 'NORIKS ControlPro Beckenbodentrainer'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) { $rv_fallback_title = 'NORIKS HYD'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) { $rv_fallback_title = 'NORIKS Cloud'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) { $rv_fallback_title = 'Polar NORIKS Cloth XXL'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) { $rv_fallback_title = 'NORIKS Snug Ganzkörperkissen'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) { $rv_fallback_title = 'NORIKS FIT Woman formendes Shirt'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('pal') ) { $rv_fallback_title = 'NORIKS Pal Gehstock'; }
+  if ( function_exists('noriks_is_type') && noriks_is_type('red') ) { $rv_fallback_title = 'NORIKS RedRelief Rotlichttherapie'; }
 
   // Include review pools (own pool per orto product group)
-  if ( $is_kneefix_page ) {
+  if ( function_exists('noriks_is_type') && noriks_is_type('snug') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_snug.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('kompwom') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_kompwom.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('pal') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_pal.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('red') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_red.php';
+  } else
+  if ( function_exists('noriks_is_type') && noriks_is_type('cloath') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_cloath.php';
+  } else  if ( function_exists('noriks_is_type') && noriks_is_type('cloud') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_cloud.php';
+  } else  if ( function_exists('noriks_is_type') && noriks_is_type('hyd') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_hyd.php';
+  } elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro') ) {
+    include get_stylesheet_directory() . '/auto_reviews/DE_controlpro.php';
+  } elseif ( $is_kneefix_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_kneefix.php';
   } elseif ( $is_kidsnest_page ) {
     include get_stylesheet_directory() . '/auto_reviews/DE_kidsnest.php';
@@ -915,6 +958,8 @@ endif;
           $args['category'] = [ 'socken', 'orto-kompresijske-carape' ];
       } elseif ( function_exists('noriks_is_type') && noriks_is_type('kneefix', $product_id) ) {
           $args['category'] = [ 'orto-kneefix' ];
+        } elseif ( function_exists('noriks_is_type') && noriks_is_type('controlpro', $product_id) ) {
+          $args['category'] = [ 'orto-controlpro' ];
       } else {
           // Stranice majica: bazen SAMO iz kategorije majica (s podkategorijama).
           // Prije je uzimao sve osim bokserica, pa su recenzije o majicama
@@ -1176,7 +1221,11 @@ function assign_unique_avatars_first_n(array $reviews, array $avatar_pool, strin
         noriks_is_type('bra') ||
         noriks_is_type('hyd') ||
         noriks_is_type('snore') ||
-        noriks_is_type('cloud')
+        noriks_is_type('cloud') ||
+        noriks_is_type('snug') ||
+        noriks_is_type('kompwom') ||
+        noriks_is_type('pal') ||
+        noriks_is_type('red')
   );
   // fotografije osoba: samo na odjeci (majice, bokserice, kompleti), ne na ortopedskim pomagalima
   $avatar_pool = $noriks_no_photos ? array() : get_review_avatar_pool($avatar_type);
@@ -1644,6 +1693,7 @@ $faq_list2 = get_field('faq_list_2', 'option');
 $faq_list3 = get_field('faq_list_3', 'option');
 
 $is_ortopas_faq   = ( function_exists('noriks_is_type') && noriks_is_type('ortopas') );
+$is_controlpro_faq = ( function_exists('noriks_is_type') && noriks_is_type('controlpro') );
 $is_bunion_faq    = ( function_exists('noriks_is_type') && noriks_is_type('bunion') );
 $is_fisiorest_faq = ( function_exists('noriks_is_type') && noriks_is_type('fisiorest') );
 $is_norikshers_faq = ( function_exists('noriks_is_type') && noriks_is_type('norikshers') );
@@ -1809,9 +1859,285 @@ $norikshers_faq = array(
 
 // Swap ONLY the product-info FAQ container ("...Produkt...") for the orto
 // products; delivery/returns containers stay untouched.
-$faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
+$controlpro_faq = array(
+  array( 'questioon' => 'Wie wird es angewendet?', 'answer' => 'Setzen Sie sich auf einen Stuhl, platzieren Sie das Gerät <strong>zwischen den Knien</strong> und drücken Sie gegen den Widerstand. Empfohlen sind <strong>3 Sätze à 10 Wiederholungen täglich</strong>, etwa fünf Minuten.' ),
+  array( 'questioon' => 'Muss etwas eingeführt werden?', 'answer' => 'Nein. Keine Sonden, kein Einführen. Das Gerät arbeitet <strong>außerhalb des Körpers</strong>.' ),
+  array( 'questioon' => 'Wann sind Ergebnisse zu erwarten?', 'answer' => 'Die meisten Anwender berichten von ersten Veränderungen nach <strong>3 bis 6 Wochen</strong> regelmäßigen Trainings.' ),
+  array( 'questioon' => 'Braucht es Batterien oder eine App?', 'answer' => 'Nein. Das Gerät ist rein mechanisch — ohne Batterien, Kabel und App. Es hat lediglich einen <strong>Wiederholungszähler</strong>.' ),
+  array( 'questioon' => 'Worin unterscheidet es sich von EMS-Geräten?', 'answer' => 'EMS-Geräte kontrahieren den Muskel für Sie. ControlPro verlangt, dass Sie <strong>die Arbeit selbst machen</strong> — gegen echten Widerstand.' ),
+  array( 'questioon' => 'Ist es nach einer Prostata-OP geeignet?', 'answer' => 'Ja, viele nutzen es genau nach einer Prostata-Operation. Wenn Sie in der Genesung sind, sprechen Sie vorher mit Ihrem Arzt.' ),
+  array( 'questioon' => 'Wie wird es gereinigt?', 'answer' => 'Mit einem feuchten Tuch und mildem Reiniger abwischen. Nicht in Wasser tauchen.' ),
+  array( 'questioon' => 'Wie erfolgt der Versand?', 'answer' => 'Der Versand ist <strong>diskret</strong>, in einem neutralen Karton ohne Hinweis auf den Inhalt.' ),
+  array( 'questioon' => 'Kann ich es zurückgeben?', 'answer' => 'Ja, Sie haben <strong>30 Tage</strong> Rückgaberecht. Eine E-Mail genügt, ohne Formulare.' ),
+);
+
+$is_cloath_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloath') );
+$cloath_faq = array(
+  array(
+    'questioon' => 'Was, wenn ich mit dem Kauf nicht zufrieden bin?',
+    'answer'    => 'Sie haben 30 Tage, um das Tuch risikofrei zu testen. Sind Sie mit dem Ergebnis nicht zufrieden, schreiben Sie unserem Support und wir erstatten den Betrag — ohne Papierkram und ohne Erklärungen.',
+  ),
+  array(
+    'questioon' => 'Woraus besteht das Tuch?',
+    'answer'    => 'Aus dichtem Mikrofasergewebe mit zweiseitigem Design: Die flauschige Seite nimmt Schmutz und Wasser auf, die genoppte Seite poliert. Der Rand ist mit einem weichen Band verstärkt, das nicht kratzt.',
+  ),
+  array(
+    'questioon' => 'Warum ist es teurer als gewöhnliche Tücher?',
+    'answer'    => 'Weil es dichter und schwerer ist als Standard-Mikrofaser — es nimmt ein Vielfaches an Wasser auf, fusselt nicht und hält Hunderte Wäschen aus. Eines ersetzt eine ganze Reihe billiger Tücher, die nach wenigen Wäschen ausfransen.',
+  ),
+  array(
+    'questioon' => 'Wie lange hält es im Vergleich zu gewöhnlichen Tüchern?',
+    'answer'    => 'Bei richtiger Pflege hält es Hunderte Anwendungen. Tücher aus dem Laden verlieren meist nach etwa 20 Wäschen ihre Dichte und hinterlassen Streifen.',
+  ),
+  array(
+    'questioon' => 'Hinterlässt es Streifen oder Flecken?',
+    'answer'    => 'Nein. Durch die Dichte und das zweiseitige Design wird das Wasser aufgenommen statt verteilt, sodass Glas und Spiegel streifenfrei bleiben — und fusselfrei.',
+  ),
+  array(
+    'questioon' => 'Wie wäscht man es am besten?',
+    'answer'    => 'In der Maschine bei 40 °C, mit Waschmittel ohne Weichspüler (Weichspüler verstopft die Fasern und mindert die Saugkraft). Kein Bleichmittel verwenden und nicht in den Trockner — an der Luft trocknen.',
+  ),
+  array(
+    'questioon' => 'Warum wirkt das Tuch auf manchen Aufnahmen dunkler?',
+    'answer'    => 'Das liegt am Licht. Das Tuch ist dunkelgrau mit schwarzem Rand; bei starkem Licht wirkt es heller, in Innenräumen dunkler.',
+  ),
+  array(
+    'questioon' => 'Eignet es sich als Geschenk?',
+    'answer'    => 'Ja — die Pakete 3+3 und 8+4 gehören zu den häufigsten Geschenken zum Einzug und zu Feiertagen. Das Tuch kommt ordentlich gefaltet und geschenkbereit.',
+  ),
+);
+
+$is_cloud_faq = ( function_exists('noriks_is_type') && noriks_is_type('cloud') );
+$cloud_faq = array(
+  array(
+    'questioon' => 'Was, wenn mir das Kissen nicht zusagt?',
+    'answer'    => 'Sie haben 60 Nächte zum Testen. Sind Sie nicht zufrieden, schreiben Sie unserem Support und wir erstatten den vollen Betrag — ohne Bedingungen und ohne Papierkram.',
+  ),
+  array(
+    'questioon' => 'Wie wird das Kissen richtig verwendet?',
+    'answer'    => 'Legen Sie sich auf die Seite, platzieren Sie das Kissen zwischen den Knien und ziehen Sie das Band um das obere Bein. Hüften, Becken und Wirbelsäule sollten eine gerade Linie bilden. Das Band lässt sich abnehmen, dann können Sie das Kissen unter den Knöcheln oder im Nacken nutzen.',
+  ),
+  array(
+    'questioon' => 'Bleibt es wirklich an Ort und Stelle, wenn ich mich drehe?',
+    'answer'    => 'Ja. Das verstellbare Band mit Druckknöpfen führt um das Bein und hält das Kissen am Knie, sodass es nicht herausrutscht wie ein gewöhnliches Kissen. Das Band hat zwei Weiten je nach Beinumfang.',
+  ),
+  array(
+    'questioon' => 'Woraus besteht das Kissen?',
+    'answer'    => 'Der Kern besteht aus Memory-Schaum in medizinischer Qualität mit Perforationen für die Luftzirkulation. Der Bezug ist aus atmungsaktivem Gewebe, abnehmbar und waschbar. Die Materialien sind nach OEKO-TEX® STANDARD 100 und CertiPUR-EU zertifiziert.',
+  ),
+  array(
+    'questioon' => 'Ist es zu hart oder zu weich?',
+    'answer'    => 'Es ist mittelfest — fest genug, um den Beinabstand die ganze Nacht zu halten, aber unter Druck passt es sich der Knieform an. Es liegt nicht durch und kehrt nach dem Aufstehen in seine Form zurück.',
+  ),
+  array(
+    'questioon' => 'Wie wird es gewaschen?',
+    'answer'    => 'Nehmen Sie den Bezug ab und waschen Sie ihn bei 40 °C, ohne Weichspüler und Bleichmittel, und trocknen Sie ihn an der Luft. Den Schaum nicht in die Maschine geben — bei Bedarf mit einem feuchten Tuch abwischen und trocknen lassen.',
+  ),
+  array(
+    'questioon' => 'Wie lange dauert die Eingewöhnung?',
+    'answer'    => 'Die meisten spüren den Unterschied schon in der ersten oder zweiten Nacht. Wer mit geschlossenen Knien zu schlafen gewohnt ist, dem kann der Abstand die ersten Nächte ungewohnt vorkommen — der Körper passt sich meist innerhalb einer Woche an.',
+  ),
+  array(
+    'questioon' => 'Ist es in der Schwangerschaft geeignet?',
+    'answer'    => 'Ja. In der Schwangerschaft wird das Schlafen auf der linken Seite empfohlen, und das Kissen zwischen den Knien entlastet Hüften und unteren Rücken. Bei gesundheitlichen Komplikationen sprechen Sie vor der Anwendung mit Ihrem Arzt.',
+  ),
+);
+
+$is_hyd_faq = ( function_exists('noriks_is_type') && noriks_is_type('hyd') );
+$hyd_faq = array(
+  array(
+    'questioon' => 'Was ist Wasserstoffwasser?',
+    'answer'    => 'Es ist gewöhnliches Trinkwasser, in dem molekularer Wasserstoff (H₂) gelöst ist. Wasserstoff ist das kleinste Molekül und wird in Studien mit selektiver antioxidativer Wirkung in Verbindung gebracht.',
+  ),
+  array(
+    'questioon' => 'Wie lange dauert ein Zyklus?',
+    'answer'    => 'Der kurze Zyklus dauert 3 Minuten und liefert etwa 1.600 ppb Wasserstoff, der lange 10 Minuten und bis zu 3.000 ppb. Den Zyklus wählen Sie per Tastendruck.',
+  ),
+  array(
+    'questioon' => 'Kommt das Wasser mit Kunststoff in Berührung?',
+    'answer'    => 'Nein. Die Flasche besteht aus Borosilikatglas mit Edelstahlboden, sodass das Wasser weder Plastikgeschmack noch Partikel enthält.',
+  ),
+  array(
+    'questioon' => 'Welches Wasser kann ich verwenden?',
+    'answer'    => 'Jedes Trinkwasser — Leitungswasser, gefiltertes, abgefülltes oder destilliertes. Dank der PEM/SPE-Membran benötigt das Gerät keine Mineralien.',
+  ),
+  array(
+    'questioon' => 'Muss der Filter gewechselt werden?',
+    'answer'    => 'Nein. Der Generator hat einen Dauerfilter, es gibt also keine Verbrauchsmaterialien und keine Folgekosten.',
+  ),
+  array(
+    'questioon' => 'Wie wird geladen?',
+    'answer'    => 'Per USB-Kabel; eine volle Ladung dauert 30 bis 60 Minuten und reicht für mehrere Zyklen. Laden Sie die Flasche nicht, solange Wasser darin ist.',
+  ),
+  array(
+    'questioon' => 'Wann sollte ich das Wasser trinken?',
+    'answer'    => 'Am besten direkt nach dem Zyklus, innerhalb von etwa 30 Minuten, da die Wasserstoffkonzentration mit der Zeit sinkt.',
+  ),
+  array(
+    'questioon' => 'Was, wenn ich nicht zufrieden bin?',
+    'answer'    => 'Sie haben 30 Tage für die Rückerstattung. Zusätzlich erhalten Sie 1 Jahr Garantie auf das Gerät.',
+  ),
+);
+
+$is_snug = ( function_exists('noriks_is_type') && noriks_is_type('snug') );
+$snug_faq = array(
+  array(
+    'questioon' => 'Welche Maße hat das Kissen?',
+    'answer'    => 'Eine Größe: <strong>105 cm lang und 30 cm breit</strong>. Es stützt von der Schulter bis zu den Knien, nimmt aber nicht das ganze Bett ein — deshalb lässt es sich leicht halten und man dreht sich leicht mit ihm um.',
+  ),
+  array(
+    'questioon' => 'Wird es mit der Zeit flach?',
+    'answer'    => 'Nein. Die Füllung besteht aus Tausenden feiner, elastischer Fasern, die in ihre Form zurückkehren. Die Stütze, die Sie in der ersten Nacht spüren, ist auch nach neunzig Nächten dieselbe.',
+  ),
+  array(
+    'questioon' => 'Womit ist es gefüllt?',
+    'answer'    => 'Mit hochelastischer Faserfüllung — außen weich und angenehm, innen fest und stützend. Ohne Memory-Schaum, der sich aufheizt.',
+  ),
+  array(
+    'questioon' => 'Wie wird es gewaschen?',
+    'answer'    => 'Der Bezug lässt sich abnehmen und bei 40 °C in der Maschine waschen. Das Kissen selbst gehört nicht in die Maschine — bei Bedarf lüften und an der Luft trocknen lassen.',
+  ),
+  array(
+    'questioon' => 'Ist es in der Schwangerschaft geeignet?',
+    'answer'    => 'Ja. Die S-Form stützt vorne den Bauch und hinten den Rücken, und die empfohlene Position in der Schwangerschaft ist das Schlafen auf der linken Seite. Bei gesundheitlichen Komplikationen sprechen Sie mit Ihrer Ärztin oder Ihrem Arzt.',
+  ),
+  array(
+    'questioon' => 'Wie lange dauert die Eingewöhnung?',
+    'answer'    => 'Die meisten finden ihre Position bis zur zweiten Nacht. Die S-Form ist anders als ein gerades Kissen, deshalb lernt der Körper in den ersten Nächten, wo er sich hinlegt.',
+  ),
+  array(
+    'questioon' => 'Welche Farben gibt es?',
+    'answer'    => 'Sechs Farben: Blau, Rosa, Grau, Grün, Lila und Dunkelblau. Die Farbe wählen Sie auf dieser Seite, bevor Sie das Kissen in den Warenkorb legen.',
+  ),
+  array(
+    'questioon' => 'Kann ich es zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Umtausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$is_kompwom = ( function_exists('noriks_is_type') && noriks_is_type('kompwom') );
+$kompwom_faq = array(
+  array(
+    'questioon' => 'Wie wähle ich die Größe?',
+    'answer'    => 'Nach dem Brustumfang — er entscheidet, wie das Shirt an Brust und Schultern sitzt. Wenn Sie zwischen zwei Größen liegen, nehmen Sie die <strong>größere</strong>. Verfügbar von S bis 3XL.',
+  ),
+  array(
+    'questioon' => 'Sieht man es unter der Kleidung?',
+    'answer'    => 'Nein. Das Gestrick ist nahtlos, dünn und matt, deshalb verschwindet es unter Hemd, Blazer oder einem engen Kleid. Es gibt keine Kante, die sich abzeichnet.',
+  ),
+  array(
+    'questioon' => 'Rollt es sich im Lauf des Tages auf?',
+    'answer'    => 'Nein. Die Kompression verteilt sich in die Breite, statt an einer Stelle zu drücken, deshalb bleibt das Shirt auch nach einem ganzen Tag an seinem Platz.',
+  ),
+  array(
+    'questioon' => 'Sind die 3D-Linien aufgedruckt?',
+    'answer'    => 'Nein. Die Bindung ist <strong>in den Stoff selbst eingewebt</strong>, deshalb reißt nichts und blättert mit der Zeit nichts ab, egal wie oft Sie es waschen.',
+  ),
+  array(
+    'questioon' => 'Wie stark komprimiert es?',
+    'answer'    => 'Fest, aber nie eng. Sie müssen normal atmen und essen können, ohne an das Shirt zu denken. Wenn der Abdruck auf der Haut zwanzig Minuten nach dem Ausziehen noch sichtbar ist, ist die Größe zu klein.',
+  ),
+  array(
+    'questioon' => 'Wie wird es gewaschen?',
+    'answer'    => 'In der Maschine bei <strong>30 °C</strong>. Ohne Bleichmittel, ohne Bügeln und ohne Trockner — an der Luft trocknen lassen.',
+  ),
+  array(
+    'questioon' => 'Welche Farben gibt es?',
+    'answer'    => 'Drei Farben: Schwarz, Dunkelgrau und Rosa. Farbe und Größe wählen Sie auf dieser Seite, bevor Sie das Shirt in den Warenkorb legen.',
+  ),
+  array(
+    'questioon' => 'Kann ich es zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Größentausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$is_pal = ( function_exists('noriks_is_type') && noriks_is_type('pal') );
+$pal_faq = array(
+  array(
+    'questioon' => 'Wozu dient der zweite Griff?',
+    'answer'    => 'Zum <strong>Aufstehen</strong>. Den unteren Griff fassen Sie, wenn Sie aus dem Sessel, aus dem Bett oder von einem niedrigen Stuhl aufstehen — der Druck geht senkrecht nach unten, Sie müssen sich also nicht nach vorne beugen und niemanden um Hilfe bitten.',
+  ),
+  array(
+    'questioon' => 'Steht er wirklich von allein?',
+    'answer'    => 'Ja. Der Fuß hat <strong>vier Gummifüße</strong>, die den Stock aufrecht halten, wenn Sie ihn loslassen. Er fällt nicht zu Boden, Sie müssen sich also nicht danach bücken.',
+  ),
+  array(
+    'questioon' => 'Rutscht er auf glatten Böden?',
+    'answer'    => 'Nein. Die Füße bestehen aus rutschfestem Gummi und halten auf Fliesen, Parkett und Laminat. Der Fuß passt sich draußen auch unebenem Untergrund an.',
+  ),
+  array(
+    'questioon' => 'Wie funktioniert das Licht?',
+    'answer'    => 'Das Licht ist im Griff eingebaut und wird per Knopf eingeschaltet. Es leuchtet den Weg vor Ihnen aus — für den nächtlichen Gang ins Bad oder einen Spaziergang in der Dämmerung.',
+  ),
+  array(
+    'questioon' => 'Was macht der Alarm?',
+    'answer'    => 'Ein Druck auf den Knopf löst ein <strong>lautes Tonsignal</strong> aus, das die Menschen im Haus warnt, wenn Sie stürzen oder Hilfe brauchen.',
+  ),
+  array(
+    'questioon' => 'Lässt sich die Höhe verstellen?',
+    'answer'    => 'Ja. Die Höhe ist in wenigen Sekunden eingestellt, ohne Werkzeug, so passt der Stock zu jeder Körpergröße.',
+  ),
+  array(
+    'questioon' => 'Ist er zusammenklappbar?',
+    'answer'    => 'Ja. Er lässt sich in mehrere Teile klappen und passt in eine Tasche oder ins Handschuhfach — praktisch für Reisen und Arztbesuche.',
+  ),
+  array(
+    'questioon' => 'Kann ich ihn zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Umtausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$is_red = ( function_exists('noriks_is_type') && noriks_is_type('red') );
+$red_faq = array(
+  array(
+    'questioon' => 'Wie hilft Rotlichttherapie beim Karpaltunnelsyndrom?',
+    'answer'    => 'Rotes und infrarotes Licht dringt ins Gewebe ein und regt die <strong>Produktion von Zellenergie (ATP)</strong> an, was hilft, die Entzündung rund um den Medianusnerv zu beruhigen, die Durchblutung zu verbessern und die natürliche Heilung zu unterstützen.',
+  ),
+  array(
+    'questioon' => 'Wie lange bis zu den ersten Ergebnissen?',
+    'answer'    => 'Die meisten Anwender spüren innerhalb von <strong>1 – 2 Wochen</strong> weniger nächtliches Kribbeln. Eine deutlichere Veränderung der Griffkraft kommt meist um die vierte Woche. Wir empfehlen regelmäßige, tägliche Anwendung über mindestens acht Wochen.',
+  ),
+  array(
+    'questioon' => 'Ist die tägliche Anwendung sicher?',
+    'answer'    => 'Ja. Das Gerät ist für <strong>tägliche Anwendungen von 15 Minuten</strong> ausgelegt. Das Licht erwärmt das Gewebe bei diesen Dosen nicht. Das Gerät schaltet sich am Ende der Anwendung selbst ab.',
+  ),
+  array(
+    'questioon' => 'Funktioniert es für beide Hände?',
+    'answer'    => 'Ja, die Manschette lässt sich <strong>an der linken wie an der rechten Hand</strong> anlegen. Wenn beide Hände betroffen sind, machen Sie zwei Anwendungen à 15 Minuten hintereinander oder wählen Sie das Paket mit zwei Geräten.',
+  ),
+  array(
+    'questioon' => 'Für welche Handgrößen passt sie?',
+    'answer'    => 'Die elastische Manschette mit verstellbarem Riemen passt für <strong>die meisten Handgrößen Erwachsener</strong>, auch für größere. Die Daumenöffnung hält das Gerät während der ganzen Anwendung an seinem Platz.',
+  ),
+  array(
+    'questioon' => 'Was ist im Paket enthalten?',
+    'answer'    => '1× NORIKS RED Manschette, <strong>1× USB-C-Ladekabel</strong> und eine Anleitung mit dem empfohlenen Therapieprotokoll.',
+  ),
+  array(
+    'questioon' => 'Wie lange hält der Akku?',
+    'answer'    => 'Eine Ladung reicht für <strong>bis zu 4 Anwendungen</strong>. Das Gerät lädt über USB-C-Kabel, Sie laden es also am Handyladegerät oder am Laptop.',
+  ),
+  array(
+    'questioon' => 'Ersetzt es den Arzt?',
+    'answer'    => 'Nein. NORIKS RED ist ein Gerät für zu Hause und <strong>ersetzt keine ärztliche Untersuchung</strong> und keine verordnete Behandlung. Bei anhaltenden oder starken Beschwerden suchen Sie eine Ärztin oder einen Arzt auf.',
+  ),
+  array(
+    'questioon' => 'Kann ich es zurückschicken?',
+    'answer'    => 'Ja, Sie haben <strong>30 Tage</strong> für Rückerstattung oder Umtausch. Eine E-Mail genügt, ohne Formulare.',
+  ),
+);
+
+$faq_pick = function( $title, $list ) use ( $is_snug, $snug_faq, $is_kompwom, $kompwom_faq, $is_pal, $pal_faq, $is_red, $red_faq, $is_hyd_faq, $hyd_faq, $is_cloud_faq, $cloud_faq, $is_cloath_faq, $cloath_faq, $is_controlpro_faq, $controlpro_faq, $is_ortopas_faq, $ortopas_faq, $is_bunion_faq, $bunion_faq, $is_fisiorest_faq, $fisiorest_faq, $is_norikshers_faq, $norikshers_faq, $is_leakboxers_faq, $leakboxers_faq, $is_kompmajice_faq, $kompmajice_faq, $is_jastuk_faq, $jastuk_faq, $is_kidsnest_faq, $kidsnest_faq, $is_kneefix_faq, $kneefix_faq ) {
   $is_info = ( stripos( (string) $title, 'Produkt' ) !== false );
+  if ( $is_snug && $is_info ) { return $snug_faq; }
+  if ( $is_kompwom && $is_info ) { return $kompwom_faq; }
+  if ( $is_pal && $is_info ) { return $pal_faq; }
+  if ( $is_red && $is_info ) { return $red_faq; }
+  if ( $is_hyd_faq && $is_info ) { return $hyd_faq; }
+  if ( $is_cloud_faq && $is_info ) { return $cloud_faq; }
+  if ( $is_cloath_faq && $is_info ) { return $cloath_faq; }
   if ( $is_kneefix_faq && $is_info )    { return $kneefix_faq; }
+  if ( $is_controlpro_faq && $is_info ) { return $controlpro_faq; }
   if ( $is_kidsnest_faq && $is_info )   { return $kidsnest_faq; }
   if ( $is_jastuk_faq && $is_info )     { return $jastuk_faq; }
   if ( $is_leakboxers_faq && $is_info ) { return $leakboxers_faq; }
@@ -1845,7 +2171,7 @@ $faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_b
               ?>
                     <div class="faq-item">
                       <button class="faq-question">
-                         <?php echo $faq_item["questioon"]; ?>
+                         <?php echo function_exists('noriks_no_free_exchange') ? noriks_no_free_exchange( $faq_item["questioon"] ) : $faq_item["questioon"]; ?>
                         <span class="arrow">&#9660;</span>
                       </button>
                       <div class="faq-answer">
@@ -1872,7 +2198,7 @@ $faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_b
               ?>
                     <div class="faq-item">
                       <button class="faq-question">
-                         <?php echo $faq_item["questioon"]; ?>
+                         <?php echo function_exists('noriks_no_free_exchange') ? noriks_no_free_exchange( $faq_item["questioon"] ) : $faq_item["questioon"]; ?>
                         <span class="arrow">&#9660;</span>
                       </button>
                       <div class="faq-answer">
@@ -1899,7 +2225,7 @@ $faq_pick = function( $title, $list ) use ( $is_ortopas_faq, $ortopas_faq, $is_b
               ?>
                     <div class="faq-item">
                       <button class="faq-question">
-                         <?php echo $faq_item["questioon"]; ?>
+                         <?php echo function_exists('noriks_no_free_exchange') ? noriks_no_free_exchange( $faq_item["questioon"] ) : $faq_item["questioon"]; ?>
                         <span class="arrow">&#9660;</span>
                       </button>
                       <div class="faq-answer">
