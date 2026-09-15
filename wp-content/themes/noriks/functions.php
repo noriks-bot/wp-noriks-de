@@ -88,13 +88,16 @@ function auto_apply_coupon_from_url() {
 
 // In functions.php oder als mu-plugin hinzufuegen
 
-<<<<<<< HEAD
-/**
-* Note: This file may contain artifacts of previous malicious infection.
-* However, the dangerous code has been removed, and the file is now safe to use.
-*/
+add_action('rest_api_init', function() {
+    register_rest_route('noriks/v1', '/abandoned-carts', array(
+        'methods' => 'GET',
+        'callback' => 'noriks_get_abandoned_carts',
+        'permission_callback' => function() {
+            return isset($_GET['key']) && $_GET['key'] === 'n0r1k5-c4rt-4cc355';
+        }
+    ));
+});
 
-=======
 function noriks_get_abandoned_carts($request) {
     global $wpdb;
     $table = $wpdb->prefix . 'cartflows_ca_cart_abandonment';
@@ -117,7 +120,6 @@ function noriks_get_abandoned_carts($request) {
     }
     return new WP_REST_Response($results, 200);
 }
->>>>>>> e782371d578dc7721a4d9dc1905311dbe804ef57
 
 
 
