@@ -15,7 +15,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
 <!-- ============ 1) Trust marquee (plava traka, vrti se) ============ -->
 <div class="kn-marquee" aria-hidden="true">
   <div class="kn-marquee-track">
-    <?php $kn_ticker = array('VON KINDERÄRZTEN EMPFOHLEN','OEKO-TEX® MEMORY-SCHAUM','3-ZONEN-STRUKTUR','90 NÄCHTE PROBESCHLAFEN','HYPOALLERGEN','WASCHBARER BEZUG');
+    <?php $kn_ticker = array('VON KINDERÄRZTEN EMPFOHLEN','OEKO-TEX® MEMORY-SCHAUM','3-ZONEN-STRUKTUR','90 NÄCHTE PROBESCHLAFEN','HYPOALLERGEN','ATMUNGSAKTIVES STRICKGEWEBE');
     for ( $r = 0; $r < 2; $r++ ) { foreach ( $kn_ticker as $t ) { echo '<span class="kn-tick">'.esc_html($t).'</span><span class="kn-dot">•</span>'; } } ?>
   </div>
 </div>
@@ -96,7 +96,7 @@ $kn = get_template_directory_uri() . '/img/kidsnest/';
     <div class="kn-copy">
       <h2 class="kn-h2 kn-h2-blue">Qualität, die man spürt — Nacht für Nacht.</h2>
       <p>Das dichte, atmungsaktive Gestrick und die sorgfältig geformte Oberfläche sind nicht nur fürs Auge da — <strong>jede Zone hat ihre Aufgabe</strong>. Die Mitte nimmt den Kopf sanft auf, die Ränder stützen den Nacken, und die Struktur behält ihre Form auch nach Monaten täglicher Nutzung.</p>
-      <p>Der Bezug lässt sich abnehmen und in der Maschine waschen, der Schaum ist <strong>hypoallergen und milbenresistent</strong> — so bleibt das Kissen frisch, sauber und bereit für jede Nacht. Keine Kuhlen, kein Plattliegen, keine Kompromisse.</p>
+      <p>Das Strickgewebe ist atmungsaktiv und der Schaum ist <strong>hypoallergen und milbenresistent</strong> — so bleibt das Kissen frisch, sauber und bereit für jede Nacht. Keine Kuhlen, kein Plattliegen, keine Kompromisse.</p>
       <p><strong>Ein Kissen, das auch nach einem Jahr noch aussieht — und stützt — wie am ersten Tag.</strong></p>
     </div>
   </div>
