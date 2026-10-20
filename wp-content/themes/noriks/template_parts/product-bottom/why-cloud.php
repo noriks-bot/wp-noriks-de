@@ -86,10 +86,10 @@ $cd_steps = array(
 <!-- ============ A) Recenzije kupaca — vrtuljak (kao prva sekcija na referenci) ============ -->
 <?php
 $cd_revs = array(
-  array( 5, 'Konačno spavam kroz noć',      'Spavam na boku cijeli život i uvijek sam se budila s ukočenim leđima. Prvo jutro nakon jastuka — ništa. Nisam vjerovala da je tako jednostavno.', 'Marina T.' ),
-  array( 5, 'Traka je ono što ga razlikuje', 'Prije mi je obični jastuk ispadao nakon pola sata. Ovaj ostaje između koljena do jutra, i kad se okrenem na drugu stranu.', 'Davor K.' ),
-  array( 5, 'Spas u trudnoći',               'Kupila sam ga u sedmom mjesecu. Konačno mogu ležati na lijevoj strani bez pritiska u kuku i bez vrpoljenja pola noći.', 'Ivana P.' ),
-  array( 5, 'Kukovi me više ne bole ujutro', 'Bila sam skeptična jer je to ipak samo jastuk. Razlika je stvarna — ustajem bez one ukočenosti u zdjelici.', 'Lucija H.' ),
+  array( 5, 'Endlich schlafe ich durch',        'Ich schlafe mein Leben lang auf der Seite und bin immer mit steifem Rücken aufgewacht. Der erste Morgen mit dem Kissen — nichts. Ich hätte nicht gedacht, dass es so einfach ist.', 'Marina T.' ),
+  array( 5, 'Der Gurt macht den Unterschied',    'Früher ist mir ein normales Kissen schon nach einer halben Stunde weggerutscht. Dieses bleibt bis zum Morgen zwischen den Knien, auch wenn ich mich auf die andere Seite drehe.', 'Dieter K.' ),
+  array( 5, 'Die Rettung in der Schwangerschaft','Ich habe es im siebten Monat gekauft. Endlich kann ich auf der linken Seite liegen, ohne Druck in der Hüfte und ohne mich die halbe Nacht hin und her zu wälzen.', 'Ivonne P.' ),
+  array( 5, 'Morgens tun mir die Hüften nicht mehr weh', 'Ich war skeptisch, es ist ja nur ein Kissen. Der Unterschied ist echt — ich stehe ohne diese Steifheit im Becken auf.', 'Luisa H.' ),
 );
 ?>
 <section class="ncd-sec ncd-dark">
