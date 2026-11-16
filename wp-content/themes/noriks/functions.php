@@ -1024,3 +1024,4 @@ add_filter('tiny_mce_plugins', function ($plugins) {
 include(get_template_directory() . '/functions/sidecart-upsell-modal.php');
 
 require_once get_template_directory() . '/functions/manuals-page.php';
+include(get_template_directory() . '/functions/black-friday.php'); // Black Friday pristajalna stran /black-friday/
