@@ -213,17 +213,15 @@ $cd_cases = array(
 
 <!-- ============ 8) Standardi ============ -->
 <section class="ncd-sec ncd-dark">
-  <div class="ncd-wrap ncd-row2">
+  <div class="ncd-wrap">
     <div class="ncd-copy">
       <h2 class="ncd-h2">Nach strengen Standards gefertigt</h2>
       <p>Die Materialien sind auf Schadstoffe geprüft und der Schaum ist zertifiziert. Das Design folgt Schweizer Qualitätsstandards.</p>
       <ul class="ncd-check">
-        <li><strong>OEKO-TEX® STANDARD 100</strong> — ohne Schadstoffe</li>
         <li><strong>CertiPUR-EU</strong> — zertifizierter Memory-Schaum</li>
         <li><strong>In der Schweiz entworfen</strong>, nach europäischen Standards produziert</li>
       </ul>
     </div>
-    <div class="ncd-media"><?php echo $cd_img('cld-certifikati.webp','OEKO-TEX i CertiPUR-EU certifikati'); ?></div>
   </div>
 </section>
 

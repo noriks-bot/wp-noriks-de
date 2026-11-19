@@ -22,7 +22,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <!-- ============ 1) Marquee (tamna traka, vrti se) ============ -->
 <div class="oj-marquee" aria-hidden="true">
   <div class="oj-marquee-track">
-    <?php $oj_ticker = array('ATMUNGSAKTIV UND WASCHBAR','PERFEKTE AUSRICHTUNG','STABILITYCORE™ SCHAUM','OEKO-TEX® ZERTIFIZIERT','HYPOALLERGEN','SILKFLEX™ BEZUG');
+    <?php $oj_ticker = array('ATMUNGSAKTIV UND WASCHBAR','PERFEKTE AUSRICHTUNG','STABILITYCORE™ SCHAUM','HYPOALLERGEN','SILKFLEX™ BEZUG');
     for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_ticker as $t ) { echo '<span class="oj-tick">'.esc_html($t).'</span><span class="oj-dot">•</span>'; } } ?>
   </div>
 </div>
@@ -83,7 +83,7 @@ $oj_img = function( $file, $alt ) use ( $oj ) {
 <section class="oj-sec oj-stills-sec">
   <div class="oj-trustbar" aria-hidden="true">
     <div class="oj-trustbar-track">
-      <?php $oj_trust = array('120.000+ KUNDEN','BEWERTUNG 4,8/5','OEKO-TEX®','VON ÄRZTEN EMPFOHLEN','30 TAGE GARANTIE','ORTHOPÄDISCHES DESIGN');
+      <?php $oj_trust = array('120.000+ KUNDEN','BEWERTUNG 4,8/5','VON ÄRZTEN EMPFOHLEN','30 TAGE GARANTIE','ORTHOPÄDISCHES DESIGN');
       for ( $r = 0; $r < 2; $r++ ) { foreach ( $oj_trust as $t ) { echo '<span class="oj-trust-item">'.esc_html($t).'</span><span class="oj-trust-dot">•</span>'; } } ?>
     </div>
   </div>

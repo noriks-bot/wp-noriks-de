@@ -1431,7 +1431,7 @@ $kompmajice_faq = array(
 $leakboxers_faq = array(
   array(
     'questioon' => 'Warum haben sich mehr als 123.000 Männer für NORIKS entschieden?',
-    'answer'    => 'NORIKS sind die saugfähigsten waschbaren Boxershorts bei männlichem Urinverlust: Sie halten bis zu 300 ml, sind Oeko-Tex®-zertifiziert und frei von Schadstoffen, waschbar und wiederverwendbar (die umweltfreundliche Alternative zu Einweg-Einlagen) und für ganztägigen Komfort und Selbstvertrauen konzipiert. Ganze 87 % der Kunden bestellen nach dem ersten Kauf erneut.'
+    'answer'    => 'NORIKS sind die saugfähigsten waschbaren Boxershorts bei männlichem Urinverlust: Sie halten bis zu 300 ml, sind frei von Schadstoffen, waschbar und wiederverwendbar (die umweltfreundliche Alternative zu Einweg-Einlagen) und für ganztägigen Komfort und Selbstvertrauen konzipiert. Ganze 87 % der Kunden bestellen nach dem ersten Kauf erneut.'
   ),
   array(
     'questioon' => 'Wie viel nehmen sie auf?',
@@ -1460,7 +1460,7 @@ $jastuk_faq = array(
   array( 'questioon' => 'Wie lindert NORIKS ErgoSit die Schmerzen beim Sitzen?', 'answer' => 'ErgoSit hat eine Steißbein-Aussparung, die den direkten Druck vom Steißbein und Ischiasnerv nimmt, während die anatomische Form aus Memory-Schaum mit hoher Dichte das Gewicht gleichmäßig auf Hüften und Oberschenkel verteilt. So werden empfindliche Druckpunkte entlastet und eine gesunde, aufrechte Haltung unterstützt.' ),
   array( 'questioon' => 'Wo überall kann ich das Kissen verwenden?', 'answer' => 'Überall, wo Sie sitzen — im Auto, auf dem Bürostuhl, dem Esszimmerstuhl, im Rollstuhl oder zu Hause. Die stabile, rutschfeste Basis hält es an Ort und Stelle, sodass der Komfort Sie den ganzen Tag begleitet.' ),
   array( 'questioon' => 'Wird der Schaum mit der Zeit platt?', 'answer' => 'Nein. ErgoSit verwendet Memory-Schaum mit hoher Dichte, der auch nach langem täglichem Gebrauch Form und Festigkeit behält — im Gegensatz zu billigen Kissen, die schnell zusammensacken.' ),
-  array( 'questioon' => 'Kann der Bezug gewaschen werden?', 'answer' => 'Ja. Der Bezug lässt sich abnehmen und in der Maschine waschen, sodass das Kissen frisch und sauber bleibt. Das Gewebe ist atmungsaktiv, hypoallergen und OEKO-TEX®-zertifiziert.' ),
+  array( 'questioon' => 'Kann der Bezug gewaschen werden?', 'answer' => 'Ja. Der Bezug lässt sich abnehmen und in der Maschine waschen, sodass das Kissen frisch und sauber bleibt. Das Gewebe ist atmungsaktiv und hypoallergen.' ),
   array( 'questioon' => 'Passt es auf meinen Stuhl oder Sitz?', 'answer' => 'ErgoSit hat eine universelle Form und passt auf die meisten Autositze, Büro- und Küchenstühle sowie Rollstühle. Es gibt keine Größen — ein Modell passt für alle.' ),
   array( 'questioon' => 'Wie schnell spüre ich einen Unterschied?', 'answer' => 'Die meisten Nutzer spüren schon ab dem ersten Tag weniger Druck auf dem Steißbein und ein bequemeres Sitzen. Für eine bessere Haltung und weniger Rückenschmerzen baut sich die Wirkung durch die regelmäßige Anwendung weiter auf.' ),
   array( 'questioon' => 'Gibt es eine Geld-zurück-Garantie?', 'answer' => 'Ja, jedes NORIKS ErgoSit kommt mit einer 30-Tage-Komfortgarantie. Wenn Sie nicht weniger Schmerzen und mehr Komfort spüren, kontaktieren Sie uns und wir finden eine Lösung.' ),
@@ -1501,7 +1501,7 @@ $kneefix_faq = array(
 $kidsnest_faq = array(
   array( 'questioon' => 'Wie schnell werde ich sehen, dass die Mundatmung aufhört?', 'answer' => 'Die meisten Eltern bemerken innerhalb der ersten 5–7 Nächte ein leiseres Atmen und weniger Aufwachen mit offenem Mund. Bis zur 14. Nacht beruhigt sich bei den meisten Kindern das Schnarchen und die Lippen bleiben geschlossen. Den vollen Unterschied — eine sichtbar bessere Position und ruhigeren Schlaf — beschreiben Eltern meist um den 21. bis 30. Tag. Verwenden Sie es jede Nacht.' ),
   array( 'questioon' => 'Für welches Alter ist KidsNest gedacht?', 'answer' => 'KidsNest gibt es in drei Größen: 1–3, 3–9 und 9–14 Jahre. Das wichtigste Zeitfenster liegt zwischen dem 3. und 9. Lebensjahr, wenn sich Gaumen und Kiefer am intensivsten entwickeln — aber jedes Alter hat seine Größe und seinen Nutzen.' ),
-  array( 'questioon' => 'Ist es sicher? Was ist drin?', 'answer' => 'KidsNest besteht aus hypoallergenem, OEKO-TEX®-zertifiziertem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA. Es ist milbenresistent und atmungsaktiv, der Bezug lässt sich abnehmen und in der Maschine waschen.' ),
+  array( 'questioon' => 'Ist es sicher? Was ist drin?', 'answer' => 'KidsNest besteht aus hypoallergenem Memory-Schaum — ohne Formaldehyd, Schwermetalle und BPA. Es ist milbenresistent und atmungsaktiv, der Bezug lässt sich abnehmen und in der Maschine waschen.' ),
   array( 'questioon' => 'Wird mein Kind es wirklich benutzen?', 'answer' => 'Ja. Die ergonomische Form fühlt sich wie Unterstützung an, nicht wie etwas Fremdes — die meisten Kinder gewöhnen sich in 1–2 Nächten daran. Eltern berichten oft, dass die Kinder nach der ersten Woche nicht mehr ohne schlafen wollen. Die 3-Zonen-Struktur nimmt den Kopf ganz natürlich auf — es gibt keine "richtige Art", keinen Kampf vor dem Schlafengehen.' ),
   array( 'questioon' => 'Wirkt es, wenn mein Kind bereits durch den Mund atmet?', 'answer' => 'Ja — genau für solche Kinder wurde es entwickelt. Die 3-Zonen-Struktur hilft zu verhindern, dass der Kopf nach hinten kippt, wodurch sich der Mund im Schlaf öffnet. Bei den meisten Kindern schließen sich die Lippen innerhalb von 7–14 Nächten auf natürliche Weise und die Nasenatmung kehrt zurück.' ),
   array( 'questioon' => 'Was, wenn es meinem Kind nicht hilft?', 'answer' => 'Lassen Sie Ihr Kind 30 Nächte auf dem KidsNest schlafen. Wenn Sie keinen Unterschied sehen — weniger Mundatmung, leisere Nächte, ruhigeren Schlaf — melden Sie sich bei uns und wir erstatten das Geld zurück. Ohne Fragen und ohne Kleingedrucktes.' ),
@@ -1621,7 +1621,7 @@ $cloud_faq = array(
   ),
   array(
     'questioon' => 'Woraus besteht das Kissen?',
-    'answer'    => 'Der Kern besteht aus Memory-Schaum in medizinischer Qualität mit Perforationen für die Luftzirkulation. Der Bezug ist aus atmungsaktivem Gewebe, abnehmbar und waschbar. Die Materialien sind nach OEKO-TEX® STANDARD 100 und CertiPUR-EU zertifiziert.',
+    'answer'    => 'Der Kern besteht aus Memory-Schaum in medizinischer Qualität mit Perforationen für die Luftzirkulation. Der Bezug ist aus atmungsaktivem Gewebe, abnehmbar und waschbar. Der Schaum ist nach CertiPUR-EU zertifiziert.',
   ),
   array(
     'questioon' => 'Ist es zu hart oder zu weich?',
